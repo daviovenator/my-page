@@ -906,4 +906,170 @@
         color: #b0b0b0;
         font-size: 0.95rem;
     }
+    
+    /********************
+ * BOTONES HEADER
+ ********************/
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Selector de idioma */
+.language-btn {
+    position: relative;
+}
+
+.language-btn select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: white;
+    padding: 8px 35px 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    min-width: 120px;
+}
+
+.language-btn select:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.language-btn select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Flecha personalizada para el select */
+.language-btn::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.language-btn:hover::after {
+    color: white;
+}
+
+.language-btn select:focus + ::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Botón de tema */
+.theme-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.theme-btn:hover::before {
+    left: 100%;
+}
+
+.theme-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.theme-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Estilos para tema claro */
+.light-theme .language-btn select {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.light-theme .language-btn select:hover {
+    background: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.light-theme .language-btn::after {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.light-theme .language-btn:hover::after {
+    color: #000;
+}
+
+.light-theme .theme-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.light-theme .theme-btn:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-buttons {
+        gap: 10px;
+    }
+    
+    .language-btn select {
+        min-width: 100px;
+        padding: 6px 30px 6px 10px;
+        font-size: 13px;
+    }
+    
+    .theme-btn {
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .language-btn, .theme-btn {
+        width: 100%;
+    }
+    
+    .language-btn select {
+        width: 100%;
+    }
+}
 </style>
