@@ -35,7 +35,7 @@
 
     .particle {
         position: absolute;
-        background-color: #D4AF37;
+        background-color: #282828;
         border-radius: 50%;
         animation: float 20s infinite linear;
         animation-delay: 0s !important;
@@ -112,7 +112,6 @@
         background-size: 50px 50px;
         opacity: 0.3;
     }
-/* ================= HEADER Y NAVEGACIÓN ================= */
 /* ================= HEADER ================= */
 header {
     background-color: rgba(20, 20, 20, 0.95);
@@ -140,13 +139,27 @@ header {
     gap: 10px;
 }
 
-/* Logo */
+/* Logo con degradado rojizo suave */
 .logo {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #D4AF37;
+    background: linear-gradient(135deg, rgba(255, 60, 60, 0.15) 0%, rgba(255, 60, 60, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    text-decoration: none; /* quita subrayado */
+}
+
+
+/* Hover del logo: rojo más profundo (#b01a1a) */
+.logo:hover {
+    background: linear-gradient(135deg, rgba(255, 60, 60, 0.15) 0%, rgba(255, 60, 60, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Botón hamburguesa */
@@ -157,7 +170,7 @@ header {
     color: #fff;
     font-size: 1.8rem;
     cursor: pointer;
-    z-index: 1001; /* encima del menú */
+    z-index: 1001;
 }
 
 /* Menú de enlaces */
@@ -180,6 +193,7 @@ header {
     transition: color 0.3s;
 }
 
+/* Subrayado con rojo intenso */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -187,60 +201,61 @@ header {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #D4AF37;
+    background-color: #e03838; /* rojo intenso actual */
     transition: width 0.3s;
 }
 
+/* Hover de los enlaces: texto rojo intenso */
 .nav-links a:hover {
-    color: #D4AF37;
+    color: #e03838;
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Botones */
+/* ================= BOTONES ================= */
 .header-buttons {
     display: flex;
     gap: 12px;
     align-items: center;
 }
 
+/* Botón de idiomas transparente */
 .language-btn select {
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
-    background-color: #111;
-    color: #fff;
+    background-color: transparent; /* fondo transparente */
+    color: #cccccc;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    box-shadow: none; /* quitar sombra */
     transition: all 0.3s ease;
     appearance: none;
 }
 
 .language-btn select:hover {
-    background-color: #222;
+    background-color: rgba(255,255,255,0.1); /* leve fondo al pasar el cursor */
     transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
+/* Botón de tema transparente */
 .theme-btn {
     padding: 8px 18px;
     border: none;
     border-radius: 8px;
-    background-color: #111;
-    color: #fff;
+    background-color: transparent; /* fondo transparente */
+    color: #cccccc;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    box-shadow: none; /* quitar sombra */
     transition: all 0.3s ease;
 }
 
 .theme-btn:hover {
-    background-color: #222;
+    background-color: rgba(255,255,255,0.1); /* leve fondo al pasar el cursor */
     transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -301,15 +316,18 @@ header {
     }
 }
 
+
     /* Sección Hero - REDISEÑADA con dos columnas */
-    .hero {
-        padding: 80px 0 60px;
-        text-align: center;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%);
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-    }
+.hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    /* 🔴 Fondo cambiado a un degradado rojizo */
+    background: linear-gradient(135deg, rgba(255, 60, 60, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
 
     .hero-content {
         width: 100%;

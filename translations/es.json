@@ -12,7 +12,7 @@
     "button": "Tema"
   },
   "hero": {
-    "title": "Pentesting & Ciberseguridad",
+    "title": "David Cigaran Flores",
     "tagline": "Protegiendo sistemas mediante pruebas ofensivas",
     "description": "Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.",
     "projectsBtn": "Ver Proyectos",
@@ -152,8 +152,8 @@
     }
   },
   "contact": {
-    "title": "Contacto Seguro",
-    "subtitle": "Información de Contacto",
+    "title": "Contacto",
+    "subtitle": "Información Personal",
     "email": "Correo Electrónico",
     "phone": "Teléfono",
     "languages": "Idiomas",
@@ -164,7 +164,7 @@
     "secure": "Comunicación Segura",
     "pgp": "PGP disponible bajo solicitud",
     "availability": "Disponibilidad",
-    "response": "Respuesta en 24-48 horas"
+    "response": "Inmediata"
   },
   "footer": {
     "copyright": "© 2023 CyberShield. Todos los derechos reservados. Este sitio utiliza conexiones seguras."

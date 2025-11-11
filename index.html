@@ -6,8 +6,17 @@
     <title>CyberShield | Pentester & Security Specialist</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
+    <!-- Contenedor invisible para el ancla de inicio -->
+    <div id="top"></div>
+
     <div class="particles-container" id="particles"></div>
     <div class="network-lines"></div>
 
@@ -15,63 +24,63 @@
     <div id="google_translate_element" style="display:none;"></div>
 
 <header>
-    <div class="container nav-container">
-        <div class="logo-hamburger">
-            <!-- Logo que desaparece en móviles -->
-            <div class="logo">
-                Krater
-            </div>
-            <!-- Botón hamburguesa para móvil -->
-            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
-            <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
-            <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
-            <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
-            <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
-            <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
-            <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
-        </ul>
-
-        <div class="header-buttons">
-            <div class="language-btn">
-                <select id="language-selector">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="it">Italiano</option>
-                    <option value="por">Portugués</option>
-                    <option value="chi">Chino</option>
-                    <option value="ru">Ruso</option>
-                </select>
-            </div>
-            <button class="theme-btn" data-translate="theme.button">Tema</button>
-        </div>
+<div class="container nav-container">
+    <div class="logo-hamburger">
+        <!-- Logo como enlace que lleva al inicio -->
+        <a href="#top" class="logo">
+            Krater
+        </a>
+        <!-- Botón hamburguesa para móvil -->
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
     </div>
+
+    <ul class="nav-links">
+        <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
+        <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
+        <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
+        <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
+        <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
+        <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
+        <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
+    </ul>
+
+    <div class="header-buttons">
+        <div class="language-btn">
+            <select id="language-selector">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="por">Portugués</option>
+                <option value="chi">Chino</option>
+                <option value="ru">Ruso</option>
+            </select>
+        </div>
+        <button class="theme-btn" data-translate="theme.button">Tema</button>
+    </div>
+</div>
 </header>
 
-    <section class="hero" id="inicio">
-        <div class="container hero-content">
-            <div class="hero-profile">
-                <div class="profile-image">
-                    <i class="fas fa-user-secret"></i>
-                </div>
-                <h2 class="hero-name">David Cigarán Flores</h2>
-            </div>
-            <div class="hero-text">
-                <h1 data-translate="hero.title">Pentesting & Ciberseguridad</h1>
-                <p class="tagline" data-translate="hero.tagline">Protegiendo sistemas mediante pruebas ofensivas</p>
-                <p data-translate="hero.description">Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.</p>
-                <div class="cta-buttons">
-                    <a href="#proyectos" class="cta-button" data-translate="hero.projectsBtn">Ver Proyectos</a>
-                    <a href="#contacto" class="cta-button secondary" data-translate="hero.contactBtn">Contactar</a>
-                </div>
+<section class="hero" id="inicio">
+    <div class="container hero-content">
+        <div class="hero-profile">
+            <div class="profile-image">
+                <i class="fas fa-user-secret"></i>
             </div>
         </div>
-    </section>
+        <div class="hero-text">
+            <h1 data-translate="hero.title">David Cigaran Flores</h1>
+            <p class="tagline" data-translate="hero.tagline">Protegiendo sistemas mediante pruebas ofensivas</p>
+            <p data-translate="hero.description">Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.</p>
+            <div class="cta-buttons">
+                <a href="#proyectos" class="cta-button" data-translate="hero.projectsBtn">Ver Proyectos</a>
+                <a href="#contacto" class="cta-button secondary" data-translate="hero.contactBtn">Contactar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="section" id="quien-soy">
         <div class="container">
@@ -305,26 +314,23 @@
 
     <section class="section" id="contacto">
         <div class="container">
-            <h2 class="section-title" data-translate="contact.title">Contacto Seguro</h2>
+            <h2 class="section-title" data-translate="contact.title">Contacto</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 data-translate="contact.subtitle">Información de Contacto</h3>
+                    <h3 data-translate="contact.subtitle">Información Personal</h3>
                     <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h4 data-translate="contact.email">Correo Electrónico</h4>
                             <p>davidcigaran@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-details">
                             <h4 data-translate="contact.phone">Teléfono</h4>
                             <p>688 846 527</p>
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-language"></i></div>
                         <div class="contact-details">
                             <h4 data-translate="contact.languages">Idiomas</h4>
                             <p data-translate="contact.spanish">Español: Nativo</p>
@@ -332,24 +338,15 @@
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-id-card"></i></div>
                         <div class="contact-details">
                             <h4 data-translate="contact.licenses">Licencias de Conducción</h4>
                             <p data-translate="contact.licenseB">Permiso B (Coche)</p>
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="contact-details">
-                            <h4 data-translate="contact.secure">Comunicación Segura</h4>
-                            <p data-translate="contact.pgp">PGP disponible bajo solicitud</p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div class="contact-details">
                             <h4 data-translate="contact.availability">Disponibilidad</h4>
-                            <p data-translate="contact.response">Respuesta en 24-48 horas</p>
+                            <p data-translate="contact.response">Inmediata</p>
                         </div>
                     </div>
                 </div>
@@ -523,9 +520,12 @@ function createParticles() {
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
 
-        const goldVariation = Math.random() * 40 + 180;
-        const opacity = Math.random() * 0.4 + 0.3;
-        particle.style.backgroundColor = `rgba(${goldVariation}, ${Math.floor(goldVariation * 0.7)}, ${Math.floor(goldVariation * 0.3)}, ${opacity})`;
+        // 🔥 Color tipo ascuas volcánicas
+        const red = 255;
+        const green = Math.floor(Math.random() * 80 + 40);  // Toques naranjas/amarillos (40–120)
+        const blue = Math.floor(Math.random() * 40);        // Leve componente cálido (0–40)
+        const opacity = Math.random() * 0.3 + 0.7;          // Brillo entre 0.7 y 1.0
+        particle.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${opacity})`;
 
         const duration = Math.random() * 15 + 15;
         const animationType = Math.random();
