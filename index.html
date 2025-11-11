@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Pentester & Security Specialist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    <div class="network-lines"></div>
+
+    <!-- Contenedor invisible necesario para Google Translate -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                CyberShield
+            </div>
+            <ul class="nav-links">
+                <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
+                <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
+                <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
+                <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
+                <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
+                <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
+                <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
+            </ul>
+
+            <div class="header-buttons">
+                <!-- Selector de idioma -->
+                <div class="language-btn">
+                    <select id="language-selector">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                </div>
+                
+                <!-- Botón de tema -->
+                <button class="theme-btn" data-translate="theme.button">Tema</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h2 class="hero-name">David Cigarán Flores</h2>
+            </div>
+            <div class="hero-text">
+                <h1 data-translate="hero.title">Pentesting & Ciberseguridad</h1>
+                <p class="tagline" data-translate="hero.tagline">Protegiendo sistemas mediante pruebas ofensivas</p>
+                <p data-translate="hero.description">Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.</p>
+                <div class="cta-buttons">
+                    <a href="#proyectos" class="cta-button" data-translate="hero.projectsBtn">Ver Proyectos</a>
+                    <a href="#contacto" class="cta-button secondary" data-translate="hero.contactBtn">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="quien-soy">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.title">¿Quién Soy?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-translate="about.subtitle">Especialista en Seguridad Ofensiva</h3>
+                    <p data-translate="about.paragraph1">Soy un profesional de la ciberseguridad especializado en pruebas de penetración y auditorías de seguridad. Mi enfoque combina metodologías estructuradas con pensamiento creativo para identificar vulnerabilidades que otros podrían pasar por alto.</p>
+                    <p data-translate="about.paragraph2">He trabajado con empresas de diversos sectores, desde startups tecnológicas hasta corporaciones financieras, ayudándoles a fortalecer sus defensas mediante la identificación proactiva de puntos débiles en sus sistemas.</p>
+                    <p data-translate="about.paragraph3">Mi filosofía se basa en que para defender eficazmente, primero hay que entender cómo atacar. Por eso, me mantengo constantemente actualizado con las últimas técnicas de explotación y vectores de ataque.</p>
+                    
+                    <div class="certifications">
+                        <h4 data-translate="about.certificationsTitle">Certificaciones</h4>
+                        <ul class="cert-list">
+                            <li data-translate="about.cert1">OSCP (Offensive Security Certified Professional)</li>
+                            <li data-translate="about.cert2">CEH (Certified Ethical Hacker)</li>
+                            <li data-translate="about.cert3">CISSP (Certified Information Systems Security Professional)</li>
+                            <li data-translate="about.cert4">CompTIA Security+</li>
+                            <li data-translate="about.cert5">eJPT (eLearnSecurity Junior Penetration Tester)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="habilidades">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills.title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-terminal"></i>
+                    <h3 data-translate="skills.skill1.title">Pentesting Avanzado</h3>
+                    <p data-translate="skills.skill1.description">Pruebas de penetración web, móvil y de red. Análisis de vulnerabilidades y explotación de sistemas. Ingeniería inversa y análisis de malware.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3 data-translate="skills.skill2.title">Herramientas de Seguridad</h3>
+                    <p data-translate="skills.skill2.description">Dominio de Metasploit, Burp Suite, Nmap, Wireshark y herramientas de testing. Desarrollo de scripts personalizados para auditorías.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3 data-translate="skills.skill3.title">Desarrollo Seguro</h3>
+                    <p data-translate="skills.skill3.description">Revisión de código fuente, análisis de aplicaciones y APIs. Conocimiento en OWASP Top 10 y prácticas de desarrollo seguro.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3 data-translate="skills.skill4.title">Seguridad de Red</h3>
+                    <p data-translate="skills.skill4.description">Análisis de arquitecturas de red, detección de intrusiones, firewall y sistemas de prevención. Hardening de sistemas y redes.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h3 data-translate="skills.skill5.title">Ingeniería Social</h3>
+                    <p data-translate="skills.skill5.description">Pruebas de concienciación, simulaciones de phishing y evaluación de la resistencia humana en organizaciones.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3 data-translate="skills.skill6.title">Seguridad en la Nube</h3>
+                    <p data-translate="skills.skill6.description">Auditoría de entornos AWS, Azure y GCP. Implementación de políticas de seguridad y mejores prácticas en la nube.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="proyectos">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects.title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="projects.project1.title">Auditoría FinTech</h3>
+                        <p data-translate="projects.project1.description">Evaluación de seguridad completa para una plataforma FinTech, identificando vulnerabilidades críticas en su API y aplicación móvil.</p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="projects.tags.web">Web App</span>
+                            <span class="project-tag" data-translate="projects.tags.api">API</span>
+                            <span class="project-tag" data-translate="projects.tags.mobile">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="projects.project2.title">Infraestructura Corporativa</h3>
+                        <p data-translate="projects.project2.description">Pentesting de red interna para empresa del Fortune 500, descubriendo vectores de ataque que permitían movimiento lateral.</p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="projects.tags.network">Red Interna</span>
+                            <span class="project-tag" data-translate="projects.tags.ad">Active Directory</span>
+                            <span class="project-tag" data-translate="projects.tags.privilege">Privilege Escalation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="projects.project3.title">Social Engineering</h3>
+                        <p data-translate="projects.project3.description">Campaña de concienciación mediante pruebas de ingeniería social controladas para evaluar la resistencia humana de una organización.</p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="projects.tags.phishing">Phishing</span>
+                            <span class="project-tag" data-translate="projects.tags.awareness">Concienciación</span>
+                            <span class="project-tag" data-translate="projects.tags.human">Factor Humano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="projects.project4.title">Hardening de Servidores</h3>
+                        <p data-translate="projects.project4.description">Refuerzo de seguridad en servidores críticos para una institución gubernamental, implementando medidas de protección avanzadas.</p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="projects.tags.linux">Linux</span>
+                            <span class="project-tag" data-translate="projects.tags.windows">Windows Server</span>
+                            <span class="project-tag" data-translate="projects.tags.hardening">Hardening</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="historial-academico">
+        <div class="container">
+            <h2 class="section-title" data-translate="education.title">Historial Académico</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-translate="education.item1.title">Máster en Ciberseguridad</h3>
+                        <div class="timeline-date">2020 - 2021</div>
+                        <p data-translate="education.item1.university">Universidad Politécnica de Madrid</p>
+                        <p data-translate="education.item1.description">Especialización en seguridad ofensiva y pruebas de penetración. Proyecto final sobre análisis de malware avanzado.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-translate="education.item2.title">Grado en Ingeniería Informática</h3>
+                        <div class="timeline-date">2015 - 2019</div>
+                        <p data-translate="education.item2.university">Universidad Complutense de Madrid</p>
+                        <p data-translate="education.item2.description">Especialidad en seguridad de la información. Trabajo de fin de grado sobre criptografía aplicada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-translate="education.item3.title">Bachillerato Tecnológico</h3>
+                        <div class="timeline-date">2013 - 2015</div>
+                        <p data-translate="education.item3.university">IES Francisco de Goya</p>
+                        <p data-translate="education.item3.description">Especialidad en ciencias tecnológicas con enfoque en programación y redes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experiencia-laboral">
+        <div class="container">
+            <h2 class="section-title" data-translate="experience.title">Experiencia Laboral</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="company-info">
+                            <h3 data-translate="experience.job1.company">BBVA Security Operations Center</h3>
+                            <div class="position" data-translate="experience.job1.position">Analista de Ciberseguridad</div>
+                            <div class="experience-date">2022 - Presente</div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <p data-translate="experience.job1.description">Monitoreo de amenazas, análisis de incidentes de seguridad y respuesta a vulnerabilidades en sistemas bancarios críticos.</p>
+                        <div class="responsibilities">
+                            <h4 data-translate="experience.responsibilities">Responsabilidades Clave:</h4>
+                            <ul>
+                                <li data-translate="experience.job1.responsibility1">Gestión de incidentes de seguridad en tiempo real</li>
+                                <li data-translate="experience.job1.responsibility2">Análisis forense digital en sistemas comprometidos</li>
+                                <li data-translate="experience.job1.responsibility3">Coordinación con equipos de respuesta a incidentes</li>
+                                <li data-translate="experience.job1.responsibility4">Desarrollo de playbooks de seguridad</li>
+                            </ul>
+                        </div>
+                        <div class="tech-used">
+                            <span class="tech-tag" data-translate="experience.tech.siem">SIEM</span>
+                            <span class="tech-tag" data-translate="experience.tech.edr">EDR</span>
+                            <span class="tech-tag" data-translate="experience.tech.forensics">Forensics</span>
+                            <span class="tech-tag" data-translate="experience.tech.threat">Threat Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más experience-cards seguirían el mismo patrón -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="certificaciones">
+        <div class="container">
+            <h2 class="section-title" data-translate="certifications.title">Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-translate="certifications.cert1.title">OSCP</h3>
+                    <p data-translate="certifications.cert1.description">Offensive Security Certified Professional</p>
+                    <p data-translate="certifications.cert1.date">Expedición: 2021</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h3 data-translate="certifications.cert2.title">CEH</h3>
+                    <p data-translate="certifications.cert2.description">Certified Ethical Hacker</p>
+                    <p data-translate="certifications.cert2.date">Expedición: 2020</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-bug"></i>
+                    <h3 data-translate="certifications.cert3.title">eJPT</h3>
+                    <p data-translate="certifications.cert3.description">eLearnSecurity Junior Penetration Tester</p>
+                    <p data-translate="certifications.cert3.date">Expedición: 2017</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3 data-translate="certifications.cert4.title">AWS Security</h3>
+                    <p data-translate="certifications.cert4.description">Especialidad en Seguridad de AWS</p>
+                    <p data-translate="certifications.cert4.date">Expedición: 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact.title">Contacto Seguro</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-translate="contact.subtitle">Información de Contacto</h3>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.email">Correo Electrónico</h4>
+                            <p>davidcigaran@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.phone">Teléfono</h4>
+                            <p>688 846 527</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-language"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.languages">Idiomas</h4>
+                            <p data-translate="contact.spanish">Español: Nativo</p>
+                            <p data-translate="contact.english">Inglés: Nivel Medio</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-id-card"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.licenses">Licencias de Conducción</h4>
+                            <p data-translate="contact.licenseB">Permiso B (Coche)</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.secure">Comunicación Segura</h4>
+                            <p data-translate="contact.pgp">PGP disponible bajo solicitud</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-details">
+                            <h4 data-translate="contact.availability">Disponibilidad</h4>
+                            <p data-translate="contact.response">Respuesta en 24-48 horas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-hacker-news"></i></a>
+            </div>
+            <p class="copyright" data-translate="footer.copyright">© 2023 CyberShield. Todos los derechos reservados. Este sitio utiliza conexiones seguras.</p>
+        </div>
+    </footer>
+
+<script>
+/********************
+ * SISTEMA DE TRADUCCIÓN
+ ********************/
+let currentLanguage = 'es';
+let translations = {};
+
+// Función para cargar las traducciones
+async function loadTranslations(lang) {
+    try {
+        console.log(`Cargando traducciones para: ${lang}`);
+        const response = await fetch(`translations/${lang}.json`);
+        
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log(`Traducciones cargadas para ${lang}:`, data);
+        return data;
+        
+    } catch (error) {
+        console.error('Error cargando traducciones:', error);
+        
+        // Si falla y no es español, intentar cargar español
+        if (lang !== 'es') {
+            console.log('Intentando cargar español como fallback...');
+            return loadTranslations('es');
+        }
+        
+        console.error('No se pudieron cargar las traducciones');
+        return {};
+    }
+}
+
+// Función auxiliar para obtener valores anidados en objetos
+function getNestedValue(obj, path) {
+    if (!obj || typeof obj !== 'object') {
+        console.warn('Objeto de traducciones no válido');
+        return null;
+    }
+    
+    return path.split('.').reduce((current, key) => {
+        return current && current[key] !== undefined ? current[key] : null;
+    }, obj);
+}
+
+// Función para aplicar las traducciones
+async function applyTranslations(lang) {
+    console.log(`Aplicando traducciones para: ${lang}`);
+    
+    try {
+        translations = await loadTranslations(lang);
+        currentLanguage = lang;
+        
+        if (Object.keys(translations).length === 0) {
+            console.error('No hay traducciones disponibles');
+            return;
+        }
+        
+        // Actualizar todos los elementos con data-translate
+        const translatableElements = document.querySelectorAll('[data-translate]');
+        console.log(`Encontrados ${translatableElements.length} elementos para traducir`);
+        
+        let translatedCount = 0;
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            const translatedText = getNestedValue(translations, key);
+            
+            if (translatedText) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translatedText;
+                } else {
+                    element.textContent = translatedText;
+                }
+                translatedCount++;
+            } else {
+                console.warn(`No se encontró traducción para clave: ${key}`);
+            }
+        });
+        
+        console.log(`Traducidos ${translatedCount} elementos`);
+        
+        // Actualizar el atributo lang del documento
+        document.documentElement.lang = lang;
+        
+        // Actualizar el selector de idioma
+        const languageSelector = document.getElementById('language-selector');
+        if (languageSelector) {
+            languageSelector.value = lang;
+        }
+        
+        // Guardar preferencia de idioma
+        localStorage.setItem('preferredLanguage', lang);
+        
+        console.log(`Traducciones aplicadas exitosamente para: ${lang}`);
+        
+    } catch (error) {
+        console.error('Error aplicando traducciones:', error);
+    }
+}
+
+// Función para inicializar el sistema de traducción
+async function initTranslation() {
+    console.log('Inicializando sistema de traducción...');
+    
+    // Cargar idioma guardado o usar el del navegador
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    const browserLanguage = navigator.language.split('-')[0];
+    const supportedLanguages = ['es', 'en', 'fr', 'de', 'it'];
+    const defaultLanguage = savedLanguage || (supportedLanguages.includes(browserLanguage) ? browserLanguage : 'es');
+    
+    console.log(`Idioma seleccionado: ${defaultLanguage}`);
+    
+    await applyTranslations(defaultLanguage);
+    
+    // Configurar el evento del selector de idioma
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.addEventListener('change', function() {
+            console.log(`Cambiando idioma a: ${this.value}`);
+            applyTranslations(this.value);
+        });
+    } else {
+        console.error('No se encontró el selector de idioma');
+    }
+}
+
+/********************
+ * PARTICULAS
+ ********************/
+function createParticles() {
+    const container = document.getElementById('particles');
+    if (!container) {
+        console.error('No se encontró el contenedor de partículas');
+        return;
+    }
+    
+    const particleCount = 40;
+    container.innerHTML = '';
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        const startX = Math.random() * 120 - 10;
+        const startY = Math.random() * 120 - 10;
+        particle.style.left = `${startX}%`;
+        particle.style.top = `${startY}%`;
+
+        const size = Math.random() * 8 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+
+        const goldVariation = Math.random() * 40 + 180;
+        const opacity = Math.random() * 0.4 + 0.3;
+        particle.style.backgroundColor = `rgba(${goldVariation}, ${Math.floor(goldVariation * 0.7)}, ${Math.floor(goldVariation * 0.3)}, ${opacity})`;
+
+        const duration = Math.random() * 15 + 15;
+        const animationType = Math.random();
+
+        if (animationType < 0.33) particle.style.animation = `float ${duration}s infinite linear`;
+        else if (animationType < 0.66) particle.style.animation = `floatDiagonal ${duration}s infinite linear`;
+        else particle.style.animation = `floatRandom ${duration}s infinite linear`;
+
+        particle.style.animationDelay = '0s';
+        particle.style.animationPlayState = 'running';
+
+        container.appendChild(particle);
+    }
+}
+
+/********************
+ * ANIMACION SCROLL
+ ********************/
+function initScrollAnimations() {
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+}
+
+/********************
+ * SCROLL SUAVE
+ ********************/
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+/********************
+ * CAMBIO DE TEMA
+ ********************/
+function toggleTheme() {
+    document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') document.body.classList.add('light-theme');
+}
+
+/********************
+ * GOOGLE TRANSLATE (mantenido por compatibilidad)
+ ********************/
+function loadGoogleTranslate() {
+    const gtScript = document.createElement('script');
+    gtScript.type = 'text/javascript';
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(gtScript);
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+/********************
+ * INICIALIZACION
+ ********************/
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM cargado, inicializando componentes...');
+    
+    createParticles();
+    initScrollAnimations();
+    initSmoothScroll();
+    loadTheme();
+    initTranslation(); // Inicializar sistema de traducción
+
+    window.addEventListener('resize', createParticles);
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) createParticles();
+    });
+
+    // Botón de tema
+    const themeBtn = document.querySelector('.theme-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', toggleTheme);
+    } else {
+        console.error('No se encontró el botón de tema');
+    }
+    
+    console.log('Todos los componentes inicializados');
+});
+
+// Función de depuración para verificar que todo funciona
+window.debugTranslations = function() {
+    console.log('=== DEBUG TRADUCCIONES ===');
+    console.log('Idioma actual:', currentLanguage);
+    console.log('Traducciones cargadas:', translations);
+    console.log('Elementos traducibles:', document.querySelectorAll('[data-translate]').length);
+    console.log('Selector de idioma:', document.getElementById('language-selector'));
+};
+</script>
+</body>
+</html>

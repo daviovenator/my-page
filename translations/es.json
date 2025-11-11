@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "¿Quién Soy?",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "education": "Historial Académico",
+    "experience": "Experiencia Laboral",
+    "certifications": "Certificaciones",
+    "contact": "Contacto"
+  },
+  "theme": {
+    "button": "Tema"
+  },
+  "hero": {
+    "title": "Pentesting & Ciberseguridad",
+    "tagline": "Protegiendo sistemas mediante pruebas ofensivas",
+    "description": "Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.",
+    "projectsBtn": "Ver Proyectos",
+    "contactBtn": "Contactar"
+  },
+  "about": {
+    "title": "¿Quién Soy?",
+    "subtitle": "Especialista en Seguridad Ofensiva",
+    "paragraph1": "Soy un profesional de la ciberseguridad especializado en pruebas de penetración y auditorías de seguridad. Mi enfoque combina metodologías estructuradas con pensamiento creativo para identificar vulnerabilidades que otros podrían pasar por alto.",
+    "paragraph2": "He trabajado con empresas de diversos sectores, desde startups tecnológicas hasta corporaciones financieras, ayudándoles a fortalecer sus defensas mediante la identificación proactiva de puntos débiles en sus sistemas.",
+    "paragraph3": "Mi filosofía se basa en que para defender eficazmente, primero hay que entender cómo atacar. Por eso, me mantengo constantemente actualizado con las últimas técnicas de explotación y vectores de ataque.",
+    "certificationsTitle": "Certificaciones",
+    "cert1": "OSCP (Offensive Security Certified Professional)",
+    "cert2": "CEH (Certified Ethical Hacker)",
+    "cert3": "CISSP (Certified Information Systems Security Professional)",
+    "cert4": "CompTIA Security+",
+    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "skill1": {
+      "title": "Pentesting Avanzado",
+      "description": "Pruebas de penetración web, móvil y de red. Análisis de vulnerabilidades y explotación de sistemas. Ingeniería inversa y análisis de malware."
+    },
+    "skill2": {
+      "title": "Herramientas de Seguridad",
+      "description": "Dominio de Metasploit, Burp Suite, Nmap, Wireshark y herramientas de testing. Desarrollo de scripts personalizados para auditorías."
+    },
+    "skill3": {
+      "title": "Desarrollo Seguro",
+      "description": "Revisión de código fuente, análisis de aplicaciones y APIs. Conocimiento en OWASP Top 10 y prácticas de desarrollo seguro."
+    },
+    "skill4": {
+      "title": "Seguridad de Red",
+      "description": "Análisis de arquitecturas de red, detección de intrusiones, firewall y sistemas de prevención. Hardening de sistemas y redes."
+    },
+    "skill5": {
+      "title": "Ingeniería Social",
+      "description": "Pruebas de concienciación, simulaciones de phishing y evaluación de la resistencia humana en organizaciones."
+    },
+    "skill6": {
+      "title": "Seguridad en la Nube",
+      "description": "Auditoría de entornos AWS, Azure y GCP. Implementación de políticas de seguridad y mejores prácticas en la nube."
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "project1": {
+      "title": "Auditoría FinTech",
+      "description": "Evaluación de seguridad completa para una plataforma FinTech, identificando vulnerabilidades críticas en su API y aplicación móvil."
+    },
+    "project2": {
+      "title": "Infraestructura Corporativa",
+      "description": "Pentesting de red interna para empresa del Fortune 500, descubriendo vectores de ataque que permitían movimiento lateral."
+    },
+    "project3": {
+      "title": "Social Engineering",
+      "description": "Campaña de concienciación mediante pruebas de ingeniería social controladas para evaluar la resistencia humana de una organización."
+    },
+    "project4": {
+      "title": "Hardening de Servidores",
+      "description": "Refuerzo de seguridad en servidores críticos para una institución gubernamental, implementando medidas de protección avanzadas."
+    },
+    "tags": {
+      "web": "Web App",
+      "api": "API",
+      "mobile": "Mobile",
+      "network": "Red Interna",
+      "ad": "Active Directory",
+      "privilege": "Privilege Escalation",
+      "phishing": "Phishing",
+      "awareness": "Concienciación",
+      "human": "Factor Humano",
+      "linux": "Linux",
+      "windows": "Windows Server",
+      "hardening": "Hardening"
+    }
+  },
+  "education": {
+    "title": "Historial Académico",
+    "item1": {
+      "title": "Máster en Ciberseguridad",
+      "university": "Universidad Politécnica de Madrid",
+      "description": "Especialización en seguridad ofensiva y pruebas de penetración. Proyecto final sobre análisis de malware avanzado."
+    },
+    "item2": {
+      "title": "Grado en Ingeniería Informática",
+      "university": "Universidad Complutense de Madrid",
+      "description": "Especialidad en seguridad de la información. Trabajo de fin de grado sobre criptografía aplicada."
+    },
+    "item3": {
+      "title": "Bachillerato Tecnológico",
+      "university": "IES Francisco de Goya",
+      "description": "Especialidad en ciencias tecnológicas con enfoque en programación y redes."
+    }
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "responsibilities": "Responsabilidades Clave:",
+    "job1": {
+      "company": "BBVA Security Operations Center",
+      "position": "Analista de Ciberseguridad",
+      "description": "Monitoreo de amenazas, análisis de incidentes de seguridad y respuesta a vulnerabilidades en sistemas bancarios críticos.",
+      "responsibility1": "Gestión de incidentes de seguridad en tiempo real",
+      "responsibility2": "Análisis forense digital en sistemas comprometidos",
+      "responsibility3": "Coordinación con equipos de respuesta a incidentes",
+      "responsibility4": "Desarrollo de playbooks de seguridad"
+    },
+    "tech": {
+      "siem": "SIEM",
+      "edr": "EDR",
+      "forensics": "Forensics",
+      "threat": "Threat Intelligence"
+    }
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "cert1": {
+      "title": "OSCP",
+      "description": "Offensive Security Certified Professional",
+      "date": "Expedición: 2021"
+    },
+    "cert2": {
+      "title": "CEH",
+      "description": "Certified Ethical Hacker",
+      "date": "Expedición: 2020"
+    },
+    "cert3": {
+      "title": "eJPT",
+      "description": "eLearnSecurity Junior Penetration Tester",
+      "date": "Expedición: 2017"
+    },
+    "cert4": {
+      "title": "AWS Security",
+      "description": "Especialidad en Seguridad de AWS",
+      "date": "Expedición: 2022"
+    }
+  },
+  "contact": {
+    "title": "Contacto Seguro",
+    "subtitle": "Información de Contacto",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "languages": "Idiomas",
+    "spanish": "Español: Nativo",
+    "english": "Inglés: Nivel Medio",
+    "licenses": "Licencias de Conducción",
+    "licenseB": "Permiso B (Coche)",
+    "secure": "Comunicación Segura",
+    "pgp": "PGP disponible bajo solicitud",
+    "availability": "Disponibilidad",
+    "response": "Respuesta en 24-48 horas"
+  },
+  "footer": {
+    "copyright": "© 2023 CyberShield. Todos los derechos reservados. Este sitio utiliza conexiones seguras."
+  }
+}

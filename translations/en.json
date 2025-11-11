@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "experience": "Work Experience",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "theme": {
+    "button": "Theme"
+  },
+  "hero": {
+    "title": "Pentesting & Cybersecurity",
+    "tagline": "Protecting systems through offensive testing",
+    "description": "Offensive security specialist with over 8 years of experience identifying vulnerabilities in critical infrastructures and enterprise applications.",
+    "projectsBtn": "View Projects",
+    "contactBtn": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Offensive Security Specialist",
+    "paragraph1": "I am a cybersecurity professional specialized in penetration testing and security audits. My approach combines structured methodologies with creative thinking to identify vulnerabilities that others might overlook.",
+    "paragraph2": "I have worked with companies across various sectors, from tech startups to financial corporations, helping them strengthen their defenses through proactive identification of weaknesses in their systems.",
+    "paragraph3": "My philosophy is based on the principle that to defend effectively, one must first understand how to attack. That's why I constantly stay updated with the latest exploitation techniques and attack vectors.",
+    "certificationsTitle": "Certifications",
+    "cert1": "OSCP (Offensive Security Certified Professional)",
+    "cert2": "CEH (Certified Ethical Hacker)",
+    "cert3": "CISSP (Certified Information Systems Security Professional)",
+    "cert4": "CompTIA Security+",
+    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "skill1": {
+      "title": "Advanced Pentesting",
+      "description": "Web, mobile and network penetration testing. Vulnerability analysis and system exploitation. Reverse engineering and malware analysis."
+    },
+    "skill2": {
+      "title": "Security Tools",
+      "description": "Proficiency in Metasploit, Burp Suite, Nmap, Wireshark and testing tools. Development of custom scripts for audits."
+    },
+    "skill3": {
+      "title": "Secure Development",
+      "description": "Source code review, application and API analysis. Knowledge of OWASP Top 10 and secure development practices."
+    },
+    "skill4": {
+      "title": "Network Security",
+      "description": "Network architecture analysis, intrusion detection, firewall and prevention systems. System and network hardening."
+    },
+    "skill5": {
+      "title": "Social Engineering",
+      "description": "Awareness testing, phishing simulations and evaluation of human resistance in organizations."
+    },
+    "skill6": {
+      "title": "Cloud Security",
+      "description": "AWS, Azure and GCP environment auditing. Implementation of security policies and cloud best practices."
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "project1": {
+      "title": "FinTech Audit",
+      "description": "Complete security assessment for a FinTech platform, identifying critical vulnerabilities in their API and mobile application."
+    },
+    "project2": {
+      "title": "Corporate Infrastructure",
+      "description": "Internal network pentesting for Fortune 500 company, discovering attack vectors that allowed lateral movement."
+    },
+    "project3": {
+      "title": "Social Engineering",
+      "description": "Awareness campaign through controlled social engineering tests to evaluate an organization's human resistance."
+    },
+    "project4": {
+      "title": "Server Hardening",
+      "description": "Security reinforcement on critical servers for a government institution, implementing advanced protection measures."
+    },
+    "tags": {
+      "web": "Web App",
+      "api": "API",
+      "mobile": "Mobile",
+      "network": "Internal Network",
+      "ad": "Active Directory",
+      "privilege": "Privilege Escalation",
+      "phishing": "Phishing",
+      "awareness": "Awareness",
+      "human": "Human Factor",
+      "linux": "Linux",
+      "windows": "Windows Server",
+      "hardening": "Hardening"
+    }
+  },
+  "education": {
+    "title": "Academic History",
+    "item1": {
+      "title": "Master's in Cybersecurity",
+      "university": "Polytechnic University of Madrid",
+      "description": "Specialization in offensive security and penetration testing. Final project on advanced malware analysis."
+    },
+    "item2": {
+      "title": "Bachelor's in Computer Engineering",
+      "university": "Complutense University of Madrid",
+      "description": "Specialty in information security. Final degree project on applied cryptography."
+    },
+    "item3": {
+      "title": "Technological Baccalaureate",
+      "university": "IES Francisco de Goya",
+      "description": "Specialty in technological sciences with focus on programming and networks."
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "responsibilities": "Key Responsibilities:",
+    "job1": {
+      "company": "BBVA Security Operations Center",
+      "position": "Cybersecurity Analyst",
+      "description": "Threat monitoring, security incident analysis and response to vulnerabilities in critical banking systems.",
+      "responsibility1": "Real-time security incident management",
+      "responsibility2": "Digital forensics analysis on compromised systems",
+      "responsibility3": "Coordination with incident response teams",
+      "responsibility4": "Development of security playbooks"
+    },
+    "tech": {
+      "siem": "SIEM",
+      "edr": "EDR",
+      "forensics": "Forensics",
+      "threat": "Threat Intelligence"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "cert1": {
+      "title": "OSCP",
+      "description": "Offensive Security Certified Professional",
+      "date": "Issued: 2021"
+    },
+    "cert2": {
+      "title": "CEH",
+      "description": "Certified Ethical Hacker",
+      "date": "Issued: 2020"
+    },
+    "cert3": {
+      "title": "eJPT",
+      "description": "eLearnSecurity Junior Penetration Tester",
+      "date": "Issued: 2017"
+    },
+    "cert4": {
+      "title": "AWS Security",
+      "description": "AWS Security Specialty",
+      "date": "Issued: 2022"
+    }
+  },
+  "contact": {
+    "title": "Secure Contact",
+    "subtitle": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "languages": "Languages",
+    "spanish": "Spanish: Native",
+    "english": "English: Intermediate Level",
+    "licenses": "Driving Licenses",
+    "licenseB": "License B (Car)",
+    "secure": "Secure Communication",
+    "pgp": "PGP available upon request",
+    "availability": "Availability",
+    "response": "Response within 24-48 hours"
+  },
+  "footer": {
+    "copyright": "© 2023 CyberShield. All rights reserved. This site uses secure connections."
+  }
+}
