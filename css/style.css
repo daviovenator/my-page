@@ -227,7 +227,7 @@ header {
     border-radius: 8px;
     border: none;
     background-color: transparent; /* fondo transparente */
-    color: #cccccc;
+    color: #fff;
     font-weight: 500;
     cursor: pointer;
     box-shadow: none; /* quitar sombra */
@@ -246,7 +246,7 @@ header {
     border: none;
     border-radius: 8px;
     background-color: transparent; /* fondo transparente */
-    color: #cccccc;
+    color: #fff;
     font-weight: 500;
     cursor: pointer;
     box-shadow: none; /* quitar sombra */
@@ -315,7 +315,6 @@ header {
         font-size: 0.8rem;
     }
 }
-
 
     /* Sección Hero - REDISEÑADA con dos columnas */
 .hero {
@@ -1055,4 +1054,29 @@ header {
     transform: translateY(-50%);
     z-index: 1000;
 }
+/* Contenedor del selector de tema */
+.theme-selector {
+    position: relative;
+    display: inline-block;
+}
+
+/* Opciones ocultas por defecto */
+.theme-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(20,20,20,0.95);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Mostrar opciones cuando el contenedor está activo */
+.theme-selector.active .theme-options {
+    display: block;
+}
+
+
 </style>

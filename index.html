@@ -6,12 +6,6 @@
     <title>CyberShield | Pentester & Security Specialist</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
     <!-- Contenedor invisible para el ancla de inicio -->
@@ -44,20 +38,25 @@
         <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
     </ul>
 
-    <div class="header-buttons">
-        <div class="language-btn">
-            <select id="language-selector">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-                <option value="de">Deutsch</option>
-                <option value="it">Italiano</option>
-                <option value="por">Portugués</option>
-                <option value="chi">Chino</option>
-                <option value="ru">Ruso</option>
-            </select>
-        </div>
-        <button class="theme-btn" data-translate="theme.button">Tema</button>
+<div class="header-buttons">
+    <div class="language-btn">
+        <select id="language-selector">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="por">Portugués</option>
+            <option value="chi">Chino</option>
+            <option value="ru">Ruso</option>
+        </select>
+    </div>
+
+<div class="theme-selector">
+    <button class="theme-btn">Tema ▾</button>
+    <div class="theme-options">
+        <div class="theme-option" data-theme="light">Claro</div>
+        <div class="theme-option" data-theme="dark">Oscuro</div>
     </div>
 </div>
 </header>
@@ -579,22 +578,125 @@ function initSmoothScroll() {
         });
     });
 }
-
+/********************
+ * CAMBIO DE TEMA - SISTEMA CON ARCHIVOS CSS SEPARADOS
+ ********************/
+/********************
+ * CAMBIO DE TEMA SIMPLIFICADO
 /********************
  * CAMBIO DE TEMA
  ********************/
-function toggleTheme() {
-    document.body.classList.toggle('light-theme');
-    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+let lightThemeLink = null;
+let currentTheme = 'dark';
+
+function applyTheme(theme) {
+    console.log('Aplicando tema:', theme);
+    currentTheme = theme;
+    
+    if (theme === 'light') {
+        // Cargar style2.css
+        if (!lightThemeLink) {
+            lightThemeLink = document.createElement('link');
+            lightThemeLink.rel = 'stylesheet';
+            lightThemeLink.href = 'css/style2.css';
+            lightThemeLink.id = 'light-theme';
+            document.head.appendChild(lightThemeLink);
+            console.log('✅ style2.css cargado');
+        }
+    } else {
+        // Remover style2.css
+        if (lightThemeLink) {
+            lightThemeLink.remove();
+            lightThemeLink = null;
+            console.log('✅ style2.css removido');
+        }
+    }
+    
+    localStorage.setItem('theme', theme);
+    updateThemeButton(theme);
+}
+
+function updateThemeButton(theme) {
+    const themeBtn = document.querySelector('.theme-btn');
+    if (themeBtn) {
+        themeBtn.textContent = theme === 'light' ? '🌞 Claro ▾' : '🌙 Oscuro ▾';
+    }
+}
+
+function initThemeSystem() {
+    const themeSelector = document.querySelector('.theme-selector');
+    const themeOptions = document.querySelectorAll('.theme-option');
+    
+    if (!themeSelector) {
+        console.error('❌ No se encontró .theme-selector');
+        return;
+    }
+    
+    // Click en botón principal
+    themeSelector.addEventListener('click', (e) => {
+        if (e.target.classList.contains('theme-btn')) {
+            themeSelector.classList.toggle('active');
+            e.stopPropagation();
+        }
+    });
+    
+    // Click en opciones
+    themeOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const theme = option.getAttribute('data-theme');
+            if (theme) {
+                applyTheme(theme);
+                themeSelector.classList.remove('active');
+            }
+            e.stopPropagation();
+        });
+    });
+    
+    // Cerrar menú al click fuera
+    document.addEventListener('click', () => {
+        themeSelector.classList.remove('active');
+    });
 }
 
 function loadTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') document.body.classList.add('light-theme');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    console.log('Cargando tema:', savedTheme);
+    applyTheme(savedTheme);
 }
 
 /********************
- * GOOGLE TRANSLATE (mantenido por compatibilidad)
+ * INICIALIZACIÓN
+ ********************/
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Iniciando aplicación...');
+    
+    // 1. Sistema de temas
+    initThemeSystem();
+    loadTheme();
+    
+    // 2. Otros componentes
+    if (typeof createParticles === 'function') createParticles();
+    if (typeof initScrollAnimations === 'function') initScrollAnimations();
+    if (typeof initSmoothScroll === 'function') initSmoothScroll();
+    if (typeof initTranslation === 'function') initTranslation();
+    
+    // 3. Sistema de menú
+    initMenuSystem();
+    
+    // 4. Event listeners globales
+    window.addEventListener('resize', () => {
+        if (typeof createParticles === 'function') createParticles();
+    });
+    
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && typeof createParticles === 'function') createParticles();
+    });
+    
+    console.log('✅ Aplicación iniciada');
+});
+
+/********************
+ * GOOGLE TRANSLATE (compatibilidad)
  ********************/
 function loadGoogleTranslate() {
     const gtScript = document.createElement('script');
@@ -612,34 +714,95 @@ function googleTranslateElementInit() {
 }
 
 /********************
- * INICIALIZACION
+ * SISTEMA DE MENÚ HAMBURGUESA
  ********************/
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM cargado, inicializando componentes...');
-    
-    createParticles();
-    initScrollAnimations();
-    initSmoothScroll();
-    loadTheme();
-    initTranslation(); // Inicializar sistema de traducción
+function initMenuSystem() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links a');
 
-    window.addEventListener('resize', createParticles);
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) createParticles();
-    });
+    console.log('Inicializando menú hamburguesa:');
+    console.log('Menu toggle:', menuToggle);
+    console.log('Nav links:', navLinks);
+    console.log('Nav items:', navItems.length);
 
-    // Botón de tema
-    const themeBtn = document.querySelector('.theme-btn');
-    if (themeBtn) {
-        themeBtn.addEventListener('click', toggleTheme);
+    if (menuToggle && navLinks) {
+        // Abrir/cerrar menú al hacer click en hamburguesa
+        menuToggle.addEventListener('click', (e) => {
+            navLinks.classList.toggle('active');
+            console.log('Menú toggled, estado:', navLinks.classList.contains('active'));
+            e.stopPropagation();
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        if (navItems.length > 0) {
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    console.log('Menú cerrado por click en enlace');
+                });
+            });
+        }
+
+        // Cerrar menú si se hace click fuera del menú o la hamburguesa
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                console.log('Menú cerrado por click fuera');
+            }
+        });
+        
+        console.log('✅ Menú hamburguesa inicializado');
     } else {
-        console.error('No se encontró el botón de tema');
+        console.warn('⚠️ Elementos del menú no encontrados');
     }
-    
-    console.log('Todos los componentes inicializados');
-});
+}
 
-// =================== DEPURACIÓN ===================
+/********************
+ * HERRAMIENTAS DE DEPURACIÓN
+ ********************/
+window.debugTheme = function() {
+    console.log('=== 🐛 DEBUG TEMA ===');
+    console.log('Tema actual:', currentTheme);
+    console.log('En localStorage:', localStorage.getItem('theme'));
+    console.log('CSS claro cargado:', !!lightThemeLink);
+    console.log('Archivos CSS en head:');
+    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        console.log('  -', link.href);
+    });
+};
+
+window.forceTheme = function(theme) {
+    console.log(`🎛️ Forzando tema: ${theme}`);
+    applyTheme(theme);
+};
+
+// Verificar que los archivos CSS existen
+window.checkThemeFiles = function() {
+    console.log('=== 📁 VERIFICANDO ARCHIVOS CSS ===');
+    fetch('css/style.css')
+        .then(r => console.log('style.css:', r.ok ? '✅ EXISTE' : '❌ NO EXISTE'))
+        .catch(() => console.log('style.css: ❌ ERROR al cargar'));
+    fetch('css/style2.css')
+        .then(r => console.log('style2.css:', r.ok ? '✅ EXISTE' : '❌ NO EXISTE'))
+        .catch(() => console.log('style2.css: ❌ ERROR al cargar'));
+};
+
+// Función para forzar el tema claro (para pruebas)
+window.forceLightTheme = function() {
+    console.log('=== FORZANDO TEMA CLARO ===');
+    applyTheme('light');
+    console.log('Tema claro forzado');
+};
+
+// Función para forzar el tema oscuro (para pruebas)
+window.forceDarkTheme = function() {
+    console.log('=== FORZANDO TEMA OSCURO ===');
+    applyTheme('dark');
+    console.log('Tema oscuro forzado');
+};
+
+// Depuración de traducciones
 window.debugTranslations = function() {
     console.log('=== DEBUG TRADUCCIONES ===');
     console.log('Idioma actual:', window.currentLanguage || 'No definido');
@@ -647,33 +810,6 @@ window.debugTranslations = function() {
     console.log('Elementos traducibles:', document.querySelectorAll('[data-translate]').length);
     console.log('Selector de idioma:', document.getElementById('language-selector'));
 };
-
-// Variables del menú
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links a');
-
-// Abrir/cerrar menú al hacer click en hamburguesa
-menuToggle.addEventListener('click', (e) => {
-    navLinks.classList.toggle('active');
-    e.stopPropagation(); // evita que el clic se propague al document y cierre inmediatamente
-});
-
-// Cerrar menú al hacer click en un enlace
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
-
-// Cerrar menú si se hace click fuera del menú o la hamburguesa
-document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('active');
-    }
-});
-
-
 </script>
 </body>
 </html>
