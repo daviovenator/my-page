@@ -17,9 +17,9 @@
 <header>
     <div class="container nav-container">
         <div class="logo-hamburger">
+            <!-- Logo que desaparece en móviles -->
             <div class="logo">
-                <i class="fas fa-shield-alt"></i>
-                CyberShield
+                Krater
             </div>
             <!-- Botón hamburguesa para móvil -->
             <button class="menu-toggle"><i class="fas fa-bars"></i></button>
@@ -639,21 +639,24 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Todos los componentes inicializados');
 });
 
-// Función de depuración para verificar que todo funciona
+// =================== DEPURACIÓN ===================
 window.debugTranslations = function() {
     console.log('=== DEBUG TRADUCCIONES ===');
-    console.log('Idioma actual:', currentLanguage);
-    console.log('Traducciones cargadas:', translations);
+    console.log('Idioma actual:', window.currentLanguage || 'No definido');
+    console.log('Traducciones cargadas:', window.translations || {});
     console.log('Elementos traducibles:', document.querySelectorAll('[data-translate]').length);
     console.log('Selector de idioma:', document.getElementById('language-selector'));
 };
 
+// Variables del menú
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 
-menuToggle.addEventListener('click', () => {
+// Abrir/cerrar menú al hacer click en hamburguesa
+menuToggle.addEventListener('click', (e) => {
     navLinks.classList.toggle('active');
+    e.stopPropagation(); // evita que el clic se propague al document y cierre inmediatamente
 });
 
 // Cerrar menú al hacer click en un enlace
@@ -661,6 +664,13 @@ navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
     });
+});
+
+// Cerrar menú si se hace click fuera del menú o la hamburguesa
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
 });
 
 

@@ -4,7 +4,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans", "Noto Sans CJK SC", "Arial", sans-serif;
     }
     
     body {
@@ -112,7 +112,8 @@
         background-size: 50px 50px;
         opacity: 0.3;
     }
-/* Header y navegación */
+/* ================= HEADER Y NAVEGACIÓN ================= */
+/* ================= HEADER ================= */
 header {
     background-color: rgba(20, 20, 20, 0.95);
     padding: 15px 30px;
@@ -132,7 +133,7 @@ header {
     align-items: center;
 }
 
-/* Logo y hamburguesa contenedor */
+/* Contenedor logo + hamburguesa */
 .logo-hamburger {
     display: flex;
     align-items: center;
@@ -150,15 +151,16 @@ header {
 
 /* Botón hamburguesa */
 .menu-toggle {
-    display: none;
+    display: none; /* se mostrará en móviles */
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    z-index: 1001; /* encima del menú */
 }
 
-/* Enlaces del menú */
+/* Menú de enlaces */
 .nav-links {
     display: flex;
     list-style: none;
@@ -241,8 +243,28 @@ header {
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    /* Ocultar logo en móviles */
+    .logo {
+        display: none;
+    }
+
+    /* Contenedor logo-hamburguesa ocupa todo y alinea hamburguesa a la derecha */
+    .logo-hamburger {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* hamburguesa a la derecha */
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Mostrar botón hamburguesa a la derecha */
+    .menu-toggle {
+        display: block !important;
+    }
+
+    /* Menú oculto por defecto */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -257,21 +279,25 @@ header {
         z-index: 999;
     }
 
+    /* Menú activo */
     .nav-links.active {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Logo y hamburguesa en la misma fila */
-    .logo-hamburger {
-        gap: 8px;
-    }
-
+    /* Ajuste de botones */
     .header-buttons {
         gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .language-btn select, .theme-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
     }
 }
 
