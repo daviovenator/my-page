@@ -14,42 +14,44 @@
     <!-- Contenedor invisible necesario para Google Translate -->
     <div id="google_translate_element" style="display:none;"></div>
 
-    <header>
-        <div class="container nav-container">
+<header>
+    <div class="container nav-container">
+        <div class="logo-hamburger">
             <div class="logo">
                 <i class="fas fa-shield-alt"></i>
                 CyberShield
             </div>
-            <ul class="nav-links">
-                <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
-                <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
-                <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
-                <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
-                <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
-                <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
-                <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
-            </ul>
-
-            <div class="header-buttons">
-                <!-- Selector de idioma -->
-                <div class="language-btn">
-                    <select id="language-selector">
-                        <option value="es">Español</option>
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                        <option value="it">Italiano</option>
-                        <option value="por">Portugués</option>
-                        <option value="chi">Chino</option>
-                        <option value="ru">Ruso</option>
-                    </select>
-                </div>
-                
-                <!-- Botón de tema -->
-                <button class="theme-btn" data-translate="theme.button">Tema</button>
-            </div>
+            <!-- Botón hamburguesa para móvil -->
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
-    </header>
+
+        <ul class="nav-links">
+            <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
+            <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
+            <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
+            <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
+            <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
+            <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
+            <li><a href="#contacto" data-translate="nav.contact">Contacto</a></li>
+        </ul>
+
+        <div class="header-buttons">
+            <div class="language-btn">
+                <select id="language-selector">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="por">Portugués</option>
+                    <option value="chi">Chino</option>
+                    <option value="ru">Ruso</option>
+                </select>
+            </div>
+            <button class="theme-btn" data-translate="theme.button">Tema</button>
+        </div>
+    </div>
+</header>
 
     <section class="hero" id="inicio">
         <div class="container hero-content">
@@ -645,6 +647,23 @@ window.debugTranslations = function() {
     console.log('Elementos traducibles:', document.querySelectorAll('[data-translate]').length);
     console.log('Selector de idioma:', document.getElementById('language-selector'));
 };
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Cerrar menú al hacer click en un enlace
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+
 </script>
 </body>
 </html>

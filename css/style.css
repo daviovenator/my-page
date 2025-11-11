@@ -115,7 +115,7 @@
 /* Header y navegación */
 header {
     background-color: rgba(20, 20, 20, 0.95);
-    padding: 15px 30px; /* ajustado para dar espacio a los botones */
+    padding: 15px 30px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -126,14 +126,20 @@ header {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Contenedor principal del header */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo alineado a la izquierda */
+/* Logo y hamburguesa contenedor */
+.logo-hamburger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -142,13 +148,17 @@ header {
     color: #D4AF37;
 }
 
-/* Enlaces del menú centrados */
-.nav-links-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
+/* Enlaces del menú */
 .nav-links {
     display: flex;
     list-style: none;
@@ -162,14 +172,10 @@ header {
     color: #cccccc;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
     position: relative;
     font-size: 0.95rem;
     white-space: nowrap;
-}
-
-.nav-links a:hover {
-    color: #D4AF37;
+    transition: color 0.3s;
 }
 
 .nav-links a::after {
@@ -183,59 +189,90 @@ header {
     transition: width 0.3s;
 }
 
+.nav-links a:hover {
+    color: #D4AF37;
+}
+
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Contenedor de botones */
+/* Botones */
 .header-buttons {
     display: flex;
     gap: 12px;
     align-items: center;
 }
 
-/* Selector de idioma */
 .language-btn select {
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
-    background-color: transparent; /* fondo negro */
-    color: #fff; /* letra blanca */
+    background-color: #111;
+    color: #fff;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    appearance: none; /* elimina estilo por defecto del select */
+    transition: all 0.3s ease;
+    appearance: none;
 }
 
 .language-btn select:hover {
-    background-color: #222; /* un poco más claro al hover */
+    background-color: #222;
     transform: translateY(-2px);
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
-/* Botón de tema */
 .theme-btn {
     padding: 8px 18px;
     border: none;
     border-radius: 8px;
-    background-color: transparent; /* fondo negro */
-    color: #fff; /* letra blanca */
+    background-color: #111;
+    color: #fff;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
 .theme-btn:hover {
-    background-color: #222; /* un poco más claro al hover */
+    background-color: #222;
     transform: translateY(-2px);
     box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
-/* Opcional: flecha personalizada en el select */
-.language-btn select::-ms-expand {
-    display: none; /* IE10+ */
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(20,20,20,0.95);
+        padding: 15px 0;
+        border-top: 1px solid rgba(212,175,55,0.3);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Logo y hamburguesa en la misma fila */
+    .logo-hamburger {
+        gap: 8px;
+    }
+
+    .header-buttons {
+        gap: 8px;
+    }
 }
 
     /* Sección Hero - REDISEÑADA con dos columnas */
