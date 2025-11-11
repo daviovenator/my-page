@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "关于我",
+    "skills": "技能",
+    "projects": "项目",
+    "education": "教育背景",
+    "experience": "工作经历",
+    "certifications": "认证",
+    "contact": "联系方式"
+  },
+  "theme": {
+    "button": "主题"
+  },
+  "hero": {
+    "title": "渗透测试与网络安全",
+    "tagline": "通过进攻性测试保护系统安全",
+    "description": "专注于进攻性安全领域的专家，拥有超过8年识别关键基础设施和企业应用漏洞的经验。",
+    "projectsBtn": "查看项目",
+    "contactBtn": "联系我"
+  },
+  "about": {
+    "title": "关于我",
+    "subtitle": "进攻性安全专家",
+    "paragraph1": "我是专注于渗透测试和安全审计的网络安全专业人士。我的方法结合了结构化方法论与创造性思维，以识别他人可能忽略的漏洞。",
+    "paragraph2": "我曾与多个行业的公司合作，从科技初创公司到金融企业，通过主动识别其系统弱点来帮助他们加强防御。",
+    "paragraph3": "我的理念基于：要有效防御，首先必须了解如何攻击。因此，我不断更新最新的漏洞利用技术和攻击向量知识。",
+    "certificationsTitle": "专业认证",
+    "cert1": "OSCP (Offensive Security认证专家)",
+    "cert2": "CEH (认证道德黑客)",
+    "cert3": "CISSP (认证信息系统安全专家)",
+    "cert4": "CompTIA Security+",
+    "cert5": "eJPT (eLearnSecurity初级渗透测试员)"
+  },
+  "skills": {
+    "title": "技术技能",
+    "skill1": {
+      "title": "高级渗透测试",
+      "description": "Web、移动和网络渗透测试。漏洞分析和系统利用。逆向工程和恶意软件分析。"
+    },
+    "skill2": {
+      "title": "安全工具",
+      "description": "精通Metasploit、Burp Suite、Nmap、Wireshark和测试工具。为审计开发定制脚本。"
+    },
+    "skill3": {
+      "title": "安全开发",
+      "description": "源代码审查、应用程序和API分析。熟悉OWASP Top 10和安全开发实践。"
+    },
+    "skill4": {
+      "title": "网络安全",
+      "description": "网络架构分析、入侵检测、防火墙和防护系统。系统和网络加固。"
+    },
+    "skill5": {
+      "title": "社会工程学",
+      "description": "安全意识测试、钓鱼模拟和组织人员安全评估。"
+    },
+    "skill6": {
+      "title": "云安全",
+      "description": "AWS、Azure和GCP环境审计。云安全策略实施和最佳实践。"
+    }
+  },
+  "projects": {
+    "title": "重点项目",
+    "project1": {
+      "title": "金融科技审计",
+      "description": "为金融科技平台进行全面安全评估，识别其API和移动应用中的关键漏洞。"
+    },
+    "project2": {
+      "title": "企业基础设施",
+      "description": "为财富500强公司进行内部网络渗透测试，发现允许横向移动的攻击向量。"
+    },
+    "project3": {
+      "title": "社会工程学",
+      "description": "通过受控的社会工程学测试开展安全意识活动，评估组织的人员安全防护能力。"
+    },
+    "project4": {
+      "title": "服务器加固",
+      "description": "为政府机构的关键服务器加强安全，实施高级保护措施。"
+    },
+    "tags": {
+      "web": "Web应用",
+      "api": "API",
+      "mobile": "移动端",
+      "network": "内部网络",
+      "ad": "Active Directory",
+      "privilege": "权限提升",
+      "phishing": "网络钓鱼",
+      "awareness": "安全意识",
+      "human": "人为因素",
+      "linux": "Linux",
+      "windows": "Windows服务器",
+      "hardening": "系统加固"
+    }
+  },
+  "education": {
+    "title": "教育背景",
+    "item1": {
+      "title": "网络安全硕士",
+      "university": "马德里理工大学",
+      "description": "专攻进攻性安全和渗透测试。毕业论文关于高级恶意软件分析。"
+    },
+    "item2": {
+      "title": "计算机工程学士",
+      "university": "马德里康普顿斯大学",
+      "description": "信息安全专业。毕业论文关于应用密码学。"
+    },
+    "item3": {
+      "title": "技术高中",
+      "university": "IES Francisco de Goya",
+      "description": "科技科学专业，专注于编程和网络。"
+    }
+  },
+  "experience": {
+    "title": "工作经历",
+    "responsibilities": "主要职责：",
+    "job1": {
+      "company": "BBVA安全运营中心",
+      "position": "网络安全分析师",
+      "description": "监控威胁，分析安全事件，响应关键银行系统的漏洞。",
+      "responsibility1": "实时安全事件管理",
+      "responsibility2": "受损系统的数字取证分析",
+      "responsibility3": "与事件响应团队协调",
+      "responsibility4": "开发安全操作手册"
+    },
+    "tech": {
+      "siem": "SIEM",
+      "edr": "EDR",
+      "forensics": "取证",
+      "threat": "威胁情报"
+    }
+  },
+  "certifications": {
+    "title": "专业认证",
+    "cert1": {
+      "title": "OSCP",
+      "description": "Offensive Security认证专家",
+      "date": "颁发时间：2021年"
+    },
+    "cert2": {
+      "title": "CEH",
+      "description": "认证道德黑客",
+      "date": "颁发时间：2020年"
+    },
+    "cert3": {
+      "title": "eJPT",
+      "description": "eLearnSecurity初级渗透测试员",
+      "date": "颁发时间：2017年"
+    },
+    "cert4": {
+      "title": "AWS安全",
+      "description": "AWS安全专业认证",
+      "date": "颁发时间：2022年"
+    }
+  },
+  "contact": {
+    "title": "安全联系",
+    "subtitle": "联系信息",
+    "email": "电子邮件",
+    "phone": "电话",
+    "languages": "语言能力",
+    "spanish": "西班牙语：母语",
+    "english": "英语：中级水平",
+    "licenses": "驾驶执照",
+    "licenseB": "B照（汽车）",
+    "secure": "安全通信",
+    "pgp": "可根据要求提供PGP密钥",
+    "availability": "可用性",
+    "response": "24-48小时内回复"
+  },
+  "footer": {
+    "copyright": "© 2023 CyberShield。保留所有权利。本网站使用安全连接。"
+  }
+}
