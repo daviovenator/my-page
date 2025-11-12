@@ -221,65 +221,50 @@ header {
     align-items: center;
 }
 
-/* Botón de idiomas transparente */
-.language-btn select {
+/* === Estilo unificado para selects === */
+.language-btn select,
+.theme-btn select {
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
-    background-color: transparent; /* fondo transparente */
-    color: #fff;
+    background-color: transparent;
+    color: #cccccc;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: none; /* quitar sombra */
+    box-shadow: none;
     transition: all 0.3s ease;
     appearance: none;
 }
 
-.language-btn select:hover {
-    background-color: rgba(255,255,255,0.1); /* leve fondo al pasar el cursor */
+.language-btn select:hover,
+.theme-btn select:hover {
+    background-color: rgba(255,255,255,0.1);
     transform: translateY(-2px);
 }
 
-/* Botón de tema transparente */
-.theme-btn {
-    padding: 8px 18px;
-    border: none;
-    border-radius: 8px;
-    background-color: transparent; /* fondo transparente */
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: none; /* quitar sombra */
-    transition: all 0.3s ease;
-}
-
-.theme-btn:hover {
-    background-color: rgba(255,255,255,0.1); /* leve fondo al pasar el cursor */
-    transform: translateY(-2px);
+.language-btn select:focus,
+.theme-btn select:focus {
+    outline: none;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-    /* Ocultar logo en móviles */
     .logo {
         display: none;
     }
 
-    /* Contenedor logo-hamburguesa ocupa todo y alinea hamburguesa a la derecha */
     .logo-hamburger {
         width: 100%;
         display: flex;
-        justify-content: flex-end; /* hamburguesa a la derecha */
+        justify-content: flex-end;
         align-items: center;
         gap: 0;
     }
 
-    /* Mostrar botón hamburguesa a la derecha */
     .menu-toggle {
         display: block !important;
     }
 
-    /* Menú oculto por defecto */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -294,12 +279,10 @@ header {
         z-index: 999;
     }
 
-    /* Menú activo */
     .nav-links.active {
         display: flex;
     }
 
-    /* Ajuste de botones */
     .header-buttons {
         gap: 8px;
     }
@@ -310,7 +293,8 @@ header {
         padding: 10px 15px;
     }
 
-    .language-btn select, .theme-btn {
+    .language-btn select,
+    .theme-btn select {
         padding: 5px 10px;
         font-size: 0.8rem;
     }
@@ -988,9 +972,7 @@ header {
     
     #certificaciones.section {
   background: transparent !important; /* quita el gris */
-}
-
-    
+}   
     /* CONTACTO - Versión con fondos oscuros */
     #contacto {
         background: transparent; /* Fondo más sólido */
@@ -1078,5 +1060,117 @@ header {
     display: block;
 }
 
+/* ========== FOOTER - TEMA OSCURO ELEGANTE Y COMPACTO ========== */
 
+/* Aplicar solo cuando NO está el tema claro */
+body:not(.light-theme) footer {
+    background: #1a1a1a !important;
+    padding: 30px 0 20px 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body:not(.light-theme) footer .container {
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+/* Enlaces sociales - TRANSPARENTES */
+body:not(.light-theme) footer .social-links {
+    display: flex !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+}
+
+body:not(.light-theme) footer .social-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 45px !important;
+    height: 45px !important;
+    background: transparent !important; /* FONDO COMPLETAMENTE TRANSPARENTE */
+    border-radius: 10px !important;
+    color: #ecf0f1 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+body:not(.light-theme) footer .social-link i {
+    font-size: 1.3rem !important;
+    background: transparent !important;
+    color: #ecf0f1 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Colores específicos para cada red social */
+body:not(.light-theme) footer .social-link:nth-child(1) i { /* LinkedIn */
+    color: #0077b5 !important;
+}
+
+body:not(.light-theme) footer .social-link:nth-child(2) i { /* GitHub */
+    color: #6cc644 !important;
+}
+
+body:not(.light-theme) footer .social-link:nth-child(3) i { /* Twitter */
+    color: #1da1f2 !important;
+}
+
+body:not(.light-theme) footer .social-link:nth-child(4) i { /* Hacker News */
+    color: #ff6600 !important;
+}
+
+/* Efectos hover - TRANSPARENTE CON BORDE MÁS VISIBLE */
+body:not(.light-theme) footer .social-link:hover {
+    background: transparent !important; /* Mantener transparente al hover */
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important; /* Borde más visible al hover */
+}
+
+body:not(.light-theme) footer .social-link:hover i {
+    transform: scale(1.1) !important;
+}
+
+/* Colores al hover - MÁS BRILLANTES */
+body:not(.light-theme) footer .social-link:nth-child(1):hover i {
+    color: #00a0dc !important;
+    filter: brightness(1.2) !important; /* Más brillante */
+}
+
+body:not(.light-theme) footer .social-link:nth-child(2):hover i {
+    color: #5cb85c !important;
+    filter: brightness(1.2) !important;
+}
+
+body:not(.light-theme) footer .social-link:nth-child(3):hover i {
+    color: #1a91da !important;
+    filter: brightness(1.2) !important;
+}
+
+body:not(.light-theme) footer .social-link:nth-child(4):hover i {
+    color: #ff8533 !important;
+    filter: brightness(1.2) !important;
+}
+
+/* Texto de copyright */
+body:not(.light-theme) footer .copyright {
+    color: #bdc3c7 !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    background: transparent !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.3px !important;
+}
 </style>
