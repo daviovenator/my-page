@@ -12,24 +12,23 @@
     "button": "Tema"
   },
   "hero": {
-    "title": "Pentesting & Ciberseguridad",
-    "tagline": "Protegiendo sistemas mediante pruebas ofensivas",
-    "description": "Especialista en seguridad ofensiva con más de 8 años de experiencia identificando vulnerabilidades en infraestructuras críticas y aplicaciones empresariales.",
+    "title": "David Cigaran Flores",
+    "tagline": "Formación práctica en pentesting y análisis ofensivo",
+    "description": "Recientemente formado en The Bridge y apasionado por la ciberseguridad ofensiva. Busco mi primera oportunidad profesional para aplicar mis conocimientos, aprender de expertos y aportar valor desde el primer día.",
     "projectsBtn": "Ver Proyectos",
     "contactBtn": "Contactar"
   },
   "about": {
     "title": "¿Quién Soy?",
-    "subtitle": "Especialista en Seguridad Ofensiva",
-    "paragraph1": "Soy un profesional de la ciberseguridad especializado en pruebas de penetración y auditorías de seguridad. Mi enfoque combina metodologías estructuradas con pensamiento creativo para identificar vulnerabilidades que otros podrían pasar por alto.",
-    "paragraph2": "He trabajado con empresas de diversos sectores, desde startups tecnológicas hasta corporaciones financieras, ayudándoles a fortalecer sus defensas mediante la identificación proactiva de puntos débiles en sus sistemas.",
-    "paragraph3": "Mi filosofía se basa en que para defender eficazmente, primero hay que entender cómo atacar. Por eso, me mantengo constantemente actualizado con las últimas técnicas de explotación y vectores de ataque.",
+    "subtitle": "Aprendiz Junior en Seguridad Ofensiva",
+    "paragraph1": "Mi nombre es David Cigarán Flores, tengo 23 años y recientemente he finalizado mis estudios de Administración de Sistemas Informáticos en Red (ASIR) y el bootcamp de Ciberseguridad en The Bridge, donde descubrí mi pasión por la seguridad ofensiva y el análisis de vulnerabilidades.",
+    "paragraph2": "Durante mi formación he desarrollado una base sólida en redes, sistemas y metodologías de pentesting, y sigo ampliando mis conocimientos por interés propio. Me considero una persona responsable, con muchas ganas de aprender y con la capacidad de adaptarme rápidamente a nuevos entornos. Disfruto trabajando en equipo, compartiendo ideas y enfrentando retos técnicos que me permitan crecer.",
+    "paragraph3": "Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender de expertos, enfrentar desafíos reales y aportar desde el primer día. Mi objetivo es seguir mejorando poco a poco, reforzar mis habilidades y llegar a ser un buen profesional en el mundo de la ciberseguridad.",
     "certificationsTitle": "Certificaciones",
     "cert1": "OSCP (Offensive Security Certified Professional)",
     "cert2": "CEH (Certified Ethical Hacker)",
-    "cert3": "CISSP (Certified Information Systems Security Professional)",
-    "cert4": "CompTIA Security+",
-    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+    "cert3": "eJPT (eLearnSecurity Junior Penetration Tester)",
+    "cert4": "AWS Security"
   },
   "skills": {
     "title": "Habilidades Técnicas",
@@ -152,8 +151,8 @@
     }
   },
   "contact": {
-    "title": "Contacto Seguro",
-    "subtitle": "Información de Contacto",
+    "title": "Contacto",
+    "subtitle": "Información Personal",
     "email": "Correo Electrónico",
     "phone": "Teléfono",
     "languages": "Idiomas",
@@ -161,10 +160,8 @@
     "english": "Inglés: Nivel Medio",
     "licenses": "Licencias de Conducción",
     "licenseB": "Permiso B (Coche)",
-    "secure": "Comunicación Segura",
-    "pgp": "PGP disponible bajo solicitud",
     "availability": "Disponibilidad",
-    "response": "Respuesta en 24-48 horas"
+    "response": "Inmediata"
   },
   "footer": {
     "copyright": "© 2023 CyberShield. Todos los derechos reservados. Este sitio utiliza conexiones seguras."
