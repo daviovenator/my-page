@@ -112,6 +112,8 @@
         background-size: 50px 50px;
         opacity: 0.3;
     }
+    
+
 /* ================= HEADER ================= */
 header {
     background-color: rgba(20, 20, 20, 0.95);
@@ -300,10 +302,9 @@ header {
     }
 }
 
-    /* Sección Hero - REDISEÑADA con dos columnas */
+/* Sección Hero - CORREGIDA */
 .hero {
     padding: 80px 0 60px;
-    text-align: center;
     /* 🔴 Fondo cambiado a un degradado rojizo */
     background: linear-gradient(135deg, rgba(255, 60, 60, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%);
     min-height: 70vh;
@@ -311,206 +312,188 @@ header {
     align-items: center;
 }
 
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
 
-    .hero-content {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        text-align: left;
-    }
+.hero-profile {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    /* MOVIMIENTO: Empujar todo un poco más a la derecha */
+    margin-left: 80px;
+}
 
+.profile-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    /* CAMBIO: Imagen cuadrada con bordes ligeramente redondeados */
+    border-radius: 12px;
+    /* CAMBIO: Quitado el fondo amarillo-dorado del borde */
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    /* CAMBIO: Quitado el shadow amarillo-dorado */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    /* CAMBIO: Asegurar que la imagen ocupe todo el espacio sin fondos extraños */
+    object-fit: cover;
+    background: transparent;
+}
+
+.profile-image img:hover {
+    transform: scale(1.03);
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #D4AF37, #F4D03F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #b0b0b0;
+    font-weight: 300;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 14px 35px;
+    background-color: #D4AF37;
+    color: #0f0f0f;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid #D4AF37;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #D4D4D4;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: #D4D4D4;
+    border: 2px solid #D4D4D4;
+}
+
+.cta-button.secondary:hover {
+    background-color: #D4AF37;
+    color: #0f0f0f;
+    border: 2px solid #D4AF37;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive para Hero */
+@media (max-width: 968px) {
     .hero-profile {
-        flex: 0 0 300px;
-        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        /* MOVIMIENTO: En móvil quitamos el margen izquierdo */
+        margin-left: 0;
+    }
+    
+    .profile-image {
+        flex: none;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 40px;
+        min-height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .profile-image {
+        flex: 0 0 250px;
+    }
+    
+    .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
+}
 
-    .profile-image {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #D4AF37, #F4D03F);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        border: 5px solid rgba(212, 175, 55, 0.3);
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-    }
-
-    .profile-image i {
-        font-size: 6rem;
-        color: #1a1a1a;
-    }
-
-    .hero-name {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #D4AF37;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .hero-text {
-        flex: 1;
-    }
-
+@media (max-width: 480px) {
     .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 15px;
-        background: linear-gradient(90deg, #D4AF37, #F4D03F);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 1.2;
+        font-size: 1.8rem;
     }
-
-    .tagline {
-        font-size: 1.3rem;
-        margin-bottom: 25px;
-        color: #b0b0b0;
-        font-weight: 300;
+    
+    .profile-image {
+        flex: 0 0 200px;
     }
-
+    
     .hero p {
-        margin-bottom: 30px;
-        font-size: 1.1rem;
-        color: #cccccc;
-        max-width: 600px;
-        line-height: 1.7;
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .cta-button {
-        padding: 14px 35px;
-        background-color: #D4AF37;
-        color: #0f0f0f;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: all 0.3s;
-        border: 2px solid #D4AF37;
         font-size: 1rem;
-        display: inline-block;
     }
-
-    .cta-button:hover {
-        background-color: transparent;
-        color: #D4AF37;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.95rem;
     }
-
-    .cta-button.secondary {
-        background-color: transparent;
-        color: #D4AF37;
-    }
-
-    .cta-button.secondary:hover {
-        background-color: #D4AF37;
-        color: #0f0f0f;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-    }
-
-    /* Responsive para Hero */
-    @media (max-width: 968px) {
-        .hero-content {
-            flex-direction: column;
-            text-align: center;
-            gap: 30px;
-        }
-        
-        .hero-profile {
-            flex: none;
-        }
-        
-        .hero-text {
-            text-align: center;
-        }
-        
-        .cta-buttons {
-            justify-content: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-        
-        .hero-name {
-            font-size: 2rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .hero {
-            padding: 60px 0 40px;
-            min-height: auto;
-        }
-        
-        .hero h1 {
-            font-size: 2.2rem;
-        }
-        
-        .hero-name {
-            font-size: 1.8rem;
-        }
-        
-        .tagline {
-            font-size: 1.1rem;
-        }
-        
-        .profile-image {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .profile-image i {
-            font-size: 4rem;
-        }
-        
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 1.8rem;
-        }
-        
-        .hero-name {
-            font-size: 1.6rem;
-        }
-        
-        .profile-image {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .profile-image i {
-            font-size: 3.5rem;
-        }
-        
-        .hero p {
-            font-size: 1rem;
-        }
-        
-        .cta-button {
-            padding: 12px 30px;
-            font-size: 0.95rem;
-        }
-    }
-
+}
+}
     /* Secciones generales */
     .section {
         padding: 100px 0;
