@@ -1156,4 +1156,14 @@ body:not(.light-theme) footer .copyright {
     font-weight: 300 !important;
     letter-spacing: 0.3px !important;
 }
+
+/* Ocultar sección proyectos */
+#proyectos {
+    display: none !important;
+}
+
+/* Ocultar enlace de Proyectos en el header */
+.nav-links li a[href="#proyectos"] {
+    display: none !important;
+}
 </style>

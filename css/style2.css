@@ -1,5 +1,12 @@
 /* ========== SECCIÓN QUIEN SOY - TEMA CLARO ========== */
-
+    body {
+        background-color: #717171;
+        color: #e0e0e0;
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+        padding-top: 80px;
+    }
 /* Fondo blanco suave para toda la sección */
 #quien-soy.section {
     background-color: #717171 !important; /* Blanco muy suave */
@@ -743,4 +750,14 @@ footer .copyright {
     border-radius: 8px !important;
     background: rgba(255, 255, 255, 0.1) !important; /* Fondo semitransparente */
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ocultar sección proyectos */
+#proyectos {
+    display: none !important;
+}
+
+/* Ocultar enlace de Proyectos en el header */
+.nav-links li a[href="#proyectos"] {
+    display: none !important;
 }
