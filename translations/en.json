@@ -3,7 +3,7 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
-    "education": "Education",
+    "education": "Academic History",
     "experience": "Work Experience",
     "certifications": "Certifications",
     "contact": "Contact"
@@ -12,61 +12,56 @@
     "button": "Theme"
   },
   "hero": {
-    "title": "Pentesting & Cybersecurity",
-    "tagline": "Protecting systems through offensive testing",
-    "description": "Offensive security specialist with over 8 years of experience identifying vulnerabilities in critical infrastructures and enterprise applications.",
+    "title": "David Cigaran Flores",
+    "tagline": "Practical training in pentesting and offensive analysis",
+    "description": "Recently trained at The Bridge and passionate about offensive cybersecurity. Looking for my first professional opportunity to apply my knowledge, learn from experts and add value from day one.",
     "projectsBtn": "View Projects",
     "contactBtn": "Contact"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Offensive Security Specialist",
-    "paragraph1": "I am a cybersecurity professional specialized in penetration testing and security audits. My approach combines structured methodologies with creative thinking to identify vulnerabilities that others might overlook.",
-    "paragraph2": "I have worked with companies across various sectors, from tech startups to financial corporations, helping them strengthen their defenses through proactive identification of weaknesses in their systems.",
-    "paragraph3": "My philosophy is based on the principle that to defend effectively, one must first understand how to attack. That's why I constantly stay updated with the latest exploitation techniques and attack vectors.",
-    "certificationsTitle": "Certifications",
-    "cert1": "OSCP (Offensive Security Certified Professional)",
-    "cert2": "CEH (Certified Ethical Hacker)",
-    "cert3": "CISSP (Certified Information Systems Security Professional)",
-    "cert4": "CompTIA Security+",
-    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+    "subtitle": "Junior Offensive Security Apprentice",
+    "paragraph1": "My name is David Cigarán Flores, I am 23 years old and I have recently completed my studies in Network Computer Systems Administration (ASIR) and the Cybersecurity bootcamp at The Bridge, where I discovered my interest in offensive security and vulnerability analysis, more specifically in the Red Team field.",
+    "paragraph2": "During my training I have developed a solid foundation in networks, systems and pentesting methodologies, and I continue to expand my knowledge out of personal interest. I consider myself a responsible person, eager to learn and with the ability to quickly adapt to new environments. I enjoy working in teams, sharing ideas and facing technical challenges that allow me to grow.",
+    "paragraph3": "I'm looking for an opportunity to start my career in an environment where I can learn from experts, face real challenges and contribute from day one. My goal is to keep improving little by little, strengthen my skills and become a good professional in the world of offensive cybersecurity.",
+    "certificationsTitle": "Certifications"
   },
   "skills": {
     "title": "Technical Skills",
     "skill1": {
-      "title": "Advanced Pentesting",
-      "description": "Web, mobile and network penetration testing. Vulnerability analysis and system exploitation. Reverse engineering and malware analysis."
+      "title": "Basic Pentesting",
+      "description": "Web, mobile and network penetration testing. Fuzzing, SQL Injections, Payloads, Brute force among others"
     },
     "skill2": {
-      "title": "Security Tools",
-      "description": "Proficiency in Metasploit, Burp Suite, Nmap, Wireshark and testing tools. Development of custom scripts for audits."
+      "title": "Some Tools",
+      "description": "Control over Metasploit, Burp Suite, Nmap, Wireshark and testing tools (Red and Blue Team)."
     },
     "skill3": {
-      "title": "Secure Development",
-      "description": "Source code review, application and API analysis. Knowledge of OWASP Top 10 and secure development practices."
+      "title": "Creativity",
+      "description": "Source code review and reverse engineering in audits."
     },
     "skill4": {
-      "title": "Network Security",
-      "description": "Network architecture analysis, intrusion detection, firewall and prevention systems. System and network hardening."
+      "title": "Network Reading",
+      "description": "Network architecture analysis, intrusion detection through firewall and prevention systems."
     },
     "skill5": {
       "title": "Social Engineering",
-      "description": "Awareness testing, phishing simulations and evaluation of human resistance in organizations."
+      "description": "Penetration tests, phishing simulations and CVE exploitation"
     },
     "skill6": {
       "title": "Cloud Security",
-      "description": "AWS, Azure and GCP environment auditing. Implementation of security policies and cloud best practices."
+      "description": "AWS knowledge for authorized penetration testing."
     }
   },
   "projects": {
     "title": "Featured Projects",
     "project1": {
       "title": "FinTech Audit",
-      "description": "Complete security assessment for a FinTech platform, identifying critical vulnerabilities in their API and mobile application."
+      "description": "Complete security assessment for a FinTech platform, identifying critical vulnerabilities in its API and mobile application."
     },
     "project2": {
       "title": "Corporate Infrastructure",
-      "description": "Internal network pentesting for Fortune 500 company, discovering attack vectors that allowed lateral movement."
+      "description": "Internal network pentesting for a Fortune 500 company, discovering attack vectors that allowed lateral movement."
     },
     "project3": {
       "title": "Social Engineering",
@@ -94,38 +89,42 @@
   "education": {
     "title": "Academic History",
     "item1": {
-      "title": "Master's in Cybersecurity",
-      "university": "Polytechnic University of Madrid",
-      "description": "Specialization in offensive security and penetration testing. Final project on advanced malware analysis."
+      "title": "Compulsory Secondary Education (E.S.O)",
+      "university": "Ntra.Sra del Rosario Dominicas Barakaldo",
+      "description": ""
     },
     "item2": {
-      "title": "Bachelor's in Computer Engineering",
-      "university": "Complutense University of Madrid",
-      "description": "Specialty in information security. Final degree project on applied cryptography."
+      "title": "Intermediate Degree in Hospitality and Tourism",
+      "university": "(UPV/EHU Leioa)",
+      "description": ""
     },
     "item3": {
-      "title": "Technological Baccalaureate",
-      "university": "IES Francisco de Goya",
-      "description": "Specialty in technological sciences with focus on programming and networks."
+      "title": "Learning methodologies similar to S.M.R (Microcomputer Systems in Networks)",
+      "university": "Campus Training Bilbao",
+      "description": ""
+    },
+    "item4": {
+      "title": "Network Computer Systems Administration (A.S.I.R)",
+      "university": "ALMI Study Center (Deusto)",
+      "description": ""
+    },
+    "item5": {
+      "title": "Cybersecurity Bootcamp",
+      "university": "The Bridge",
+      "description": ""
     }
   },
   "experience": {
     "title": "Work Experience",
-    "responsibilities": "Key Responsibilities:",
+    "responsibilities": "Most important tasks:",
     "job1": {
-      "company": "BBVA Security Operations Center",
-      "position": "Cybersecurity Analyst",
-      "description": "Threat monitoring, security incident analysis and response to vulnerabilities in critical banking systems.",
-      "responsibility1": "Real-time security incident management",
-      "responsibility2": "Digital forensics analysis on compromised systems",
-      "responsibility3": "Coordination with incident response teams",
-      "responsibility4": "Development of security playbooks"
-    },
-    "tech": {
-      "siem": "SIEM",
-      "edr": "EDR",
-      "forensics": "Forensics",
-      "threat": "Threat Intelligence"
+      "company": "ALMI Study Center",
+      "position": "Internship at the Center",
+      "description": "So far I haven't had work experience in this sector, as I've had it in others, but during my internship at ALMI I had to adapt the Basurto Day Center website to requests I received.",
+      "responsibility1": "Website import and export.",
+      "responsibility2": "Database creation and management",
+      "responsibility3": "Good plugin control for staff and consumer use.",
+      "responsibility4": "Documentation of changes and previously performed tests."
     }
   },
   "certifications": {
@@ -152,8 +151,8 @@
     }
   },
   "contact": {
-    "title": "Secure Contact",
-    "subtitle": "Contact Information",
+    "title": "Contact",
+    "subtitle": "Personal Information",
     "email": "Email",
     "phone": "Phone",
     "languages": "Languages",
@@ -161,10 +160,8 @@
     "english": "English: Intermediate Level",
     "licenses": "Driving Licenses",
     "licenseB": "License B (Car)",
-    "secure": "Secure Communication",
-    "pgp": "PGP available upon request",
     "availability": "Availability",
-    "response": "Response within 24-48 hours"
+    "response": "Immediate"
   },
   "footer": {
     "copyright": "© 2023 CyberShield. All rights reserved. This site uses secure connections."

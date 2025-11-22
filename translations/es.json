@@ -21,47 +21,43 @@
   "about": {
     "title": "¿Quién Soy?",
     "subtitle": "Aprendiz Junior en Seguridad Ofensiva",
-    "paragraph1": "Mi nombre es David Cigarán Flores, tengo 23 años y recientemente he finalizado mis estudios de Administración de Sistemas Informáticos en Red (ASIR) y el bootcamp de Ciberseguridad en The Bridge, donde descubrí mi pasión por la seguridad ofensiva y el análisis de vulnerabilidades.",
+    "paragraph1": "Mi nombre es David Cigarán Flores, tengo 23 años y recientemente he finalizado mis estudios de Administración de Sistemas Informáticos en Red (ASIR) y el bootcamp de Ciberseguridad en The Bridge, donde descubrí mi gusto por la seguridad ofensiva y el análisis de vulnerabilidades, más específicamente en el ámbito del Red Team.",
     "paragraph2": "Durante mi formación he desarrollado una base sólida en redes, sistemas y metodologías de pentesting, y sigo ampliando mis conocimientos por interés propio. Me considero una persona responsable, con muchas ganas de aprender y con la capacidad de adaptarme rápidamente a nuevos entornos. Disfruto trabajando en equipo, compartiendo ideas y enfrentando retos técnicos que me permitan crecer.",
-    "paragraph3": "Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender de expertos, enfrentar desafíos reales y aportar desde el primer día. Mi objetivo es seguir mejorando poco a poco, reforzar mis habilidades y llegar a ser un buen profesional en el mundo de la ciberseguridad.",
-    "certificationsTitle": "Certificaciones",
-    "cert1": "OSCP (Offensive Security Certified Professional)",
-    "cert2": "CEH (Certified Ethical Hacker)",
-    "cert3": "eJPT (eLearnSecurity Junior Penetration Tester)",
-    "cert4": "AWS Security"
+    "paragraph3": "Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender de expertos, enfrentar desafíos reales y aportar desde el primer día. Mi objetivo es seguir mejorando poco a poco, reforzar mis habilidades y llegar a ser un buen profesional en el mundo de la ciberseguridad ofensiva.",
+    "certificationsTitle": "Certificaciones"
   },
   "skills": {
     "title": "Habilidades Técnicas",
     "skill1": {
-      "title": "Pentesting Avanzado",
-      "description": "Pruebas de penetración web, móvil y de red. Análisis de vulnerabilidades y explotación de sistemas. Ingeniería inversa y análisis de malware."
+      "title": "Pentesting Básico",
+      "description": "Pruebas de penetración web, móvil y de red. Fuzzing, Inyecciones SQL, Payloads, Fuerza bruta entre otros"
     },
     "skill2": {
-      "title": "Herramientas de Seguridad",
-      "description": "Dominio de Metasploit, Burp Suite, Nmap, Wireshark y herramientas de testing. Desarrollo de scripts personalizados para auditorías."
+      "title": "Algunas Herramientas",
+      "description": "Control sobre Metasploit, Burp Suite, Nmap, Wireshark y herramientas de testing (Red y Blue Team)."
     },
     "skill3": {
-      "title": "Desarrollo Seguro",
-      "description": "Revisión de código fuente, análisis de aplicaciones y APIs. Conocimiento en OWASP Top 10 y prácticas de desarrollo seguro."
+      "title": "Creatividad",
+      "description": "Revisión de código fuente e ingeniería inversa en auditorías."
     },
     "skill4": {
-      "title": "Seguridad de Red",
-      "description": "Análisis de arquitecturas de red, detección de intrusiones, firewall y sistemas de prevención. Hardening de sistemas y redes."
+      "title": "Lectura de Red",
+      "description": "Análisis de arquitecturas de red, detección de intrusiones mediante firewall y sistemas de prevención."
     },
     "skill5": {
       "title": "Ingeniería Social",
-      "description": "Pruebas de concienciación, simulaciones de phishing y evaluación de la resistencia humana en organizaciones."
+      "description": "Pruebas de penetración, simulaciones de phishing y explotación de CVE"
     },
     "skill6": {
       "title": "Seguridad en la Nube",
-      "description": "Auditoría de entornos AWS, Azure y GCP. Implementación de políticas de seguridad y mejores prácticas en la nube."
+      "description": "Conocimientos en AWS para pruebas de penetración autorizadas."
     }
   },
   "projects": {
     "title": "Proyectos Destacados",
     "project1": {
       "title": "Auditoría FinTech",
-      "description": "Evaluación de seguridad completa para una plataforma FinTech, identificando vulnerabilidades críticas en su API y aplicación móvil."
+      "description": "Evaluación de seguridad completa para una plataforma FinTech,identificando vulnerabilidades críticas en su API y aplicación móvil."
     },
     "project2": {
       "title": "Infraestructura Corporativa",
@@ -69,7 +65,7 @@
     },
     "project3": {
       "title": "Social Engineering",
-      "description": "Campaña de concienciación mediante pruebas de ingeniería social controladas para evaluar la resistencia humana de una organización."
+      "description": "Campaña de concienciación mediante pruebas de ingeniería socialcontroladas paraevaluar la resistencia humana de una organización."
     },
     "project4": {
       "title": "Hardening de Servidores",
@@ -93,38 +89,42 @@
   "education": {
     "title": "Historial Académico",
     "item1": {
-      "title": "Máster en Ciberseguridad",
-      "university": "Universidad Politécnica de Madrid",
-      "description": "Especialización en seguridad ofensiva y pruebas de penetración. Proyecto final sobre análisis de malware avanzado."
+      "title": "Educación Secundaria Obligatoria (E.S.O)",
+      "university": "Ntra.Sra del Rosario Dominicas Barakaldo",
+      "description": ""
     },
     "item2": {
-      "title": "Grado en Ingeniería Informática",
-      "university": "Universidad Complutense de Madrid",
-      "description": "Especialidad en seguridad de la información. Trabajo de fin de grado sobre criptografía aplicada."
+      "title": "Grado Medio Hostelería y Turismo",
+      "university": "(UPV/EHU Leioa)",
+      "description": ""
     },
     "item3": {
-      "title": "Bachillerato Tecnológico",
-      "university": "IES Francisco de Goya",
-      "description": "Especialidad en ciencias tecnológicas con enfoque en programación y redes."
+      "title": "Aprendizaje de metodologías similares a S.M.R (Sistemas Microinformáticos en Redes)",
+      "university": "Campus Training Bilbao",
+      "description": ""
+    },
+    "item4": {
+      "title": "Administración de Sistemas Informáticos en Redes (A.S.I.R)",
+      "university": "Centro de Estudios ALMI (Deusto)",
+      "description": ""
+    },
+    "item5": {
+      "title": "Bootcamp de Ciberseguridad",
+      "university": "The Bridge",
+      "description": ""
     }
   },
   "experience": {
     "title": "Experiencia Laboral",
-    "responsibilities": "Responsabilidades Clave:",
+    "responsibilities": "Tareas más importantes:",
     "job1": {
-      "company": "BBVA Security Operations Center",
-      "position": "Analista de Ciberseguridad",
-      "description": "Monitoreo de amenazas, análisis de incidentes de seguridad y respuesta a vulnerabilidades en sistemas bancarios críticos.",
-      "responsibility1": "Gestión de incidentes de seguridad en tiempo real",
-      "responsibility2": "Análisis forense digital en sistemas comprometidos",
-      "responsibility3": "Coordinación con equipos de respuesta a incidentes",
-      "responsibility4": "Desarrollo de playbooks de seguridad"
-    },
-    "tech": {
-      "siem": "SIEM",
-      "edr": "EDR",
-      "forensics": "Forensics",
-      "threat": "Threat Intelligence"
+      "company": "Centro de Estudios ALMI",
+      "position": "Prácticas en el Centro",
+      "description": "De momento no tuve experiencia laboral en éste sector, ya que la he tenido en otros pero durante mis prácticas en ALMI tuve que moldear la página del Centro de Día de Basurto a peticiones que fui recibiendo.",
+      "responsibility1": "Importación y exportación de la página.",
+      "responsibility2": "Creación y gestión de Base de Datos",
+      "responsibility3": "Buen control de plugins para buen uso del personal y consumidores.",
+      "responsibility4": "Documentación de cambios y de pruebas realizadas con anterioridad."
     }
   },
   "certifications": {

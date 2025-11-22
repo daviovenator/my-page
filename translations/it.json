@@ -12,68 +12,63 @@
     "button": "Tema"
   },
   "hero": {
-    "title": "Pentesting & Cybersecurity",
-    "tagline": "Proteggere i sistemi attraverso test offensivi",
-    "description": "Specialista in sicurezza offensiva con oltre 8 anni di esperienza nell'identificazione di vulnerabilità in infrastrutture critiche e applicazioni aziendali.",
+    "title": "David Cigaran Flores",
+    "tagline": "Formazione pratica in pentesting e analisi offensiva",
+    "description": "Recentemente formato a The Bridge e appassionato di cybersecurity offensiva. Cerco la mia prima opportunità professionale per applicare le mie conoscenze, imparare dagli esperti e portare valore fin dal primo giorno.",
     "projectsBtn": "Vedi Progetti",
     "contactBtn": "Contatta"
   },
   "about": {
     "title": "Chi Sono",
-    "subtitle": "Specialista in Sicurezza Offensiva",
-    "paragraph1": "Sono un professionista della cybersecurity specializzato in test di penetrazione e audit di sicurezza. Il mio approccio combina metodologie strutturate con pensiero creativo per identificare vulnerabilità che altri potrebbero trascurare.",
-    "paragraph2": "Ho lavorato con aziende di vari settori, dalle startup tecnologiche alle corporazioni finanziarie, aiutandole a rafforzare le loro difese attraverso l'identificazione proattiva di punti deboli nei loro sistemi.",
-    "paragraph3": "La mia filosofia si basa sul principio che per difendere efficacemente, bisogna prima capire come attaccare. Per questo mi mantengo costantemente aggiornato con le ultime tecniche di sfruttamento e vettori di attacco.",
-    "certificationsTitle": "Certificazioni",
-    "cert1": "OSCP (Offensive Security Certified Professional)",
-    "cert2": "CEH (Certified Ethical Hacker)",
-    "cert3": "CISSP (Certified Information Systems Security Professional)",
-    "cert4": "CompTIA Security+",
-    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+    "subtitle": "Apprendista Junior in Sicurezza Offensiva",
+    "paragraph1": "Mi chiamo David Cigarán Flores, ho 23 anni e ho recentemente terminato i miei studi in Amministrazione di Sistemi Informatici in Rete (ASIR) e il bootcamp di Cybersecurity a The Bridge, dove ho scoperto il mio interesse per la sicurezza offensiva e l'analisi delle vulnerabilità, più specificamente nell'ambito del Red Team.",
+    "paragraph2": "Durante la mia formazione ho sviluppato una solida base in reti, sistemi e metodologie di pentesting, e continuo ad ampliare le mie conoscenze per interesse personale. Mi considero una persona responsabile, con molta voglia di imparare e con la capacità di adattarmi rapidamente a nuovi ambienti. Mi piace lavorare in team, condividere idee e affrontare sfide tecniche che mi permettano di crescere.",
+    "paragraph3": "Cerco un'opportunità per iniziare la mia carriera in un ambiente dove possa imparare dagli esperti, affrontare sfide reali e contribuire fin dal primo giorno. Il mio obiettivo è continuare a migliorare poco a poco, rafforzare le mie competenze e diventare un buon professionista nel mondo della cybersecurity offensiva.",
+    "certificationsTitle": "Certificazioni"
   },
   "skills": {
     "title": "Competenze Tecniche",
     "skill1": {
-      "title": "Pentesting Avanzato",
-      "description": "Test di penetrazione web, mobile e di rete. Analisi delle vulnerabilità e sfruttamento dei sistemi. Reverse engineering e analisi malware."
+      "title": "Pentesting Base",
+      "description": "Test di penetrazione web, mobile e di rete. Fuzzing, Iniezioni SQL, Payloads, Forza bruta tra gli altri"
     },
     "skill2": {
-      "title": "Strumenti di Sicurezza",
-      "description": "Padronanza di Metasploit, Burp Suite, Nmap, Wireshark e strumenti di testing. Sviluppo di script personalizzati per audit."
+      "title": "Alcuni Strumenti",
+      "description": "Controllo su Metasploit, Burp Suite, Nmap, Wireshark e strumenti di testing (Red e Blue Team)."
     },
     "skill3": {
-      "title": "Sviluppo Sicuro",
-      "description": "Revisione del codice sorgente, analisi di applicazioni e API. Conoscenza delle OWASP Top 10 e pratiche di sviluppo sicuro."
+      "title": "Creatività",
+      "description": "Revisione del codice sorgente e ingegneria inversa nelle audit."
     },
     "skill4": {
-      "title": "Sicurezza di Rete",
-      "description": "Analisi delle architetture di rete, rilevamento di intrusioni, firewall e sistemi di prevenzione. Hardening di sistemi e reti."
+      "title": "Lettura della Rete",
+      "description": "Analisi delle architetture di rete, rilevamento delle intrusioni tramite firewall e sistemi di prevenzione."
     },
     "skill5": {
       "title": "Ingegneria Sociale",
-      "description": "Test di consapevolezza, simulazioni di phishing e valutazione della resistenza umana nelle organizzazioni."
+      "description": "Test di penetrazione, simulazioni di phishing e sfruttamento di CVE"
     },
     "skill6": {
       "title": "Sicurezza Cloud",
-      "description": "Audit di ambienti AWS, Azure e GCP. Implementazione di politiche di sicurezza e best practice cloud."
+      "description": "Conoscenze AWS per test di penetrazione autorizzati."
     }
   },
   "projects": {
     "title": "Progetti in Evidenza",
     "project1": {
       "title": "Audit FinTech",
-      "description": "Valutazione di sicurezza completa per una piattaforma FinTech, identificando vulnerabilità critiche nella sua API e applicazione mobile."
+      "description": "Valutazione completa della sicurezza per una piattaforma FinTech, identificando vulnerabilità critiche nella sua API e applicazione mobile."
     },
     "project2": {
-      "title": "Infrastruttura Aziendale",
-      "description": "Pentesting di rete interna per azienda Fortune 500, scoprendo vettori di attacco che permettevano movimento laterale."
+      "title": "Infrastruttura Corporate",
+      "description": "Pentesting di rete interna per un'azienda Fortune 500, scoprendo vettori di attacco che permettevano movimento laterale."
     },
     "project3": {
       "title": "Ingegneria Sociale",
-      "description": "Campagna di consapevolezza attraverso test di ingegneria sociale controllati per valutare la resistenza umana di un'organizzazione."
+      "description": "Campagna di sensibilizzazione attraverso test controllati di ingegneria sociale per valutare la resistenza umana di un'organizzazione."
     },
     "project4": {
-      "title": "Hardening dei Server",
+      "title": "Irrobustimento Server",
       "description": "Rafforzamento della sicurezza su server critici per un'istituzione governativa, implementando misure di protezione avanzate."
     },
     "tags": {
@@ -84,7 +79,7 @@
       "ad": "Active Directory",
       "privilege": "Escalation Privilegi",
       "phishing": "Phishing",
-      "awareness": "Consapevolezza",
+      "awareness": "Sensibilizzazione",
       "human": "Fattore Umano",
       "linux": "Linux",
       "windows": "Windows Server",
@@ -94,38 +89,42 @@
   "education": {
     "title": "Storico Accademico",
     "item1": {
-      "title": "Master in Cybersecurity",
-      "university": "Università Politecnica di Madrid",
-      "description": "Specializzazione in sicurezza offensiva e test di penetrazione. Progetto finale sull'analisi malware avanzato."
+      "title": "Istruzione Secondaria Obbligatoria (E.S.O)",
+      "university": "Ntra.Sra del Rosario Dominicas Barakaldo",
+      "description": ""
     },
     "item2": {
-      "title": "Laurea in Ingegneria Informatica",
-      "university": "Università Complutense di Madrid",
-      "description": "Specialità in sicurezza delle informazioni. Progetto di fine studi sulla crittografia applicata."
+      "title": "Diploma Medio in Ospitalità e Turismo",
+      "university": "(UPV/EHU Leioa)",
+      "description": ""
     },
     "item3": {
-      "title": "Diploma Tecnologico",
-      "university": "IES Francisco de Goya",
-      "description": "Specialità in scienze tecnologiche con focus su programmazione e reti."
+      "title": "Apprendimento di metodologie simili a S.M.R (Sistemi Microinformatici in Rete)",
+      "university": "Campus Training Bilbao",
+      "description": ""
+    },
+    "item4": {
+      "title": "Amministrazione di Sistemi Informatici in Rete (A.S.I.R)",
+      "university": "Centro Studi ALMI (Deusto)",
+      "description": ""
+    },
+    "item5": {
+      "title": "Bootcamp di Cybersecurity",
+      "university": "The Bridge",
+      "description": ""
     }
   },
   "experience": {
     "title": "Esperienza Lavorativa",
-    "responsibilities": "Responsabilità Chiave:",
+    "responsibilities": "Compiti più importanti:",
     "job1": {
-      "company": "BBVA Security Operations Center",
-      "position": "Analista di Cybersecurity",
-      "description": "Monitoraggio delle minacce, analisi degli incidenti di sicurezza e risposta alle vulnerabilità nei sistemi bancari critici.",
-      "responsibility1": "Gestione incidenti di sicurezza in tempo reale",
-      "responsibility2": "Analisi forense digitale su sistemi compromessi",
-      "responsibility3": "Coordinamento con team di risposta agli incidenti",
-      "responsibility4": "Sviluppo di playbook di sicurezza"
-    },
-    "tech": {
-      "siem": "SIEM",
-      "edr": "EDR",
-      "forensics": "Forensics",
-      "threat": "Threat Intelligence"
+      "company": "Centro Studi ALMI",
+      "position": "Tirocinio nel Centro",
+      "description": "Finora non ho avuto esperienza lavorativa in questo settore, poiché l'ho avuta in altri, ma durante il mio tirocinio in ALMI ho dovuto modellare il sito web del Centro Diurno di Basurto secondo le richieste che ho ricevuto.",
+      "responsibility1": "Importazione ed esportazione del sito web.",
+      "responsibility2": "Creazione e gestione del Database",
+      "responsibility3": "Buon controllo dei plugin per l'uso del personale e dei consumatori.",
+      "responsibility4": "Documentazione dei cambiamenti e dei test effettuati in precedenza."
     }
   },
   "certifications": {
@@ -152,8 +151,8 @@
     }
   },
   "contact": {
-    "title": "Contatto Sicuro",
-    "subtitle": "Informazioni di Contatto",
+    "title": "Contatto",
+    "subtitle": "Informazioni Personali",
     "email": "Email",
     "phone": "Telefono",
     "languages": "Lingue",
@@ -161,10 +160,8 @@
     "english": "Inglese: Livello Intermedio",
     "licenses": "Patenti di Guida",
     "licenseB": "Patente B (Auto)",
-    "secure": "Comunicazione Sicura",
-    "pgp": "PGP disponibile su richiesta",
     "availability": "Disponibilità",
-    "response": "Risposta entro 24-48 ore"
+    "response": "Immediata"
   },
   "footer": {
     "copyright": "© 2023 CyberShield. Tutti i diritti riservati. Questo sito utilizza connessioni sicure."

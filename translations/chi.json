@@ -12,57 +12,52 @@
     "button": "主题"
   },
   "hero": {
-    "title": "渗透测试与网络安全",
-    "tagline": "通过进攻性测试保护系统安全",
-    "description": "专注于进攻性安全领域的专家，拥有超过8年识别关键基础设施和企业应用漏洞的经验。",
+    "title": "David Cigaran Flores",
+    "tagline": "渗透测试和攻击分析实践培训",
+    "description": "最近在The Bridge完成培训，对攻击性网络安全充满热情。寻找第一个专业机会来应用我的知识，向专家学习，并从第一天开始创造价值。",
     "projectsBtn": "查看项目",
-    "contactBtn": "联系我"
+    "contactBtn": "联系"
   },
   "about": {
     "title": "关于我",
-    "subtitle": "进攻性安全专家",
-    "paragraph1": "我是专注于渗透测试和安全审计的网络安全专业人士。我的方法结合了结构化方法论与创造性思维，以识别他人可能忽略的漏洞。",
-    "paragraph2": "我曾与多个行业的公司合作，从科技初创公司到金融企业，通过主动识别其系统弱点来帮助他们加强防御。",
-    "paragraph3": "我的理念基于：要有效防御，首先必须了解如何攻击。因此，我不断更新最新的漏洞利用技术和攻击向量知识。",
-    "certificationsTitle": "专业认证",
-    "cert1": "OSCP (Offensive Security认证专家)",
-    "cert2": "CEH (认证道德黑客)",
-    "cert3": "CISSP (认证信息系统安全专家)",
-    "cert4": "CompTIA Security+",
-    "cert5": "eJPT (eLearnSecurity初级渗透测试员)"
+    "subtitle": "攻击安全初级学员",
+    "paragraph1": "我叫David Cigarán Flores，今年23岁，最近完成了网络计算机系统管理（ASIR）的学习和在The Bridge的网络安全训练营，在那里我发现了自己对攻击性安全和漏洞分析的兴趣，特别是在红队领域。",
+    "paragraph2": "在培训期间，我在网络、系统和渗透测试方法学方面建立了坚实的基础，并继续出于个人兴趣扩展我的知识。我认为自己是一个负责任的人，有强烈的学习意愿，能够快速适应新环境。我喜欢团队合作，分享想法，面对能让我成长的技术挑战。",
+    "paragraph3": "我正在寻找一个机会，在一个能够向专家学习、面对真实挑战并从第一天开始做出贡献的环境中开始我的职业生涯。我的目标是逐步改进，加强我的技能，成为攻击性网络安全领域的优秀专业人士。",
+    "certificationsTitle": "认证"
   },
   "skills": {
     "title": "技术技能",
     "skill1": {
-      "title": "高级渗透测试",
-      "description": "Web、移动和网络渗透测试。漏洞分析和系统利用。逆向工程和恶意软件分析。"
+      "title": "基础渗透测试",
+      "description": "Web、移动和网络渗透测试。模糊测试、SQL注入、有效载荷、暴力破解等"
     },
     "skill2": {
-      "title": "安全工具",
-      "description": "精通Metasploit、Burp Suite、Nmap、Wireshark和测试工具。为审计开发定制脚本。"
+      "title": "一些工具",
+      "description": "掌握Metasploit、Burp Suite、Nmap、Wireshark和测试工具（红队和蓝队）。"
     },
     "skill3": {
-      "title": "安全开发",
-      "description": "源代码审查、应用程序和API分析。熟悉OWASP Top 10和安全开发实践。"
+      "title": "创造力",
+      "description": "审计中的源代码审查和逆向工程。"
     },
     "skill4": {
-      "title": "网络安全",
-      "description": "网络架构分析、入侵检测、防火墙和防护系统。系统和网络加固。"
+      "title": "网络分析",
+      "description": "网络架构分析，通过防火墙和预防系统进行入侵检测。"
     },
     "skill5": {
       "title": "社会工程学",
-      "description": "安全意识测试、钓鱼模拟和组织人员安全评估。"
+      "description": "渗透测试、网络钓鱼模拟和CVE利用"
     },
     "skill6": {
       "title": "云安全",
-      "description": "AWS、Azure和GCP环境审计。云安全策略实施和最佳实践。"
+      "description": "AWS知识用于授权的渗透测试。"
     }
   },
   "projects": {
     "title": "重点项目",
     "project1": {
       "title": "金融科技审计",
-      "description": "为金融科技平台进行全面安全评估，识别其API和移动应用中的关键漏洞。"
+      "description": "为金融科技平台进行全面安全评估，识别其API和移动应用程序中的关键漏洞。"
     },
     "project2": {
       "title": "企业基础设施",
@@ -70,11 +65,11 @@
     },
     "project3": {
       "title": "社会工程学",
-      "description": "通过受控的社会工程学测试开展安全意识活动，评估组织的人员安全防护能力。"
+      "description": "通过受控的社会工程学测试进行意识宣传活动，评估组织的人员抵抗力。"
     },
     "project4": {
       "title": "服务器加固",
-      "description": "为政府机构的关键服务器加强安全，实施高级保护措施。"
+      "description": "为政府机构的关键服务器加强安全性，实施高级保护措施。"
     },
     "tags": {
       "web": "Web应用",
@@ -84,87 +79,89 @@
       "ad": "Active Directory",
       "privilege": "权限提升",
       "phishing": "网络钓鱼",
-      "awareness": "安全意识",
+      "awareness": "意识",
       "human": "人为因素",
       "linux": "Linux",
       "windows": "Windows服务器",
-      "hardening": "系统加固"
+      "hardening": "加固"
     }
   },
   "education": {
     "title": "教育背景",
     "item1": {
-      "title": "网络安全硕士",
-      "university": "马德里理工大学",
-      "description": "专攻进攻性安全和渗透测试。毕业论文关于高级恶意软件分析。"
+      "title": "义务中等教育（E.S.O）",
+      "university": "Ntra.Sra del Rosario Dominicas Barakaldo",
+      "description": ""
     },
     "item2": {
-      "title": "计算机工程学士",
-      "university": "马德里康普顿斯大学",
-      "description": "信息安全专业。毕业论文关于应用密码学。"
+      "title": "酒店与旅游中级学位",
+      "university": "（UPV/EHU Leioa）",
+      "description": ""
     },
     "item3": {
-      "title": "技术高中",
-      "university": "IES Francisco de Goya",
-      "description": "科技科学专业，专注于编程和网络。"
+      "title": "学习类似于S.M.R（网络微计算机系统）的方法学",
+      "university": "Campus Training Bilbao",
+      "description": ""
+    },
+    "item4": {
+      "title": "网络计算机系统管理（A.S.I.R）",
+      "university": "ALMI学习中心（Deusto）",
+      "description": ""
+    },
+    "item5": {
+      "title": "网络安全训练营",
+      "university": "The Bridge",
+      "description": ""
     }
   },
   "experience": {
     "title": "工作经历",
-    "responsibilities": "主要职责：",
+    "responsibilities": "最重要的任务：",
     "job1": {
-      "company": "BBVA安全运营中心",
-      "position": "网络安全分析师",
-      "description": "监控威胁，分析安全事件，响应关键银行系统的漏洞。",
-      "responsibility1": "实时安全事件管理",
-      "responsibility2": "受损系统的数字取证分析",
-      "responsibility3": "与事件响应团队协调",
-      "responsibility4": "开发安全操作手册"
-    },
-    "tech": {
-      "siem": "SIEM",
-      "edr": "EDR",
-      "forensics": "取证",
-      "threat": "威胁情报"
+      "company": "ALMI学习中心",
+      "position": "中心实习",
+      "description": "到目前为止，我在这个行业没有工作经验，因为我在其他行业有过经验，但在ALMI实习期间，我不得不根据收到的请求调整Basurto日间中心的网站。",
+      "responsibility1": "网站的导入和导出。",
+      "responsibility2": "数据库创建和管理",
+      "responsibility3": "良好的插件控制，供员工和消费者使用。",
+      "responsibility4": "变更和先前执行测试的文档记录。"
     }
   },
   "certifications": {
-    "title": "专业认证",
+    "title": "认证",
     "cert1": {
       "title": "OSCP",
-      "description": "Offensive Security认证专家",
-      "date": "颁发时间：2021年"
+      "description": "攻击性安全认证专家",
+      "date": "颁发：2021年"
     },
     "cert2": {
       "title": "CEH",
       "description": "认证道德黑客",
-      "date": "颁发时间：2020年"
+      "date": "颁发：2020年"
     },
     "cert3": {
       "title": "eJPT",
       "description": "eLearnSecurity初级渗透测试员",
-      "date": "颁发时间：2017年"
+      "date": "颁发：2017年"
     },
     "cert4": {
       "title": "AWS安全",
       "description": "AWS安全专业认证",
-      "date": "颁发时间：2022年"
+      "date": "颁发：2022年"
     }
   },
   "contact": {
-    "title": "安全联系",
-    "subtitle": "联系信息",
+    "title": "联系方式",
+    "subtitle": "个人信息",
     "email": "电子邮件",
     "phone": "电话",
-    "languages": "语言能力",
+    "languages": "语言",
     "spanish": "西班牙语：母语",
     "english": "英语：中级水平",
     "licenses": "驾驶执照",
     "licenseB": "B照（汽车）",
-    "secure": "安全通信",
-    "pgp": "可根据要求提供PGP密钥",
     "availability": "可用性",
-    "response": "24-48小时内回复"
+    "response": "立即"
   },
   "footer": {
     "copyright": "© 2023 CyberShield。保留所有权利。本网站使用安全连接。"

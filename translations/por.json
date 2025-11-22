@@ -1,9 +1,9 @@
 {
   "nav": {
-    "about": "Sobre Mim",
+    "about": "Quem Sou",
     "skills": "Habilidades",
     "projects": "Projetos",
-    "education": "Formação Acadêmica",
+    "education": "Histórico Acadêmico",
     "experience": "Experiência Profissional",
     "certifications": "Certificações",
     "contact": "Contato"
@@ -12,77 +12,72 @@
     "button": "Tema"
   },
   "hero": {
-    "title": "Pentesting e Cibersegurança",
-    "tagline": "Protegendo sistemas através de testes ofensivos",
-    "description": "Especialista em segurança ofensiva com mais de 8 anos de experiência identificando vulnerabilidades em infraestruturas críticas e aplicações empresariais.",
+    "title": "David Cigaran Flores",
+    "tagline": "Formação prática em pentesting e análise ofensiva",
+    "description": "Recentemente formado na The Bridge e apaixonado por cibersegurança ofensiva. Busco minha primeira oportunidade profissional para aplicar meus conhecimentos, aprender com especialistas e agregar valor desde o primeiro dia.",
     "projectsBtn": "Ver Projetos",
-    "contactBtn": "Contactar"
+    "contactBtn": "Contatar"
   },
   "about": {
-    "title": "Sobre Mim",
-    "subtitle": "Especialista em Segurança Ofensiva",
-    "paragraph1": "Sou um profissional de cibersegurança especializado em testes de penetração e auditorias de segurança. Minha abordagem combina metodologias estruturadas com pensamento criativo para identificar vulnerabilidades que outros poderiam ignorar.",
-    "paragraph2": "Trabalhei com empresas de diversos setores, desde startups tecnológicas até corporações financeiras, ajudando-as a fortalecer suas defesas através da identificação proativa de pontos fracos em seus sistemas.",
-    "paragraph3": "Minha filosofia baseia-se em que para defender eficazmente, primeiro é preciso entender como atacar. Por isso, mantenho-me constantemente atualizado com as últimas técnicas de exploração e vetores de ataque.",
-    "certificationsTitle": "Certificações",
-    "cert1": "OSCP (Offensive Security Certified Professional)",
-    "cert2": "CEH (Certified Ethical Hacker)",
-    "cert3": "CISSP (Certified Information Systems Security Professional)",
-    "cert4": "CompTIA Security+",
-    "cert5": "eJPT (eLearnSecurity Junior Penetration Tester)"
+    "title": "Quem Sou",
+    "subtitle": "Aprendiz Júnior em Segurança Ofensiva",
+    "paragraph1": "Meu nome é David Cigarán Flores, tenho 23 anos e recentemente concluí meus estudos em Administração de Sistemas Informáticos em Rede (ASIR) e o bootcamp de Cibersegurança na The Bridge, onde descobri meu interesse por segurança ofensiva e análise de vulnerabilidades, mais especificamente na área da Red Team.",
+    "paragraph2": "Durante minha formação desenvolvi uma base sólida em redes, sistemas e metodologias de pentesting, e continuo expandindo meus conhecimentos por interesse próprio. Considero-me uma pessoa responsável, com muita vontade de aprender e com capacidade de me adaptar rapidamente a novos ambientes. Gosto de trabalhar em equipe, compartilhar ideias e enfrentar desafios técnicos que me permitam crescer.",
+    "paragraph3": "Busco uma oportunidade para iniciar minha carreira em um ambiente onde possa aprender com especialistas, enfrentar desafios reais e contribuir desde o primeiro dia. Meu objetivo é continuar melhorando pouco a pouco, reforçar minhas habilidades e me tornar um bom profissional no mundo da cibersegurança ofensiva.",
+    "certificationsTitle": "Certificações"
   },
   "skills": {
     "title": "Habilidades Técnicas",
     "skill1": {
-      "title": "Pentesting Avançado",
-      "description": "Testes de penetração web, móvel e de rede. Análise de vulnerabilidades e exploração de sistemas. Engenharia reversa e análise de malware."
+      "title": "Pentesting Básico",
+      "description": "Testes de penetração web, móvel e de rede. Fuzzing, Injeções SQL, Payloads, Força bruta entre outros"
     },
     "skill2": {
-      "title": "Ferramentas de Segurança",
-      "description": "Domínio de Metasploit, Burp Suite, Nmap, Wireshark e ferramentas de teste. Desenvolvimento de scripts personalizados para auditorias."
+      "title": "Algumas Ferramentas",
+      "description": "Controle sobre Metasploit, Burp Suite, Nmap, Wireshark e ferramentas de teste (Red e Blue Team)."
     },
     "skill3": {
-      "title": "Desenvolvimento Seguro",
-      "description": "Revisão de código fonte, análise de aplicações e APIs. Conhecimento em OWASP Top 10 e práticas de desenvolvimento seguro."
+      "title": "Criatividade",
+      "description": "Revisão de código fonte e engenharia reversa em auditorias."
     },
     "skill4": {
-      "title": "Segurança de Rede",
-      "description": "Análise de arquiteturas de rede, deteção de intrusões, firewall e sistemas de prevenção. Hardening de sistemas e redes."
+      "title": "Leitura de Rede",
+      "description": "Análise de arquiteturas de rede, detecção de intrusão através de firewall e sistemas de prevenção."
     },
     "skill5": {
       "title": "Engenharia Social",
-      "description": "Testes de conscientização, simulações de phishing e avaliação da resistência humana em organizações."
+      "description": "Testes de penetração, simulações de phishing e exploração de CVE"
     },
     "skill6": {
       "title": "Segurança na Nuvem",
-      "description": "Auditoria de ambientes AWS, Azure e GCP. Implementação de políticas de segurança e melhores práticas na nuvem."
+      "description": "Conhecimentos em AWS para testes de penetração autorizados."
     }
   },
   "projects": {
-    "title": "Projetos Destacados",
+    "title": "Projetos em Destaque",
     "project1": {
       "title": "Auditoria FinTech",
-      "description": "Avaliação de segurança completa para uma plataforma FinTech, identificando vulnerabilidades críticas na sua API e aplicação móvel."
+      "description": "Avaliação de segurança completa para uma plataforma FinTech, identificando vulnerabilidades críticas em sua API e aplicativo móvel."
     },
     "project2": {
       "title": "Infraestrutura Corporativa",
-      "description": "Pentesting de rede interna para empresa da Fortune 500, descobrindo vetores de ataque que permitiam movimento lateral."
+      "description": "Pentesting de rede interna para empresa Fortune 500, descobrindo vetores de ataque que permitiam movimento lateral."
     },
     "project3": {
       "title": "Engenharia Social",
-      "description": "Campanha de conscientização através de testes de engenharia social controlados para avaliar a resistência humana de uma organização."
+      "description": "Campanha de conscientização através de testes controlados de engenharia social para avaliar a resistência humana de uma organização."
     },
     "project4": {
       "title": "Hardening de Servidores",
       "description": "Reforço de segurança em servidores críticos para uma instituição governamental, implementando medidas de proteção avançadas."
     },
     "tags": {
-      "web": "App Web",
+      "web": "Aplicação Web",
       "api": "API",
-      "mobile": "Móvel",
+      "mobile": "Mobile",
       "network": "Rede Interna",
       "ad": "Active Directory",
-      "privilege": "Escalada de Privilégios",
+      "privilege": "Escalação de Privilégios",
       "phishing": "Phishing",
       "awareness": "Conscientização",
       "human": "Fator Humano",
@@ -92,40 +87,44 @@
     }
   },
   "education": {
-    "title": "Formação Acadêmica",
+    "title": "Histórico Acadêmico",
     "item1": {
-      "title": "Mestrado em Cibersegurança",
-      "university": "Universidade Politécnica de Madrid",
-      "description": "Especialização em segurança ofensiva e testes de penetração. Projeto final sobre análise de malware avançado."
+      "title": "Ensino Secundário Obrigatório (E.S.O)",
+      "university": "Ntra.Sra del Rosario Dominicas Barakaldo",
+      "description": ""
     },
     "item2": {
-      "title": "Licenciatura em Engenharia Informática",
-      "university": "Universidade Complutense de Madrid",
-      "description": "Especialidade em segurança da informação. Trabalho de fim de curso sobre criptografia aplicada."
+      "title": "Curso Técnico em Hotelaria e Turismo",
+      "university": "(UPV/EHU Leioa)",
+      "description": ""
     },
     "item3": {
-      "title": "Bacharelato Tecnológico",
-      "university": "IES Francisco de Goya",
-      "description": "Especialidade em ciências tecnológicas com enfoque em programação e redes."
+      "title": "Aprendizado de metodologias similares a S.M.R (Sistemas Microinformáticos em Redes)",
+      "university": "Campus Training Bilbao",
+      "description": ""
+    },
+    "item4": {
+      "title": "Administração de Sistemas Informáticos em Rede (A.S.I.R)",
+      "university": "Centro de Estudos ALMI (Deusto)",
+      "description": ""
+    },
+    "item5": {
+      "title": "Bootcamp de Cibersegurança",
+      "university": "The Bridge",
+      "description": ""
     }
   },
   "experience": {
     "title": "Experiência Profissional",
-    "responsibilities": "Responsabilidades Principais:",
+    "responsibilities": "Tarefas mais importantes:",
     "job1": {
-      "company": "Centro de Operações de Segurança BBVA",
-      "position": "Analista de Cibersegurança",
-      "description": "Monitorização de ameaças, análise de incidentes de segurança e resposta a vulnerabilidades em sistemas bancários críticos.",
-      "responsibility1": "Gestão de incidentes de segurança em tempo real",
-      "responsibility2": "Análise forense digital em sistemas comprometidos",
-      "responsibility3": "Coordenação com equipas de resposta a incidentes",
-      "responsibility4": "Desenvolvimento de playbooks de segurança"
-    },
-    "tech": {
-      "siem": "SIEM",
-      "edr": "EDR",
-      "forensics": "Forense",
-      "threat": "Threat Intelligence"
+      "company": "Centro de Estudos ALMI",
+      "position": "Estágio no Centro",
+      "description": "Até o momento não tive experiência profissional neste setor, pois a tive em outros, mas durante meu estágio na ALMI tive que adaptar o site do Centro de Dia de Basurto a solicitações que recebi.",
+      "responsibility1": "Importação e exportação do site.",
+      "responsibility2": "Criação e gestão de Banco de Dados",
+      "responsibility3": "Bom controle de plugins para uso da equipe e consumidores.",
+      "responsibility4": "Documentação de mudanças e testes realizados anteriormente."
     }
   },
   "certifications": {
@@ -133,38 +132,36 @@
     "cert1": {
       "title": "OSCP",
       "description": "Offensive Security Certified Professional",
-      "date": "Emissão: 2021"
+      "date": "Emitido: 2021"
     },
     "cert2": {
       "title": "CEH",
       "description": "Certified Ethical Hacker",
-      "date": "Emissão: 2020"
+      "date": "Emitido: 2020"
     },
     "cert3": {
       "title": "eJPT",
       "description": "eLearnSecurity Junior Penetration Tester",
-      "date": "Emissão: 2017"
+      "date": "Emitido: 2017"
     },
     "cert4": {
       "title": "AWS Security",
       "description": "Especialidade em Segurança AWS",
-      "date": "Emissão: 2022"
+      "date": "Emitido: 2022"
     }
   },
   "contact": {
-    "title": "Contacto Seguro",
-    "subtitle": "Informação de Contacto",
-    "email": "E-mail",
+    "title": "Contato",
+    "subtitle": "Informações Pessoais",
+    "email": "Email",
     "phone": "Telefone",
     "languages": "Idiomas",
     "spanish": "Espanhol: Nativo",
-    "english": "Inglês: Nível Intermédio",
-    "licenses": "Carta de Condução",
-    "licenseB": "Categoria B (Carro)",
-    "secure": "Comunicação Segura",
-    "pgp": "PGP disponível mediante solicitação",
+    "english": "Inglês: Nível Intermediário",
+    "licenses": "Carteiras de Motorista",
+    "licenseB": "Carteira B (Carro)",
     "availability": "Disponibilidade",
-    "response": "Resposta em 24-48 horas"
+    "response": "Imediata"
   },
   "footer": {
     "copyright": "© 2023 CyberShield. Todos os direitos reservados. Este site utiliza conexões seguras."
