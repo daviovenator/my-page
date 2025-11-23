@@ -596,7 +596,7 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     /* Quitar height: 100% para que el contenido determine la altura real */
     /* height: 100%; */
-    min-height: 350px; /* opcional, para un tamaño base uniforme */
+    min-height: 150px; /* opcional, para un tamaño base uniforme */
 }
 
 .skill-card:hover {
