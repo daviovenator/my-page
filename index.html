@@ -6,6 +6,7 @@
     <title>David Cigaran Flores</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Contenedor invisible para el ancla de inicio -->
@@ -64,7 +65,7 @@
     <div class="container hero-content">
         <div class="hero-profile">
             <div class="profile-image">
-                <img src="img/Sin título1.jpeg" alt="Foto de David Cigaran Flores">
+                <img src="img/Sintítulo.jpeg" alt="Foto de David Cigaran Flores">
             </div>
             <div class="hero-text">
                 <h1 data-translate="hero.title">David Cigaran Flores</h1>
@@ -271,38 +272,44 @@ Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender
             </div>
         </div>
     </section>
-<br><br><br><br><br>
-    <section class="section" id="certificaciones">
-        <div class="container">
-            <h2 class="section-title" data-translate="certifications.title">Certificaciones</h2>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3 data-translate="certifications.cert1.title">OSCP</h3>
-                    <p data-translate="certifications.cert1.description">Offensive Security Certified Professional</p>
-                    <p data-translate="certifications.cert1.date">Expedición: 2021</p>
+<br><br><br>
+<section class="section" id="certificaciones">
+    <div class="container">
+        <h2 class="section-title">Certificaciones</h2>
+<br><br>
+        <div id="carousel-container">
+            <div id="carousel">
+
+                <div class="carousel-item">
+                    <img src="/img/oscp.png" alt="OSCP">
+                    <p>OSCP</p>
+                    <p>Expedición: 2021</p>
                 </div>
-                <div class="cert-card">
-                    <i class="fas fa-user-secret"></i>
-                    <h3 data-translate="certifications.cert2.title">CEH</h3>
-                    <p data-translate="certifications.cert2.description">Certified Ethical Hacker</p>
-                    <p data-translate="certifications.cert2.date">Expedición: 2020</p>
+
+                <div class="carousel-item">
+                    <img src="/img/ceh.png" alt="CEH">
+                    <p>eCPPT</p>
+                    <p>Expedición: 2020</p>
                 </div>
-                <div class="cert-card">
-                    <i class="fas fa-bug"></i>
-                    <h3 data-translate="certifications.cert3.title">eJPT</h3>
-                    <p data-translate="certifications.cert3.description">eLearnSecurity Junior Penetration Tester</p>
-                    <p data-translate="certifications.cert3.date">Expedición: 2017</p>
+
+                <div class="carousel-item">
+                    <p>eJPT</p>
+<img src="img/ejpt.png" alt="eJPT">
+                    <p>Expedición: 2017</p>
                 </div>
-                <div class="cert-card">
-                    <i class="fas fa-cloud"></i>
-                    <h3 data-translate="certifications.cert4.title">AWS Security</h3>
-                    <p data-translate="certifications.cert4.description">Especialidad en Seguridad de AWS</p>
-                    <p data-translate="certifications.cert4.date">Expedición: 2022</p>
+
+                <div class="carousel-item">
+                    <img src="/img/aws.png" alt="AWS Security">
+                    <p>AWS</p>
+                    <p>Expedición: 2022</p>
                 </div>
+
             </div>
         </div>
-    </section>
+
+    </div>
+<br><br><br><br><br>
+</section>
 <br><br><br><br><br>
     <section class="section" id="contacto">
         <div class="container">
@@ -799,6 +806,126 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+var isDragging = false;
+var startX;
+var scale = 0.5;
+
+var distanceItems = '350px';
+
+var carousel = document.getElementById('carousel');
+var items = Array.from(carousel.children);
+
+carousel.addEventListener('mousedown', handleDragStart);
+document.addEventListener('mouseup', handleDragEnd);
+document.addEventListener('mousemove', handleDragMove);
+carousel.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+});
+
+items.forEach(function (item, index) {
+    item.addEventListener('mousedown', function (mousedownEvent) {
+        handleItemClick(mousedownEvent, index);
+    });
+});
+
+function handleDragStart(e) {
+    isDragging = true;
+    startX = e.clientX;
+    document.body.style.cursor = 'grabbing';
+}
+
+function handleDragEnd() {
+    isDragging = false;
+    document.body.style.cursor = 'default';
+}
+
+function handleDragMove(e) {
+    if (isDragging) {
+        var deltaX = (e.clientX - startX) * scale;
+        startX = e.clientX;
+
+        var currentRotation = parseFloat(carousel.style.getPropertyValue('--rotation') || 0);
+        if (currentRotation > 360 || currentRotation < -360) {
+            currentRotation = 0;
+        }
+        updateCarouselRotation(deltaX, currentRotation);
+    }
+}
+
+function handleItemClick(mousedownEvent, index) {
+    var isMouseDown = true;
+    var startX = mousedownEvent.clientX;
+
+    document.addEventListener('mousemove', function (mousemoveEvent) {
+        if (isMouseDown) {
+            var currentX = mousemoveEvent.clientX;
+            var dragDistance = Math.abs(currentX - startX);
+            if (dragDistance > 5) isMouseDown = false;
+        }
+    });
+
+    document.addEventListener('mouseup', function () {
+        if (isMouseDown) handleItemClickEnd(index);
+        isMouseDown = false;
+    });
+}
+
+function handleItemClickEnd(index) {
+    var currentRotation = parseFloat(carousel.style.getPropertyValue('--rotation') || 0);
+    var anglePerItem = 360 / items.length;
+    var targetRotation;
+
+    var optionA = 360 - (index * anglePerItem);
+    var optionB = index * -anglePerItem;
+
+    var diffA = Math.abs(currentRotation - optionA);
+    var diffB = Math.abs(currentRotation - optionB);
+
+    targetRotation = diffA < diffB ? optionA : optionB;
+
+    rotateCarousel(targetRotation);
+}
+
+function updateCarouselRotation(deltaX, currentRotation) {
+    carousel.style.transform = 'rotateY(' + (currentRotation + deltaX) + 'deg)';
+    carousel.style.setProperty('--rotation', currentRotation + deltaX);
+
+    items.forEach(function (item, index) {
+        var angle = index * (360 / items.length);
+        var rotation = angle + currentRotation;
+        item.style.transform = 
+            'rotateY(' + angle + 'deg) '
+            + 'translateZ(' + distanceItems + ') '
+            + 'rotateY(' + -rotation + 'deg)';
+    });
+}
+
+function rotateCarousel(rotation) {
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+    carousel.style.transform = 'rotateY(' + rotation + 'deg)';
+    carousel.style.setProperty('--rotation', rotation);
+
+    items.forEach(function (item, index) {
+        var angle = index * (360 / items.length);
+        var totalRotation = angle + rotation;
+
+        item.style.transition = 'transform 0.5s ease-in-out';
+        item.style.transform =
+            'rotateY(' + angle + 'deg) '
+            + 'translateZ(' + distanceItems + ') '
+            + 'rotateY(' + -totalRotation + 'deg)';
+    });
+
+    carousel.addEventListener('transitionend', function reset() {
+        carousel.style.transition = '';
+        carousel.removeEventListener('transitionend', reset);
+    });
+}
+
+handleItemClickEnd(0);
+
+
 </script>
 </body>
 </html>

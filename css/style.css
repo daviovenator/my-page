@@ -493,7 +493,6 @@ header {
         font-size: 0.95rem;
     }
 }
-}
     /* Secciones generales */
     .section {
         padding: 100px 0;
@@ -956,6 +955,64 @@ header {
     #certificaciones.section {
   background: transparent !important; /* quita el gris */
 }   
+
+#carousel-container {
+    perspective: 1200px;
+    width: 350px;
+    height: 400px; /* un poco más alto para separar expedición */
+    margin: auto;
+}
+
+#carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* espacio entre texto y expedición */
+    align-items: center;
+    transform-style: preserve-3d;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- NOMBRE ARRIBA, MÁS GRANDE --- */
+.carousel-item p:first-of-type {
+    color: #ffffff; /* blanco */
+    font-size: 1.2em; /* más grande */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* --- IMAGEN CENTRADA Y MÁS GRANDE --- */
+.carousel-item img {
+    width: 90%;
+    max-height: 220px;
+    object-fit: contain;
+    margin: 30px 0 10px 0; /* más espacio arriba */
+    border-radius: 8px;
+}
+
+/* --- EXPEDICIÓN ABAJO --- */
+.carousel-item p:last-of-type {
+    color: #db712a; /* verde claro */
+    font-weight: bold;
+    margin: 0;
+    margin-top: auto; /* fuerza que esté abajo */
+}
+
+
     /* CONTACTO - Versión con fondos oscuros */
     #contacto {
         background: transparent; /* Fondo más sólido */
