@@ -622,146 +622,160 @@ header {
 }
 
     
-    /* Sección Experiencia Laboral */
-    .experience-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-    }
-    
-    .experience-card {
-        background: rgba(50, 50, 50, 0.9) !important; /* gris con ligera transparencia */
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    .experience-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
-        border-color: rgba(212, 175, 55, 0.6);
-    }
-    
-    .experience-header {
-        background: linear-gradient(90deg, #D4AF37, #F4D03F);
-        padding: 25px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    .company-logo {
-        width: 60px;
-        height: 60px;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-    
-    .company-logo i {
-        font-size: 1.8rem;
-        color: #D4AF37;
-    }
-    
-    .company-info {
-        flex-grow: 1;
-    }
-    
-    .company-info h3 {
-        font-size: 1.3rem;
-        margin-bottom: 5px;
-        color: #1a1a1a;
-    }
-    
-    .position {
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-        color: rgba(26, 26, 26, 0.9);
-        font-weight: 500;
-    }
-    
-    .experience-date {
-        font-size: 0.9rem;
-        color: rgba(26, 26, 26, 0.8);
-        background: rgba(255, 255, 255, 0.2);
-        padding: 3px 10px;
-        border-radius: 15px;
-        display: inline-block;
-    }
-    
-    .experience-content {
-        padding: 25px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .experience-content p {
-        color: #b0b0b0;
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
-    
-    .responsibilities {
-        margin-bottom: 20px;
-    }
-    
-    .responsibilities h4 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        color: #F4D03F;
-    }
-    
-    .responsibilities ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    
-    .responsibilities li {
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        position: relative;
-        padding-left: 20px;
-        color: #b0b0b0;
-    }
-    
-    .responsibilities li::before {
-        content: '▶';
-        position: absolute;
-        left: 0;
-        color: #D4AF37;
-        font-size: 0.8rem;
-    }
-    
-    .tech-used {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-    }
-    
-    .tech-tag {
-        background: rgba(212, 175, 55, 0.2);
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        color: #D4AF37;
-        border: 1px solid rgba(212, 175, 55, 0.4);
-    }
-    
+/* ============================================
+   EXPERIENCIA LABORAL – OSCURO PROFESIONAL
+============================================ */
+
+/* Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.experience-card {
+    background: rgba(35, 35, 35, 0.9) !important; /* gris oscuro elegante */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card:hover {
+    transform: translateY(-8px); /* solo movimiento */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35); /* sombra suave negra */
+}
+
+/* Header */
+.experience-header {
+    background: linear-gradient(90deg, #444, #666); /* gris elegante */
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo redondo */
+.company-logo {
+    width: 60px;
+    height: 60px;
+    background: rgba(15, 15, 15, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+}
+
+.company-logo i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* Info */
+.company-info {
+    flex-grow: 1;
+}
+
+.company-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.position {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #e5e5e5;
+    font-weight: 500;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* Contenido */
+.experience-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experience-content p {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Responsibilities */
+.responsibilities {
+    margin-bottom: 20px;
+}
+
+.responsibilities h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.responsibilities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.responsibilities li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    padding-left: 20px;
+    color: #dcdcdc;
+}
+
+.responsibilities li::before {
+    content: '•'; /* cambiado de ▶ a bullet limpio */
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Tecnologías */
+.tech-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Fondo totalmente transparente */
 #experiencia-laboral.section,
 #experiencia-laboral .container {
     background: transparent !important;
 }
+
 
 /* ======== SECCIÓN PROYECTOS ======== */
 .projects-grid {
@@ -904,17 +918,16 @@ header {
     background: transparent !important;
 }
 
-    /* Sección Certificaciones */
+/* Sección Certificaciones */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    background: transparent; /* o el color que desees */
+    background: transparent;
 }
 
-    
 .cert-card {
-  background: rgba(50, 50, 50, 0.9); /* gris oscuro con transparencia */
+  background: rgba(50, 50, 50, 0.9);
   padding: 30px 20px;
   border-radius: 12px;
   text-align: center;
@@ -927,39 +940,38 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-    
-    .cert-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
-        border-color: rgba(212, 175, 55, 0.6);
-    }
-    
-    .cert-card i {
-        font-size: 3rem;
-        color: #D4AF37;
-        margin-bottom: 20px;
-    }
-    
-    .cert-card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-        color: #F4D03F;
-    }
-    
-    .cert-card p {
-        color: #b0b0b0;
-        line-height: 1.5;
-        margin-bottom: 10px;
-    }
-    
-    #certificaciones.section {
-  background: transparent !important; /* quita el gris */
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+    border-color: rgba(212, 175, 55, 0.6);
+}
+
+.cert-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.cert-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #F4D03F;
+}
+
+.cert-card p {
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#certificaciones.section {
+  background: transparent !important;
 }   
 
 #carousel-container {
     perspective: 1200px;
     width: 350px;
-    height: 400px; /* un poco más alto para separar expedición */
+    height: 450px; /* Aumentado para incluir el botón */
     margin: auto;
 }
 
@@ -980,7 +992,7 @@ header {
     box-shadow: 0 0 12px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* espacio entre texto y expedición */
+    justify-content: space-between;
     align-items: center;
     transform-style: preserve-3d;
     text-align: center;
@@ -989,8 +1001,8 @@ header {
 
 /* --- NOMBRE ARRIBA, MÁS GRANDE --- */
 .carousel-item p:first-of-type {
-    color: #ffffff; /* blanco */
-    font-size: 1.2em; /* más grande */
+    color: #ffffff;
+    font-size: 1.2em;
     font-weight: 600;
     margin: 0;
 }
@@ -1000,23 +1012,407 @@ header {
     width: 90%;
     max-height: 220px;
     object-fit: contain;
-    margin: 30px 0 10px 0; /* más espacio arriba */
+    margin: 30px 0 10px 0;
     border-radius: 8px;
 }
 
-/* --- EXPEDICIÓN ABAJO --- */
-.carousel-item p:last-of-type {
-    color: #db712a; /* verde claro */
+/* --- EXPEDICIÓN --- */
+.carousel-item p:nth-last-of-type(2) {
+    color: #db712a;
     font-weight: bold;
     margin: 0;
-    margin-top: auto; /* fuerza que esté abajo */
+    margin-top: auto;
 }
 
+/* --- BOTÓN VER MÁS SIMPLE (naranja claro) --- */
+.ver-mas-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 25px;
+    background-color: #ffa726; /* Naranja claro */
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+}
+
+.ver-mas-btn:hover {
+    background-color: #ff9800; /* Naranja un poco más oscuro al hover */
+    color: #000;
+}
+
+/* --- ESTILOS PARA LAS PÁGINAS DE DETALLE - UNA SOLA TARJETA --- */
+.detalle-certificacion-container {
+    background: #0a0a0a;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header de subpáginas con botón de volver a la izquierda */
+.detalle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    max-width: 900px;
+}
+
+.detalle-header h1 {
+    color: #fff;
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Botón de volver SIMPLE - transparente con letra blanca */
+.volver-btn {
+    padding: 8px 16px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* Letra blanca */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.volver-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil al hover */
+    color: #fff;
+    text-decoration: none;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* UNA SOLA TARJETA para TODO el contenido */
+.detalle-certificacion {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Título principal de la página */
+.detalle-certificacion h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+/* Logo/imagen centrada */
+.cert-logo {
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+.cert-logo img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+/* Nombre de la certificación (como "eJPT") */
+.cert-nombre {
+    color: #fff;
+    font-size: 1.8em;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+/* Separador */
+.detalle-certificacion hr {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 25px 0;
+}
+
+/* Estilos para la información - DIRECTO en .detalle-certificacion */
+.detalle-certificacion h3 {
+    color: #ffa726;
+    font-size: 1.4em;
+    margin: 20px 0 10px 0;
+}
+
+.detalle-certificacion h4 {
+    color: #ccc;
+    font-size: 1.2em;
+    margin: 15px 0 8px 0;
+    font-weight: 500;
+}
+
+.detalle-certificacion p {
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.detalle-certificacion strong {
+    color: #ffa726;
+    font-weight: 600;
+}
+
+/* Listas */
+.detalle-certificacion ul {
+    color: #ccc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.detalle-certificacion li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Botón de volver al final de la tarjeta */
+.detalle-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* --- CONTACTO - Versión con fondos oscuros --- */
+#contacto {
+    background: transparent;
+    padding: 70px 0;
+}
+
+#contacto .section-title {
+    color: #D4AF37;
+    margin-bottom: 35px;
+}
+
+.contact-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #282828;
+    padding: 35px 40px;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #F4D03F;
+    font-weight: 600;
+}
+
+.contact-method {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-method:last-child {
+    border-bottom: none;
+}
+
+.contact-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.contact-details p {
+    margin: 0;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+/* --- FOOTER PARA PÁGINAS DE DETALLE --- */
+footer {
+    margin-top: 50px;
+    padding: 30px 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.9);
+    border-top: 1px solid #333;
+}
+
+footer .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #2a2a2a;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: #ffa726;
+    color: #333;
+    transform: translateY(-3px);
+    border-color: #ffa726;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    #carousel-container {
+        width: 300px;
+        height: 420px;
+    }
+    
+    .carousel-item {
+        padding: 15px;
+    }
+    
+    .carousel-item img {
+        max-height: 180px;
+    }
+    
+    .ver-mas-btn {
+        width: 90%;
+        padding: 8px 20px;
+    }
+    
+    .detalle-certificacion {
+        padding: 25px;
+        margin: 0;
+    }
+    
+    .detalle-certificacion h1 {
+        font-size: 1.8em;
+    }
+    
+    .detalle-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .volver-btn {
+        align-self: flex-start;
+    }
+    
+    .cert-logo img {
+        max-width: 120px;
+    }
+    
+    /* Contacto responsive */
+    .contact-container {
+        padding: 25px 20px;
+        margin: 0 15px;
+    }
+    
+    #contacto {
+        padding: 50px 0;
+    }
+    
+    /* Footer responsive */
+    footer {
+        margin-top: 30px;
+        padding: 25px 0;
+    }
+    
+    .social-links {
+        gap: 20px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .detalle-certificacion {
+        padding: 20px 15px;
+    }
+    
+    .detalle-certificacion h1 {
+        font-size: 1.5em;
+    }
+    
+    .volver-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .cert-logo img {
+        max-width: 100px;
+    }
+    
+    .cert-nombre {
+        font-size: 1.5em;
+    }
+    
+    .detalle-certificacion h3 {
+        font-size: 1.2em;
+    }
+    
+    .detalle-certificacion h4 {
+        font-size: 1.1em;
+    }
+    
+    /* Contacto mobile */
+    .contact-container {
+        padding: 30px 15px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Footer mobile */
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+}
 
     /* CONTACTO - Versión con fondos oscuros */
     #contacto {
         background: transparent; /* Fondo más sólido */
-        padding: 70px 0;
+        padding: 30px 0;
     }
 
     #contacto .section-title {
@@ -1028,7 +1424,7 @@ header {
         max-width: 750px;
         margin: 0 auto;
         background: #282828; /* Fondo sólido en lugar de transparente */
-        padding: 35px 40px;
+        padding: 65px 40px;
         border-radius: 14px;
         border: 1px solid rgba(212, 175, 55, 0.4);
         box-shadow: 0 4px 18px rgba(0,0,0,0.4);
@@ -1222,5 +1618,127 @@ body:not(.light-theme) footer .copyright {
 /* Ocultar enlace de Proyectos en el header */
 .nav-links li a[href="#proyectos"] {
     display: none !important;
+}
+
+/* ========== FOOTER PARA PÁGINAS DE DETALLE ========== */
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 40px 0 30px 0;
+    position: relative;
+    z-index: 100;
+    margin-top: 60px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+footer .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(40, 40, 40, 0.8);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+}
+
+footer .social-link:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Colores específicos para los íconos */
+footer .social-link:nth-child(1) i { /* Email */
+    color: #ea4335;
+}
+
+footer .social-link:nth-child(2) i { /* WhatsApp */
+    color: #25d366;
+}
+
+footer .social-link:nth-child(3) i { /* GitHub */
+    color: #ffffff;
+}
+
+footer .social-link:nth-child(4) i { /* LinkedIn */
+    color: #0077b5;
+}
+
+/* Copyright */
+footer .copyright {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0 20px 0;
+        margin-top: 40px;
+    }
+    
+    footer .social-links {
+        gap: 20px;
+    }
+    
+    footer .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 25px 0 15px 0;
+        margin-top: 30px;
+    }
+    
+    footer .social-links {
+        gap: 15px;
+    }
+    
+    footer .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    footer .copyright {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
 }
 </style>

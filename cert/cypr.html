@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Cigaran Flores - Cybersecurity Profile Recon</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el modal y efectos de imagen - VERSIÓN LIMPIA */
+        .cert-logo {
+            text-align: center;
+            margin: 20px 0 30px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-logo img {
+            max-width: 180px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-logo:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modal - FONDO NEGRO SÓLIDO */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; /* NEGRO SÓLIDO, no transparente */
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+            opacity: 0.8;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="detalle-certificacion-container">
+    <!-- Modal para imagen ampliada - FONDO NEGRO -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="detalle-header">
+        <a href="../index.html#certificaciones" class="volver-btn">← Volver</a>
+        <h1>Insignia</h1>
+        <!-- Espaciador invisible para centrar el título -->
+        <div style="width: 70px; opacity: 0;">← Volver</div>
+    </div>
+    
+    <section class="detalle-certificacion">
+        <h1>Cybersecurity Profile Recon</h1>
+        
+        <div class="cert-logo" onclick="openModal()">
+            <img src="img/f3.png" alt="Cybersecurity Profile Recon">
+        </div>
+        
+        <hr>
+        
+        <h3>Expedición: 20 de noviembre de 2025, 14:58</h3>
+        <h4>Organización: The Bridge School</h4>
+        <h4>Estado: Activa</h4>
+        <h4>Curso: Bootcamp Ciberseguridad (Core-Septiembre 25)</h4>
+        
+        <h4>Descripción:</h4>
+        <p><strong>Cybersecurity Profile Recon</strong> otorgado a <strong>David Cigaran Flores</strong>. Esta insignia reconoce la capacidad para comenzar a perfilar el objetivo sobre el cual se realizarán los ataques posteriores con herramientas pasivas. Además reconoce el aprendizaje de herramientas utilizando técnicas activas con NMAP, Nessus y OpenVAS.</p>
+        
+        <h4>Criterios de Evaluación:</h4>
+        <ul>
+            <li><strong>Uso adecuado de herramientas pasivas</strong> para obtener información en fuentes abiertas (OSINT).</li>
+            <li><strong>Capacidad de realizar análisis de vulnerabilidades</strong> a través de las herramientas Nessus y OpenVAS.</li>
+            <li><strong>Uso adecuado de Nmap</strong> para realizar escaneos activos del objetivo.</li>
+            <li>Comprensión de metodologías de reconocimiento y footprinting.</li>
+            <li>Identificación de vectores de ataque iniciales.</li>
+        </ul>
+        
+        <h4>Habilidades Validadas:</h4>
+        <div class="tech-used" style="margin-top: 15px;">
+            <span class="tech-tag">Nmap</span>
+            <span class="tech-tag">Nessus</span>
+            <span class="tech-tag">OpenVAS</span>
+            <span class="tech-tag">OSINT</span>
+            <span class="tech-tag">Reconocimiento Pasivo</span>
+            <span class="tech-tag">Escaneo de Puertos</span>
+            <span class="tech-tag">Análisis de Vulnerabilidades</span>
+            <span class="tech-tag">Footprinting</span>
+            <span class="tech-tag">TheHarvester</span>
+            <span class="tech-tag">Shodan</span>
+        </div>
+        
+        <h4>Metodologías Aplicadas:</h4>
+        <ul>
+            <li>Recopilación de información de fuentes públicas</li>
+            <li>Identificación de activos y servicios expuestos</li>
+            <li>Escaneo de puertos y servicios</li>
+            <li>Detección de versiones de software</li>
+            <li>Evaluación de vulnerabilidades conocidas</li>
+            <li>Documentación de hallazgos</li>
+        </ul>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=todmacgover29@gmail.com" 
+                   class="social-link" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/34688846527" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/daviovenator" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tu-usuario" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad del modal - VERSIÓN LIMPIA
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = document.querySelector('.cert-logo img');
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            
+            // Deshabilitar scroll del body
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Habilitar scroll del body
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Cerrar modal con botón X
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Cerrar modal haciendo clic en cualquier parte
+            modal.addEventListener('click', function(e) {
+                closeModal();
+            });
+            
+            // Cerrar modal con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+            
+            // Evitar que el clic en la imagen cierre el modal
+            const modalImg = document.getElementById('modalImage');
+            modalImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Hacer la imagen clicable con teclado (accesibilidad)
+            const certLogo = document.querySelector('.cert-logo');
+            certLogo.setAttribute('tabindex', '0');
+            certLogo.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

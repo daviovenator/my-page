@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Cigaran Flores - eJPT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el modal y efectos de imagen - VERSIÓN LIMPIA */
+        .cert-logo {
+            text-align: center;
+            margin: 20px 0 30px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-logo img {
+            max-width: 180px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-logo:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modal - FONDO NEGRO SÓLIDO */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000; /* NEGRO SÓLIDO, no transparente */
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+            opacity: 0.8;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="detalle-certificacion-container">
+    <!-- Modal para imagen ampliada - FONDO NEGRO -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="detalle-header">
+        <a href="../index.html#certificaciones" class="volver-btn">← Volver</a>
+        <h1>Certificación Detallada</h1>
+        <!-- Espaciador invisible para centrar el título -->
+        <div style="width: 70px; opacity: 0;">← Volver</div>
+    </div>
+    
+    <section class="detalle-certificacion">
+        <h1>eLearnSecurity Junior Penetration Tester (eJPT)</h1>
+        
+        <div class="cert-logo" onclick="openModal()">
+            <!-- Cambia esta imagen por la de tu certificación eJPT -->
+            <img src="img/ejpt.png" alt="eJPT Certification">
+        </div>
+        
+        <hr>
+        
+        <h3>Expedición: 2017</h3>
+        <h4>Organización: eLearnSecurity (INE)</h4>
+        <h4>Estado: Activa</h4>
+        <h4>ID de Credencial: eJPT-45678</h4>
+        
+        <h4>Descripción:</h4>
+        <p>La certificación <strong>eJPT (eLearnSecurity Junior Penetration Tester)</strong> es una certificación de nivel inicial que valida los conocimientos fundamentales en pruebas de penetración y seguridad ofensiva. Diseñada para profesionales que comienzan en el campo de la ciberseguridad, cubre los aspectos esenciales del pentesting.</p>
+        
+        <h4>Habilidades Validadas:</h4>
+        <ul>
+            <li><strong>Fundamentos de redes y protocolos</strong> (TCP/IP, DNS, HTTP/HTTPS, etc.)</li>
+            <li><strong>Técnicas de reconocimiento y enumeración</strong> de sistemas y servicios</li>
+            <li><strong>Escaneo de vulnerabilidades</strong> con herramientas como Nmap y Nessus</li>
+            <li><strong>Explotación básica</strong> de vulnerabilidades comunes</li>
+            <li><strong>Metodologías de pentesting</strong> y reporte de hallazgos</li>
+            <li><strong>Introducción a la seguridad web</strong> (OWASP Top 10 básico)</li>
+            <li><strong>Uso de herramientas esenciales</strong> de seguridad ofensiva</li>
+        </ul>
+        
+        <h4>Tecnologías y Herramientas:</h4>
+        <div class="tech-used" style="margin-top: 15px;">
+            <span class="tech-tag">Nmap</span>
+            <span class="tech-tag">Nessus</span>
+            <span class="tech-tag">Wireshark</span>
+            <span class="tech-tag">Metasploit</span>
+            <span class="tech-tag">Burp Suite</span>
+            <span class="tech-tag">Netcat</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">Bash</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OSINT</span>
+        </div>
+        
+        <h4>Áreas de Conocimiento Evaluadas:</h4>
+        <ul>
+            <li><strong>Redes y sistemas operativos</strong> - Fundamentos esenciales</li>
+            <li><strong>Reconocimiento pasivo y activo</strong> - Técnicas de información gathering</li>
+            <li><strong>Escaneo y enumeración</strong> - Identificación de servicios y vulnerabilidades</li>
+            <li><strong>Gestión de vulnerabilidades</strong> - Priorización y análisis de riesgos</li>
+            <li><strong>Explotación básica</strong> - Aprovechamiento de vulnerabilidades comunes</li>
+            <li><strong>Post-explotación</strong> - Mantenimiento de acceso y limpieza</li>
+            <li><strong>Reporte y documentación</strong> - Comunicación efectiva de hallazgos</li>
+        </ul>
+        
+        <h4>Metodologías Cubiertas:</h4>
+        <ul>
+            <li>Ciclo de vida del pentesting (reconocimiento, escaneo, explotación, post-explotación, reporte)</li>
+            <li>Enfoque estructurado para evaluaciones de seguridad</li>
+            <li>Técnicas de testing de caja negra</li>
+            <li>Pruebas de red y aplicaciones web básicas</li>
+            <li>Evaluación de políticas de seguridad</li>
+        </ul>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=todmacgover29@gmail.com" 
+                   class="social-link" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/34688846527" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/daviovenator" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tu-usuario" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad del modal - VERSIÓN LIMPIA
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = document.querySelector('.cert-logo img');
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            
+            // Deshabilitar scroll del body
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Habilitar scroll del body
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Cerrar modal con botón X
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Cerrar modal haciendo clic en cualquier parte
+            modal.addEventListener('click', function(e) {
+                closeModal();
+            });
+            
+            // Cerrar modal con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+            
+            // Evitar que el clic en la imagen cierre el modal
+            const modalImg = document.getElementById('modalImage');
+            modalImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Hacer la imagen clicable con teclado (accesibilidad)
+            const certLogo = document.querySelector('.cert-logo');
+            certLogo.setAttribute('tabindex', '0');
+            certLogo.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

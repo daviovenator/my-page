@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Cigaran Flores - PortSwigger Web Security Certification</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .cert-logo {
+            text-align: center;
+            margin: 20px 0 30px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-logo img {
+            max-width: 180px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-logo:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+            opacity: 0.8;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="detalle-certificacion-container">
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="detalle-header">
+        <a href="../index.html#certificaciones" class="volver-btn">← Volver</a>
+        <h1>Certificación</h1>
+        <div style="width: 70px; opacity: 0;">← Volver</div>
+    </div>
+    
+    <section class="detalle-certificacion">
+        <h1>PortSwigger Web Security Certification</h1>
+        
+        <div class="cert-logo" onclick="openModal()">
+            <img src="img/portswigger.png" alt="PortSwigger Certification">
+        </div>
+        
+        <hr>
+        
+        <h3>Expedición: 5 de diciembre de 2025, 12:00</h3>
+        <h4>Organización: PortSwigger</h4>
+        <h4>Estado: Activa</h4>
+        <h4>Curso: Web Security Academy</h4>
+        
+        <h4>Descripción:</h4>
+        <p>Certificación oficial otorgada a <strong>David Cigaran Flores</strong> por demostrar competencia en pruebas de seguridad web, incluyendo identificación y explotación de vulnerabilidades en aplicaciones web, siguiendo los estándares de PortSwigger.</p>
+        
+        <h4>Criterios de Evaluación:</h4>
+        <ul>
+            <li>Detección y explotación de vulnerabilidades XSS, SQLi y CSRF.</li>
+            <li>Comprensión de técnicas de autenticación y control de sesiones.</li>
+            <li>Uso correcto de Burp Suite para pruebas de seguridad web.</li>
+            <li>Implementación de metodologías de seguridad web y pruebas de penetración.</li>
+            <li>Documentación precisa de hallazgos y mitigaciones sugeridas.</li>
+        </ul>
+        
+        <h4>Habilidades Validadas:</h4>
+        <div class="tech-used" style="margin-top: 15px;">
+            <span class="tech-tag">Burp Suite</span>
+            <span class="tech-tag">XSS</span>
+            <span class="tech-tag">SQL Injection</span>
+            <span class="tech-tag">CSRF</span>
+            <span class="tech-tag">Authentication Testing</span>
+            <span class="tech-tag">Session Management</span>
+            <span class="tech-tag">Recon Web</span>
+            <span class="tech-tag">Security Testing</span>
+        </div>
+        
+        <h4>Metodologías Aplicadas:</h4>
+        <ul>
+            <li>Pruebas de inyección y validación de entradas</li>
+            <li>Análisis de vulnerabilidades en aplicaciones web</li>
+            <li>Evaluación de autenticación y control de sesiones</li>
+            <li>Uso de Burp Suite para pruebas automatizadas y manuales</li>
+            <li>Reporte de hallazgos y recomendaciones de mitigación</li>
+        </ul>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:todmacgover29@gmail.com" class="social-link" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/34688846527" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/daviovenator" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tu-usuario" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = document.querySelector('.cert-logo img');
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            closeBtn.addEventListener('click', closeModal);
+            
+            modal.addEventListener('click', function(e) {
+                closeModal();
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+            
+            const modalImg = document.getElementById('modalImage');
+            modalImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            const certLogo = document.querySelector('.cert-logo');
+            certLogo.setAttribute('tabindex', '0');
+            certLogo.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
