@@ -1,4 +1,9 @@
 <style>
+
+html {
+    scroll-padding-top: 50px; /* altura exacta de tu header */
+    scroll-behavior: smooth;  /* opcional, para que el scroll sea suave */
+}
     /* Estilos generales */
     * {
         margin: 0;
