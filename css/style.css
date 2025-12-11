@@ -309,10 +309,10 @@ header {
 
 /* Sección Hero - CORREGIDA */
 .hero {
-    padding: 80px 0 60px;
+    padding: 60px 0 70px;
     /* 🔴 Fondo cambiado a un degradado rojizo */
     background: linear-gradient(135deg, rgba(255, 60, 60, 0.15) 0%, rgba(15, 15, 15, 0.95) 100%);
-    min-height: 70vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }

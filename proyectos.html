@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Navideños</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <!-- Botón Volver -->
+    <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver</span>
+    </a>
+
+    <div class="particles-container" id="particles"></div>
+    <div class="network-lines"></div>
+
+    <header>
+        <h1>Mis Proyectos</h1>
+        <p>Haz clic en cualquier proyecto para verlo en YouTube</p>
+    </header>
+
+    <main class="projects-container">
+        <div class="project">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <h2>Explorando Marte: Proyecto Rover</h2>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank">
+                <h2>Robótica Doméstica Avanzada</h2>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="https://www.youtube.com/watch?v=V-_O7nl0Ii0" target="_blank">
+                <h2>Realidad Virtual Interactiva</h2>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="https://www.youtube.com/watch?v=l482T0yNkeo" target="_blank">
+                <h2>Animación 3D: Mundo Fantástico</h2>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">
+                <h2>Inteligencia Artificial Creativa</h2>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer con enlaces sociales y emojis -->
+<footer>
+    <div class="container">
+        <div class="social-links">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=todmacgover29@gmail.com" 
+               class="social-link email" target="_blank">
+                <i class="fas fa-envelope"></i>
+                <span class="emoji">📧</span>
+            </a>
+
+            <a href="https://wa.me/34688846527" class="social-link whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span class="emoji">💬</span>
+            </a>
+
+            <a href="https://github.com/daviovenator" class="social-link github" target="_blank">
+                <i class="fab fa-github"></i>
+                <span class="emoji">🐙</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/tu-usuario" class="social-link linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="emoji">💼</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            const particleCount = 50;
+            container.innerHTML = '';
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                const startX = Math.random() * 120 - 10;
+                const startY = Math.random() * 120 - 10;
+                particle.style.left = `${startX}%`;
+                particle.style.top = `${startY}%`;
+
+                // Tamaño variado para partículas blancas
+                const size = Math.random() * 6 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Color blanco puro con variaciones de opacidad
+                const opacity = Math.random() * 0.6 + 0.4;
+                particle.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+
+                const duration = Math.random() * 15 + 15;
+                const animationType = Math.random();
+
+                if (animationType < 0.33) {
+                    particle.style.animation = `float ${duration}s infinite linear`;
+                } else if (animationType < 0.66) {
+                    particle.style.animation = `floatDiagonal ${duration}s infinite linear`;
+                } else {
+                    particle.style.animation = `floatRandom ${duration}s infinite linear`;
+                }
+
+                particle.style.animationDelay = '0s';
+                container.appendChild(particle);
+            }
+        }
+
+        // Crear partículas cuando se carga la página
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Recrear partículas si cambia el tamaño de la ventana
+            window.addEventListener('resize', createParticles);
+        });
+
+        // Agregar interactividad a los proyectos
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') return;
+                
+                const link = this.querySelector('a');
+                if (link) {
+                    // Efecto visual antes de redirigir
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        window.open(link.href, '_blank');
+                        this.style.transform = '';
+                    }, 200);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

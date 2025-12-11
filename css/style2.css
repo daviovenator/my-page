@@ -1,0 +1,345 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background: linear-gradient(135deg, #0c1a2d 0%, #152642 50%, #1a2f57 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Botón Volver */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+
+        .back-button i {
+            font-size: 0.9rem;
+        }
+
+        /* Partículas de fondo - Blancas en toda la página */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+            animation-delay: 0s !important;
+        }
+
+        /* Animación mejorada para cubrir toda la pantalla */
+        @keyframes float {
+            0% {
+                transform: translate(-10vw, -10vh);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.9;
+            }
+            95% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(110vw, 110vh);
+                opacity: 0;
+            }
+        }
+
+        /* Versión alternativa con más cobertura */
+        @keyframes floatDiagonal {
+            0% {
+                transform: translate(-100px, -100px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(calc(100vw + 100px), calc(100vh + 100px));
+                opacity: 0;
+            }
+        }
+
+        /* Otra animación para variar las trayectorias */
+        @keyframes floatRandom {
+            0% {
+                transform: translate(-50px, -50px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(calc(100vw + 50px), calc(100vh + 50px));
+                opacity: 0;
+            }
+        }
+        
+        /* Líneas de red - Dorado suave */
+        .network-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #b0c4de;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .project:hover::before {
+            transform: translateX(100%);
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .project:hover h2 {
+            color: #ffd700;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 2.5rem 1rem;
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        /* Emojis dentro de los enlaces */
+        .social-link .emoji {
+            font-size: 1.4rem;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            transform: translateY(-8px) scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Colores específicos para cada enlace */
+        .social-link.email:hover {
+            background: #d44638;
+            border-color: #d44638;
+        }
+
+        .social-link.whatsapp:hover {
+            background: #25D366;
+            border-color: #25D366;
+        }
+
+        .social-link.github:hover {
+            background: #333;
+            border-color: #333;
+        }
+
+        .social-link.linkedin:hover {
+            background: #0077B5;
+            border-color: #0077B5;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .projects-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .project {
+                padding: 1.5rem;
+            }
+            
+            .social-links {
+                gap: 1.2rem;
+            }
+            
+            .social-link {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+            }
+            
+            .social-link .emoji {
+                font-size: 1.2rem;
+                width: 22px;
+                height: 22px;
+            }
+        }
