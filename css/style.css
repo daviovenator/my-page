@@ -577,56 +577,298 @@ header {
 /* Sección Habilidades */
 #habilidades.section,
 #habilidades .container {
-    background: transparent !important; /* Mantiene fondo transparente en la sección */
+    background: transparent !important;
+    position: relative;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* espacio entre columnas y filas */
-    align-items: stretch; /* tarjetas de la misma fila igual altura */
+/* Grid general de tarjetas (6 tarjetas) - OCULTADO PARA EL CARRUSEL */
+.skills-grid,
+.skill-card,
+.skill-card:hover,
+.skills-wrapper,
+.skill-box,
+.skill-box:hover {
+    display: none !important;
 }
 
-.skill-card {
-    background: rgba(50, 50, 50, 0.9); /* Gris oscuro con ligera transparencia */
-    padding: 35px 25px;
+/* ========== ESTILOS PARA EL CARRUSEL ========== */
+
+/* Contenedor del carrusel */
+#habilidades-carousel-container {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* El carrusel en sí */
+#habilidades-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Tarjetas del carrusel */
+.habilidades-carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, #0a1a2a 100%);
+    padding: 20px 15px;
     border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.25);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* el contenido empuja hacia abajo naturalmente */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    /* Quitar height: 100% para que el contenido determine la altura real */
-    /* height: 100%; */
-    min-height: 150px; /* opcional, para un tamaño base uniforme */
+    justify-content: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; /* 🔥 Cambiado a hidden para ocultar scrollbars */
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
-    border-color: rgba(212, 175, 55, 0.6);
-}
-
-.skill-card i {
-    font-size: 3rem;
-    color: #D4AF37;
-    margin-bottom: 20px;
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+/* Título de categoría del carrusel */
+.habilidades-carousel-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px; /* 🔥 Aumentado para mejor separación */
     color: #F4D03F;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 0 5px;
 }
 
-.skill-card p {
-    color: #b0b0b0;
-    line-height: 1.6;
-}
-
+/* ========================================================= */
+/* 🔥 SIN SCROLLBAR + IMÁGENES MÁS GRANDES */
+/* ========================================================= */
+.habilidades-carousel-item .skill-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 🔥 4 columnas fijas */
+    grid-template-rows: repeat(2, auto); /* 🔥 2 filas fijas */
+    gap: 20px 15px; /* 🔥 Más espacio para imágenes grandes */
+    justify-content: center;
+    align-content: start;
+    align-items: start;
     
+    /* 🔥 SIN SCROLLBAR - ocultar overflow */
+    min-height: 220px; /* 🔥 Aumentado para imágenes grandes */
+    max-height: 240px; /* 🔥 Aumentado para imágenes grandes */
+    padding: 10px 5px;
+    
+    overflow: hidden; /* 🔥 Oculta cualquier scrollbar */
+    position: relative;
+    z-index: 1;
+    
+    /* 🔥 Asegurar que quepan exactamente 8 elementos (4x2) */
+    width: 100%;
+}
+
+/* 🔥 ELIMINADO: Estilos de scrollbar completamente */
+
+/* Cada icono con su nombre - AJUSTADO PARA IMÁGENES GRANDES */
+.habilidades-carousel-item .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px; /* 🔥 Aumentado para imágenes grandes */
+}
+
+/* Imagen del icono - 10px MÁS GRANDES */
+.habilidades-carousel-item .item img {
+    width: 75px; /* 🔥 Aumentado 10px (de 65px) */
+    height: 60px; /* 🔥 Aumentado 10px (de 50px) */
+    object-fit: contain;
+    margin: 0;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* ✨ Brillo al pasar el mouse */
+.habilidades-carousel-item .item img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+
+/* Nombre debajo del icono */
+.habilidades-carousel-item .item span {
+    color: #d0d0d0;
+    font-size: 0.8rem; /* 🔥 Un poco más grande para balance */
+    margin-top: 6px; /* 🔥 Más espacio para la imagen grande */
+    text-align: center;
+    line-height: 1.1;
+    max-width: 100px;
+    word-wrap: break-word;
+    padding: 0 2px;
+}
+
+/* Botones: ocultos */
+.carousel-controls,
+.carousel-prev,
+.carousel-next {
+    display: none !important;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    right: 0;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.25);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.carousel-indicator:hover {
+    background: rgba(212, 175, 55, 0.5);
+    transform: scale(1.15);
+}
+
+.carousel-indicator.active {
+    background: #F4D03F;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(244, 208, 63, 0.4);
+}
+
+/* Hover visual del carrusel */
+#habilidades-carousel-container:hover .habilidades-carousel-item[style*="opacity: 1"] {
+    box-shadow: 0 0 0 1.5px rgba(212, 175, 55, 0.2) !important;
+    transition: box-shadow 0.25s ease !important;
+}
+
+/* ========== RESPONSIVE CON IMÁGENES GRANDES ========== */
+
+@media (max-width: 900px) {
+    .habilidades-carousel-item .skill-items {
+        grid-template-columns: repeat(4, 1fr); /* 🔥 Mantener 4 columnas */
+        gap: 18px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #habilidades-carousel-container {
+        height: 380px; /* 🔥 Ajustado para imágenes más grandes */
+    }
+    
+    .habilidades-carousel-item .skill-items {
+        grid-template-columns: repeat(4, 1fr); /* 🔥 Mantener 4 columnas en tablet */
+        min-height: 200px;
+        max-height: 220px;
+        gap: 16px 10px;
+    }
+
+    .habilidades-carousel-item .item img {
+        width: 65px; /* 🔥 Aumentado proporcionalmente */
+        height: 52px;
+    }
+    
+    .habilidades-carousel-item .item {
+        height: 90px;
+    }
+    
+    .habilidades-carousel-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .habilidades-carousel-item .skill-items {
+        grid-template-columns: repeat(4, 1fr); /* 🔥 Mantener 4 columnas */
+        gap: 14px 8px;
+    }
+    
+    .habilidades-carousel-item .item img {
+        width: 60px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    #habilidades-carousel-container {
+        height: 360px;
+    }
+    
+    .habilidades-carousel-item .skill-items {
+        grid-template-columns: repeat(4, 1fr); /* 🔥 Mantener 4 columnas en móvil */
+        min-height: 180px;
+        max-height: 200px;
+        gap: 12px 6px;
+    }
+
+    .habilidades-carousel-item .item img {
+        width: 55px; /* 🔥 Aumentado proporcionalmente */
+        height: 44px;
+    }
+    
+    .habilidades-carousel-item .item {
+        height: 85px;
+    }
+    
+    .habilidades-carousel-item .item span {
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+    
+    .habilidades-carousel-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .habilidades-carousel-item .skill-items {
+        grid-template-columns: repeat(4, 1fr); /* 🔥 Mantener 4 columnas */
+        gap: 10px 4px;
+    }
+    
+    .habilidades-carousel-item .item img {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    #habilidades-carousel-container {
+        height: 340px;
+    }
+    
+    .habilidades-carousel-item .skill-items {
+        min-height: 170px;
+        max-height: 190px;
+    }
+    
+    .habilidades-carousel-item {
+        padding: 15px 10px;
+    }
+}
+
+/* Instrucción del carrusel */
+.carrusel-instruccion {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+}
+
 /* ============================================
    EXPERIENCIA LABORAL – OSCURO PROFESIONAL
 ============================================ */
@@ -1477,152 +1719,10 @@ footer .container {
     transform: translateY(-50%);
     z-index: 1000;
 }
-/* Contenedor del selector de tema */
-.theme-selector {
-    position: relative;
-    display: inline-block;
-}
-
-/* Opciones ocultas por defecto */
-.theme-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(20,20,20,0.95);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
 
 /* Mostrar opciones cuando el contenedor está activo */
 .theme-selector.active .theme-options {
     display: block;
-}
-
-/* ========== FOOTER - TEMA OSCURO ELEGANTE Y COMPACTO ========== */
-
-/* Aplicar solo cuando NO está el tema claro */
-body:not(.light-theme) footer {
-    background: #1a1a1a !important;
-    padding: 30px 0 20px 0 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-body:not(.light-theme) footer .container {
-    background: transparent !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
-}
-
-/* Enlaces sociales - TRANSPARENTES */
-body:not(.light-theme) footer .social-links {
-    display: flex !important;
-    gap: 20px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background: transparent !important;
-}
-
-body:not(.light-theme) footer .social-link {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 45px !important;
-    height: 45px !important;
-    background: transparent !important; /* FONDO COMPLETAMENTE TRANSPARENTE */
-    border-radius: 10px !important;
-    color: #ecf0f1 !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
-}
-
-body:not(.light-theme) footer .social-link i {
-    font-size: 1.3rem !important;
-    background: transparent !important;
-    color: #ecf0f1 !important;
-    transition: all 0.3s ease !important;
-}
-
-/* Colores específicos para cada red social */
-body:not(.light-theme) footer .social-link:nth-child(1) i { /* LinkedIn */
-    color: #0077b5 !important;
-}
-
-body:not(.light-theme) footer .social-link:nth-child(2) i { /* GitHub */
-    color: #6cc644 !important;
-}
-
-body:not(.light-theme) footer .social-link:nth-child(3) i { /* Twitter */
-    color: #1da1f2 !important;
-}
-
-body:not(.light-theme) footer .social-link:nth-child(4) i { /* Hacker News */
-    color: #ff6600 !important;
-}
-
-/* Efectos hover - TRANSPARENTE CON BORDE MÁS VISIBLE */
-body:not(.light-theme) footer .social-link:hover {
-    background: transparent !important; /* Mantener transparente al hover */
-    transform: translateY(-2px) scale(1.05) !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
-    border-color: rgba(255, 255, 255, 0.4) !important; /* Borde más visible al hover */
-}
-
-body:not(.light-theme) footer .social-link:hover i {
-    transform: scale(1.1) !important;
-}
-
-/* Colores al hover - MÁS BRILLANTES */
-body:not(.light-theme) footer .social-link:nth-child(1):hover i {
-    color: #00a0dc !important;
-    filter: brightness(1.2) !important; /* Más brillante */
-}
-
-body:not(.light-theme) footer .social-link:nth-child(2):hover i {
-    color: #5cb85c !important;
-    filter: brightness(1.2) !important;
-}
-
-body:not(.light-theme) footer .social-link:nth-child(3):hover i {
-    color: #1a91da !important;
-    filter: brightness(1.2) !important;
-}
-
-body:not(.light-theme) footer .social-link:nth-child(4):hover i {
-    color: #ff8533 !important;
-    filter: brightness(1.2) !important;
-}
-
-/* Texto de copyright */
-body:not(.light-theme) footer .copyright {
-    color: #bdc3c7 !important;
-    text-align: center !important;
-    font-size: 0.9rem !important;
-    margin: 0 !important;
-    background: transparent !important;
-    padding: 10px 20px !important;
-    border-radius: 8px !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.3px !important;
-}
-
-/* Ocultar sección proyectos */
-#proyectos {
-    display: none !important;
-}
-
-/* Ocultar enlace de Proyectos en el header */
-.nav-links li a[href="#proyectos"] {
-    display: none !important;
 }
 
 /* ========== FOOTER PARA PÁGINAS DE DETALLE ========== */

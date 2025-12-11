@@ -28,7 +28,6 @@
     <ul class="nav-links">
       <li><a href="#quien-soy" data-translate="nav.about">¿Quién Soy?</a></li>
       <li><a href="#habilidades" data-translate="nav.skills">Habilidades</a></li>
-      <li><a href="#proyectos" data-translate="nav.projects">Proyectos</a></li>
       <li><a href="#historial-academico" data-translate="nav.education">Historial Académico</a></li>
       <li><a href="#experiencia-laboral" data-translate="nav.experience">Experiencia Laboral</a></li>
       <li><a href="#certificaciones" data-translate="nav.certifications">Certificaciones</a></li>
@@ -48,14 +47,6 @@
           <option value="ru">Ruso</option>
         </select>
       </div>
-
-      <!-- Aquí cambiamos el botón por un <select> -->
-      <div class="theme-btn">
-        <select id="theme-selector">
-          <option value="light">Claro</option>
-          <option value="dark">Oscuro</option>
-        </select>
-      </div>
     </div>
   </div>
 </header>
@@ -70,16 +61,22 @@
             <div class="hero-text">
                 <h1 data-translate="hero.title">David Cigaran Flores</h1>
                 <p class="tagline" data-translate="hero.tagline">Formación práctica en pentesting y análisis ofensivo</p>
-                <p data-translate="hero.description">Recientemente formado en The Bridge y apasionado por la ciberseguridad ofensiva. Busco mi primera oportunidad profesional para aplicar mis conocimientos, aprender de expertos y aportar valor desde el primer día.</p>
+                <p data-translate="hero.description">
+                    Recientemente formado en The Bridge y apasionado por la ciberseguridad ofensiva. 
+                    Busco mi primera oportunidad profesional para aplicar mis conocimientos, aprender de expertos y 
+                    aportar valor desde el primer día.
+                </p>
                 <div class="cta-buttons">
-                    <a href="#proyectos" class="cta-button" data-translate="hero.projectsBtn">Ver Proyectos</a>
+                    <!-- Aquí cambiamos #proyectos por la subpágina -->
+                    <a href="proyectos.html" class="cta-button" data-translate="hero.projectsBtn">Ver Proyectos</a>
+
                     <a href="#contacto" class="cta-button secondary" data-translate="hero.contactBtn">Contactar</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<br><br>
+
     <section class="section" id="quien-soy">
         <div class="container">
             <h2 class="section-title" data-translate="about.title">¿Quién Soy?</h2>
@@ -100,102 +97,111 @@ Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender
             </div>
         </div>
     </section>
-<br><br><br><br><br>
-    <section class="section" id="habilidades">
-        <div class="container">
-            <h2 class="section-title" data-translate="skills.title">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill1.title">Pentesting Básico</h3>
-                    <p data-translate="skills.skill1.description">Pruebas de penetración web, móvil y de red. Fuzzing, Inyecciones SQL, Payloads, Fuerza bruta entre otros</p>
+<br><br>
+<section id="habilidades" class="section">
+    <div class="container">
+        <h2 class="section-title">Experiencia en:</h2>     
+        <!-- Instrucción para el carrusel -->
+        <div class="carrusel-instruccion">
+             (Haga click en los lados de la tarjeta para deslizar) 
+        </div>
+        <div id="habilidades-carousel-container">
+            <div id="habilidades-carousel">
+            
+                            <!-- === 8. Sistemas Operativos === -->
+                <div class="habilidades-carousel-item">
+                    <h3>Sistemas Operativos</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/kali.png"><span>Kali</span></div>
+                        <div class="item"><img src="img/parrot.png"><span>Parrot</span></div>
+                        <div class="item"><img src="img/ubu.png"><span>Ubuntu && Ubuntu Server</span></div>
+                        <div class="item"><img src="img/w7.jpeg"><span>Win 7</span></div>
+                        <div class="item"><img src="img/w10.png"><span>Win 10</span></div>
+                        <div class="item"><img src="img/w_server.png"><span>Win Server</span></div>
+                        <div class="item"><img src="img/zorin.png"><span>Zorin</span></div>
+                        <div class="item"><img src="img/tails.png"><span>Tails</span></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill2.title">Herramientas</h3>
-                    <p data-translate="skills.skill2.description">Control sobre Metasploit, Burp Suite, Nmap, Wireshark y otras herramientas de testing (Red y Blue Team).</p>
+
+                <!-- === 1. OSINT (Inteligencia de Fuentes Abiertas) === -->
+                <div class="habilidades-carousel-item">
+                    <h3>OSINT</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/Dorks.webp"><span>Google Dorks</span></div>
+                        <div class="item"><img src="img/cen.png"><span>Censys</span></div>
+                        <div class="item"><img src="img/shodan.jpeg"><span>Shodan</span></div>
+                        <div class="item"><img src="img/spiderfoot.png"><span>SpiderFoot</span></div>
+                        <div class="item"><img src="img/FOCA.png"><span>FOCA</span></div>
+                        <div class="item"><img src="img/maltego.png"><span>Maltego</span></div>
+                        <div class="item"><img src="img/httrack.png"><span>HTTrack</span></div>
+                        <div class="item"><img src="img/exiftool.png"><span>ExifTool</span></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill3.title">Creatividad</h3>
-                    <p data-translate="skills.skill3.description">Revisión de código fuente e ingeniería inversa en auditorías.</p>
+
+                <!-- === 2. Escaneo Web y Fuzzers === -->
+                <div class="habilidades-carousel-item">
+                    <h3>Escaneo Web y Fuzzing</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/nikto.jpeg"><span>Nikto</span></div>
+                        <div class="item"><img src="img/dirb.png"><span>Dirb</span></div>
+                        <div class="item"><img src="img/dirbuster.png"><span>DirBuster</span></div>
+                        <div class="item"><img src="img/dirsearch.png"><span>DirSearch</span></div>
+                        <div class="item"><img src="img/gobuster.png"><span>GoBuster</span></div>
+                        <div class="item"><img src="img/Burp_suite.png"><span>Burp Suite</span></div>
+                        <div class="item"><img src="img/sqlmap.png"><span>SQLMap</span></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill4.title">Lectura de Red</h3>
-                    <p data-translate="skills.skill4.description">Análisis de arquitecturas de red, detección de intrusiones mediante firewall y sistemas de prevención.</p>
+
+                <!-- === 3. Análisis de Red === -->
+                <div class="habilidades-carousel-item">
+                    <h3>Análisis de Red</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/nmap.jpeg"><span>Nmap</span></div>
+                        <div class="item"><img src="img/arp.png"><span>ARP-Scan</span></div>
+                        <div class="item"><img src="img/ping.jpeg"><span>Ping</span></div>
+                        <div class="item"><img src="img/curl.png"><span>cURL</span></div>
+                        <div class="item"><img src="img/netcat.png"><span>Netcat</span></div>
+                        <div class="item"><img src="img/wireshark.jpeg"><span>Wireshark</span></div>
+                        <div class="item"><img src="img/OpenSSL.jpg"><span>OpenSSL</span></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill5.title">Ingeniería Social</h3>
-                    <p data-translate="skills.skill5.description">Pruebas de penetración, simulaciones de phishing y explotación de CVE</p>
+
+                <!-- === 4. Escáneres de Vulnerabilidades === -->
+                <div class="habilidades-carousel-item">
+                    <h3>Escaneo y Virtualización</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/nessus.png"><span>Nessus</span></div>
+                        <div class="item"><img src="img/greenbone.png"><span>Greenbone</span></div>
+                        <div class="item"><img src="img/dvwa.jpeg"><span>DVWA</span></div>
+                        <div class="item"><img src="img/aws.png"><span>AWS</span></div>
+                        <div class="item"><img src="img/vbox.png"><span>VirtualBox</span></div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3 data-translate="skills.skill6.title">Seguridad en la Nube</h3>
-                    <p data-translate="skills.skill6.description">Conocimientos en AWS para pruebas de penetración autorizadas.</p>
+
+                <!-- === 5. Ataque y Explotación === -->
+                <div class="habilidades-carousel-item">
+                    <h3>Control y Explotación</h3>
+                    <div class="skill-items">
+                        <div class="item"><img src="img/hidra.png"><span>Hydra</span></div>
+                        <div class="item"><img src="img/john.png"><span>John</span></div>
+                        <div class="item"><img src="img/hash.jpeg"><span>Hash-Identifier</span></div>
+                        <div class="item"><img src="img/decode.png"><span>Decode</span></div>
+                        <div class="item"><img src="img/meta.png"><span>Metasploit</span></div>
+                        <div class="item"><img src="img/bash.png"><span>Bash</span></div>
+                        <div class="item"><img src="img/mysql.png"><span>MySQL</span></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-<br><br><br><br><br>
-#    <section class="section" id="proyectos">
-#        <div class="container">
-#            <h2 class="section-title" data-translate="projects.title">Proyectos Destacados</h2>
-#            <div class="projects-grid">
-#                <div class="project-card">
-#                    <div class="project-header">
-#                        <i class="fas fa-lock"></i>
-#                    </div>
-#                    <div class="project-content">
-#                        <h3 data-translate="projects.project1.title">Auditoría FinTech</h3>
-#                        <p data-translate="projects.project1.description">Evaluación de seguridad completa para una plataforma FinTech,identificando vulnerabilidades críticas en su API y aplicación móvil.</p>
-#                        <div class="project-tags">
-#                            <span class="project-tag" data-translate="projects.tags.web">Web App</span>
-#                            <span class="project-tag" data-translate="projects.tags.api">API</span>
-#                            <span class="project-tag" data-translate="projects.tags.mobile">Mobile</span>
-#                        </div>
-#                    </div>
-#                </div>
-#                <div class="project-card">
-#                    <div class="project-header">
-#                        <i class="fas fa-network-wired"></i>
-#                    </div>
-#                    <div class="project-content">
-#                        <h3 data-translate="projects.project2.title">Infraestructura Corporativa</h3>
-#                        <p data-translate="projects.project2.description">Pentesting de red interna para empresa del Fortune 500, descubriendo vectores de ataque que permitían movimiento lateral.</p>
-#                        <div class="project-tags">
-#                            <span class="project-tag" data-translate="projects.tags.network">Red Interna</span>
-#                            <span class="project-tag" data-translate="projects.tags.ad">Active Directory</span>
-#                            <span class="project-tag" data-translate="projects.tags.privilege">Privilege Escalation</span>
-#                        </div>
-#                    </div>
-#                </div>
-#                <div class="project-card">
-#                    <div class="project-header">
-#                        <i class="fas fa-user-secret"></i>
-#                    </div>
-#                    <div class="project-content">
-#                        <h3 data-translate="projects.project3.title">Social Engineering</h3>
-#                        <p data-translate="projects.project3.description">Campaña de concienciación mediante pruebas de ingeniería socialcontroladas paraevaluar la resistencia humana de una organización.</p>
-#                        <div class="project-tags">
-#                            <span class="project-tag" data-translate="projects.tags.phishing">Phishing</span>
-#                            <span class="project-tag" data-translate="projects.tags.awareness">Concienciación</span>
-#                            <span class="project-tag" data-translate="projects.tags.human">Factor Humano</span>
-#                        </div>
-#                    </div>
-#                </div>
-#                <div class="project-card">
-#                    <div class="project-header">
-#                        <i class="fas fa-server"></i>
-#                    </div>
-#                    <div class="project-content">
-#                        <h3 data-translate="projects.project4.title">Hardening de Servidores</h3>
-#                        <p data-translate="projects.project4.description">Refuerzo de seguridad en servidores críticos para una institución gubernamental, implementando medidas de protección avanzadas.</p>
-#                        <div class="project-tags">
-#                            <span class="project-tag" data-translate="projects.tags.linux">Linux</span>
-#                            <span class="project-tag" data-translate="projects.tags.windows">Windows Server</span>
-#                            <span class="project-tag" data-translate="projects.tags.hardening">Hardening</span>
-#                        </div>
-#                    </div>
-#                </div>
-#            </div>
-#        </div>
-#    </section>
+        
+        <!-- Botones de navegación del carrusel -->
+        <div class="carousel-controls">
+            <button class="carousel-prev">❮</button>
+            <button class="carousel-next">❯</button>
+        </div>
+    </div>
+</section>
+
 <br><br><br><br><br>
     <section class="section" id="historial-academico">
         <div class="container">
@@ -239,7 +245,7 @@ Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender
             </div>
         </div>
     </section>
-<br><br><br><br><br>
+<br><br>
     <section class="section" id="experiencia-laboral">
         <div class="container">
             <h2 class="section-title" data-translate="experience.title">Experiencia Laboral</h2>
@@ -269,7 +275,6 @@ Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender
             </div>
         </div>
     </section>
-<br><br><br>
 <section class="section" id="certificaciones">
     <div class="container">
         <h2 class="section-title">Certificaciones e Insignias</h2>
@@ -342,7 +347,7 @@ Busco una oportunidad para iniciar mi carrera en un entorno donde pueda aprender
                     <div class="contact-method">
                         <div class="contact-details">
                             <h4 data-translate="contact.licenses">Licencias de Conducción</h4>
-                            <p data-translate="contact.licenseB">Permiso B (Coche)</p>
+                            <p data-translate="contact.licenseB">No</p>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -594,64 +599,254 @@ function initSmoothScroll() {
 }
 
 /********************
- * CAMBIO DE TEMA
+ * CARRUSEL DE HABILIDADES SIMPLE (Ciclo infinito suave)
  ********************/
-let lightThemeLink = null;
-let currentTheme = 'dark';
-
-function applyTheme(theme) {
-  console.log('Aplicando tema:', theme);
-  currentTheme = theme;
-
-  if (theme === 'light') {
-    // Cargar style2.css
-    if (!lightThemeLink) {
-      lightThemeLink = document.createElement('link');
-      lightThemeLink.rel = 'stylesheet';
-      lightThemeLink.href = 'css/style2.css';
-      lightThemeLink.id = 'light-theme';
-      document.head.appendChild(lightThemeLink);
-      console.log('✅ style2.css cargado');
+function initHabilidadesCarousel() {
+    const container = document.getElementById('habilidades-carousel-container');
+    const carousel = document.getElementById('habilidades-carousel');
+    const items = document.querySelectorAll('.habilidades-carousel-item');
+    
+    if (!container || !carousel || !items.length) return;
+    
+    console.log('Inicializando carrusel de habilidades...');
+    
+    let currentIndex = 0;
+    let isAnimating = false;
+    const totalItems = items.length;
+    
+    // Duplicar items al principio y al final para efecto cíclico suave
+    const firstItemClone = items[0].cloneNode(true);
+    const lastItemClone = items[totalItems - 1].cloneNode(true);
+    
+    // Insertar clones
+    carousel.appendChild(firstItemClone); // Clon del primero al final
+    carousel.insertBefore(lastItemClone, items[0]); // Clon del último al principio
+    
+    // Obtener todos los items incluyendo los clones
+    const allItems = document.querySelectorAll('.habilidades-carousel-item');
+    const totalItemsWithClones = allItems.length; // totalItems + 2
+    
+    // Configurar el contenedor y carrusel
+    container.style.overflow = 'hidden';
+    container.style.cursor = 'pointer';
+    carousel.style.display = 'flex';
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.width = `${totalItemsWithClones * 100}%`;
+    
+    // Configurar todos los items
+    allItems.forEach((item, index) => {
+        item.style.width = `${100 / totalItemsWithClones}%`;
+        item.style.flexShrink = '0';
+        item.style.transition = 'opacity 0.4s ease';
+        item.style.boxSizing = 'border-box';
+    });
+    
+    // Posicionar inicialmente en el primer item real (índice 1 porque el 0 es el clon del último)
+    currentIndex = 1;
+    updateCarousel();
+    
+    // Evento de click en el contenedor
+    container.addEventListener('click', (e) => {
+        if (isAnimating) return;
+        
+        const rect = container.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const containerWidth = rect.width;
+        
+        // Determinar si el click fue en la mitad izquierda o derecha
+        if (clickX < containerWidth / 2) {
+            // Click en mitad izquierda - ir a anterior
+            goToSlide(currentIndex - 1);
+        } else {
+            // Click en mitad derecha - ir a siguiente
+            goToSlide(currentIndex + 1);
+        }
+    });
+    
+    // Función para mover el carrusel
+    function goToSlide(index) {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        currentIndex = index;
+        updateCarousel();
+        
+        // Si llegamos al clon del último (índice totalItems + 1)
+        if (currentIndex === totalItemsWithClones - 1) {
+            setTimeout(() => {
+                // Saltar sin transición al primer item real
+                carousel.style.transition = 'none';
+                currentIndex = 1;
+                updateCarousel();
+                
+                // Restaurar transición
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease';
+                }, 50);
+                
+                isAnimating = false;
+            }, 500);
+        }
+        // Si llegamos al clon del primero (índice 0)
+        else if (currentIndex === 0) {
+            setTimeout(() => {
+                // Saltar sin transición al último item real
+                carousel.style.transition = 'none';
+                currentIndex = totalItemsWithClones - 2;
+                updateCarousel();
+                
+                // Restaurar transición
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease';
+                }, 50);
+                
+                isAnimating = false;
+            }, 500);
+        } else {
+            setTimeout(() => {
+                isAnimating = false;
+            }, 500);
+        }
     }
-  } else {
-    // Remover style2.css
-    if (lightThemeLink) {
-      lightThemeLink.remove();
-      lightThemeLink = null;
-      console.log('✅ style2.css removido');
+    
+    // Función para actualizar la posición del carrusel
+    function updateCarousel() {
+        const translateX = -currentIndex * (100 / totalItemsWithClones);
+        carousel.style.transform = `translateX(${translateX}%)`;
+        
+        // Actualizar opacidad de todos los items
+        allItems.forEach((item, index) => {
+            // Solo mostrar los items reales (los clones son invisibles)
+            if (index === currentIndex) {
+                item.style.opacity = '1';
+            } else {
+                item.style.opacity = '0';
+            }
+        });
+        
+        // Actualizar indicadores
+        updateIndicators();
     }
-  }
-
-  localStorage.setItem('theme', theme);
-  updateThemeSelect(theme);
-}
-
-function updateThemeSelect(theme) {
-  const themeSelector = document.getElementById('theme-selector');
-  if (themeSelector) {
-    themeSelector.value = theme;
-  }
-}
-
-function initThemeSystem() {
-  const themeSelector = document.getElementById('theme-selector');
-
-  if (!themeSelector) {
-    console.error('❌ No se encontró #theme-selector');
-    return;
-  }
-
-  // Cambiar tema al seleccionar una opción
-  themeSelector.addEventListener('change', (e) => {
-    const theme = e.target.value;
-    applyTheme(theme);
-  });
-}
-
-function loadTheme() {
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  console.log('Cargando tema:', savedTheme);
-  applyTheme(savedTheme);
+    
+    // Función siguiente (para debug si es necesario)
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+    
+    // Función anterior (para debug si es necesario)
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+    
+    // Crear e inicializar indicadores (solo para los items reales)
+    function createIndicators() {
+        // Remover indicadores existentes si los hay
+        const existingIndicators = document.querySelector('.carousel-indicators');
+        if (existingIndicators) {
+            existingIndicators.remove();
+        }
+        
+        const indicatorsContainer = document.createElement('div');
+        indicatorsContainer.className = 'carousel-indicators';
+        
+        // Solo crear indicadores para los items reales (excluyendo clones)
+        for (let i = 0; i < totalItems; i++) {
+            const indicator = document.createElement('button');
+            indicator.className = `carousel-indicator ${i === (currentIndex - 1) ? 'active' : ''}`;
+            indicator.setAttribute('aria-label', `Ir a la tarjeta ${i + 1}`);
+            
+            indicator.addEventListener('click', (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                if (!isAnimating) {
+                    // +1 porque el primer item es el clon del último
+                    goToSlide(i + 1);
+                }
+            });
+            
+            indicatorsContainer.appendChild(indicator);
+        }
+        
+        // Insertar después del contenedor del carrusel
+        container.parentNode.insertBefore(indicatorsContainer, container.nextSibling);
+    }
+    
+    function updateIndicators() {
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        indicators.forEach((indicator, index) => {
+            // Convertir índice del carrusel a índice de indicador
+            // currentIndex - 1 porque el primer item es el clon del último
+            const realItemIndex = (currentIndex - 1 + totalItems) % totalItems;
+            indicator.classList.toggle('active', index === realItemIndex);
+        });
+    }
+    
+    // Añadir estilos para los clones (invisibles para el usuario)
+    const style = document.createElement('style');
+    style.textContent = `
+        .carousel-controls {
+            display: none !important;
+        }
+        
+        /* Ocultar flechas */
+        .carousel-prev, .carousel-next {
+            display: none !important;
+        }
+        
+        /* Efecto de borde en hover para indicar que es clickeable */
+        #habilidades-carousel-container:hover .habilidades-carousel-item[style*="opacity: 1"] {
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3) !important;
+            transition: box-shadow 0.3s ease !important;
+        }
+        
+        /* Indicadores más visibles */
+        .carousel-indicators {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            z-index: 100;
+        }
+        
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(212, 175, 55, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+        
+        .carousel-indicator:hover {
+            background: rgba(212, 175, 55, 0.6);
+            transform: scale(1.2);
+        }
+        
+        .carousel-indicator.active {
+            background: #F4D03F;
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(244, 208, 63, 0.5);
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Inicializar
+    createIndicators();
+    
+    console.log('Carrusel de habilidades inicializado con', totalItems, 'tarjetas en ciclo infinito');
+    
+    // Para depuración (opcional)
+    window.carruselDebug = {
+        next: nextSlide,
+        prev: prevSlide,
+        getCurrentIndex: () => currentIndex
+    };
 }
 
 /********************
@@ -660,15 +855,14 @@ function loadTheme() {
 document.addEventListener('DOMContentLoaded', function () {
   console.log('🚀 Iniciando aplicación...');
 
-  // 1. Sistema de temas
-  initThemeSystem();
-  loadTheme();
-
-  // 2. Otros componentes
+  // 1. Otros componentes
   if (typeof createParticles === 'function') createParticles();
   if (typeof initScrollAnimations === 'function') initScrollAnimations();
   if (typeof initSmoothScroll === 'function') initSmoothScroll();
   if (typeof initTranslation === 'function') initTranslation();
+  
+  // 2. Carrusel de habilidades
+  if (typeof initHabilidadesCarousel === 'function') initHabilidadesCarousel();
 
   // 3. Sistema de menú
   initMenuSystem();
@@ -751,43 +945,6 @@ function initMenuSystem() {
 /********************
  * HERRAMIENTAS DE DEPURACIÓN
  ********************/
-window.debugTheme = function () {
-  console.log('=== 🐛 DEBUG TEMA ===');
-  console.log('Tema actual:', currentTheme);
-  console.log('En localStorage:', localStorage.getItem('theme'));
-  console.log('CSS claro cargado:', !!lightThemeLink);
-  document.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
-    console.log('  -', link.href);
-  });
-};
-
-window.forceTheme = function (theme) {
-  console.log(`🎛️ Forzando tema: ${theme}`);
-  applyTheme(theme);
-};
-
-window.checkThemeFiles = function () {
-  console.log('=== 📁 VERIFICANDO ARCHIVOS CSS ===');
-  fetch('css/style.css')
-    .then((r) => console.log('style.css:', r.ok ? '✅ EXISTE' : '❌ NO EXISTE'))
-    .catch(() => console.log('style.css: ❌ ERROR al cargar'));
-  fetch('css/style2.css')
-    .then((r) => console.log('style2.css:', r.ok ? '✅ EXISTE' : '❌ NO EXISTE'))
-    .catch(() => console.log('style2.css: ❌ ERROR al cargar'));
-};
-
-window.forceLightTheme = function () {
-  console.log('=== FORZANDO TEMA CLARO ===');
-  applyTheme('light');
-  console.log('Tema claro forzado');
-};
-
-window.forceDarkTheme = function () {
-  console.log('=== FORZANDO TEMA OSCURO ===');
-  applyTheme('dark');
-  console.log('Tema oscuro forzado');
-};
-
 window.debugTranslations = function () {
   console.log('=== DEBUG TRADUCCIONES ===');
   console.log('Idioma actual:', window.currentLanguage || 'No definido');
@@ -795,7 +952,6 @@ window.debugTranslations = function () {
   console.log('Elementos traducibles:', document.querySelectorAll('[data-translate]').length);
   console.log('Selector de idioma:', document.getElementById('language-selector'));
 };
-
 
 // En tu archivo JavaScript principal, añade esto si quieres manejar los clicks
 document.addEventListener('DOMContentLoaded', function() {
